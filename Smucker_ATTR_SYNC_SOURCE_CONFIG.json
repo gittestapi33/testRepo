@@ -1,0 +1,236 @@
+[
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c9180867b97c7c3017b9c132f1c451a",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": null
+        },
+        "object": {
+            "source": {
+                "id": "2c9180867b97c7c3017b9c132f1c451a",
+                "type": "SOURCE",
+                "name": null
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "att_email",
+                    "name": "email",
+                    "target": "email"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_first_name",
+                    "name": "firstname",
+                    "target": "first_name"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_last_name",
+                    "name": "lastname",
+                    "target": "last_name"
+                }
+            ]
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c91808477a6a9f00177d4d3dd620036",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": "JC - SalesForce Test"
+        },
+        "object": {
+            "source": {
+                "id": "2c91808477a6a9f00177d4d3dd620036",
+                "type": "SOURCE",
+                "name": "JC - SalesForce Test"
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "att_email",
+                    "name": "email",
+                    "target": "Email"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_first_name",
+                    "name": "firstname",
+                    "target": "FirstName"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_last_name",
+                    "name": "lastname",
+                    "target": "LastName"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "Lifecycle State",
+                    "name": "cloudLifecycleState",
+                    "target": "IsActive"
+                },
+                {
+                    "enabled": false,
+                    "displayName": "att_email",
+                    "name": "email",
+                    "target": "Username"
+                }
+            ]
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c918088719e06c80171c23cf4b92bf7",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": null
+        },
+        "object": {
+            "source": {
+                "id": "2c918088719e06c80171c23cf4b92bf7",
+                "type": "SOURCE",
+                "name": null
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "Title",
+                    "name": "title",
+                    "target": "title"
+                }
+            ]
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c91808678daf0230178dc39a834180d",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": "AHAD"
+        },
+        "object": {
+            "source": {
+                "id": "2c91808678daf0230178dc39a834180d",
+                "type": "SOURCE",
+                "name": "AHAD"
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "att_email",
+                    "name": "email",
+                    "target": "mail"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_first_name",
+                    "name": "firstname",
+                    "target": "givenName"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_last_name",
+                    "name": "lastname",
+                    "target": "sn"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_display_name",
+                    "name": "displayName",
+                    "target": "displayName"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "Personal Phone",
+                    "name": "phone",
+                    "target": "telephoneNumber"
+                }
+            ]
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c918084703112a701703667c7405c60",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": null
+        },
+        "object": {
+            "source": {
+                "id": "2c918084703112a701703667c7405c60",
+                "type": "SOURCE",
+                "name": null
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "Title",
+                    "name": "title",
+                    "target": "title"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "Department",
+                    "name": "department",
+                    "target": "department"
+                }
+            ]
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "230ef5d0-8aa6-43a3-8287-83db3cacf024:2c9180846c3f9731016c6dd24fec48a4",
+            "type": "ATTR_SYNC_SOURCE_CONFIG",
+            "name": "AD - Employees"
+        },
+        "object": {
+            "source": {
+                "id": "2c9180846c3f9731016c6dd24fec48a4",
+                "type": "SOURCE",
+                "name": "AD - Employees"
+            },
+            "attributes": [
+                {
+                    "enabled": true,
+                    "displayName": "att_email",
+                    "name": "email",
+                    "target": "mail"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "att_first_name",
+                    "name": "firstname",
+                    "target": "givenName"
+                },
+                {
+                    "enabled": true,
+                    "displayName": "Work Phone",
+                    "name": "workPhone",
+                    "target": "telephoneNumber"
+                },
+                {
+                    "enabled": false,
+                    "displayName": "att_last_name",
+                    "name": "lastname",
+                    "target": "sn"
+                },
+                {
+                    "enabled": false,
+                    "displayName": "Title",
+                    "name": "title",
+                    "target": "title"
+                },
+                {
+                    "enabled": false,
+                    "displayName": "Department",
+                    "name": "department",
+                    "target": "department"
+                }
+            ]
+        }
+    }
+]
