@@ -13,12 +13,12 @@
         "name": "a10"
     },
     "features": [
-        "ENABLE",
-        "AUTHENTICATE",
-        "PASSWORD",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "SEARCH"
+        "ENABLE",
+        "SEARCH",
+        "AUTHENTICATE",
+        "PASSWORD"
     ],
     "schemas": [
         {

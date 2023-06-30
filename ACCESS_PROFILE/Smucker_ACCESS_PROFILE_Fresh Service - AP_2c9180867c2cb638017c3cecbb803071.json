@@ -17,14 +17,14 @@
     },
     "entitlements": [
         {
-            "id": "2c9180877c387afe017c38da7f8b12dc",
-            "type": "ENTITLEMENT",
-            "name": "Database Team"
-        },
-        {
             "id": "2c9180877c387afe017c38da80b712e0",
             "type": "ENTITLEMENT",
             "name": "Network Team"
+        },
+        {
+            "id": "2c9180877c387afe017c38da7f8b12dc",
+            "type": "ENTITLEMENT",
+            "name": "Database Team"
         }
     ],
     "requestable": true,

@@ -1,6 +1,6 @@
 {
-    "triggerId": "idn:access-request-pre-approval",
     "responseDeadline": "PT1H",
+    "triggerId": "idn:access-request-pre-approval",
     "httpConfig": {
         "httpDispatchMode": "SYNC",
         "httpAuthenticationType": "BASIC_AUTH",
@@ -13,8 +13,8 @@
     },
     "triggerName": "Access Request Submitted",
     "description": "Access Request GP Test",
-    "id": "6e34221b-6dfa-4b15-bf40-bd4c37929764",
     "enabled": false,
+    "id": "6e34221b-6dfa-4b15-bf40-bd4c37929764",
     "type": "HTTP",
     "name": "Access Request GP Test"
 }

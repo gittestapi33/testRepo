@@ -14,12 +14,12 @@
     },
     "features": [
         "ENABLE",
-        "GROUP_PROVISIONING",
         "PROVISIONING",
+        "SYNC_PROVISIONING",
         "UNLOCK",
         "DISCOVER_SCHEMA",
-        "DIRECT_PERMISSIONS",
-        "SYNC_PROVISIONING"
+        "GROUP_PROVISIONING",
+        "DIRECT_PERMISSIONS"
     ],
     "schemas": [
         {

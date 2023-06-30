@@ -13,10 +13,10 @@
         "name": "amit_hansalia"
     },
     "features": [
-        "SEARCH",
-        "SYNC_PROVISIONING",
         "PROVISIONING",
-        "MANAGER_LOOKUP"
+        "SYNC_PROVISIONING",
+        "MANAGER_LOOKUP",
+        "SEARCH"
     ],
     "schemas": [
         {

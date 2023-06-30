@@ -17,14 +17,14 @@
     },
     "entitlements": [
         {
-            "id": "2c9180877900450b0179041e865572a5",
-            "type": "ENTITLEMENT",
-            "name": "UNO-Application Users"
-        },
-        {
             "id": "2c9180877900450b017904289f4a7320",
             "type": "ENTITLEMENT",
             "name": "UNO-Application Interns"
+        },
+        {
+            "id": "2c9180877900450b0179041e865572a5",
+            "type": "ENTITLEMENT",
+            "name": "UNO-Application Users"
         }
     ],
     "requestable": true,

@@ -13,13 +13,13 @@
         "name": "jack.boike"
     },
     "features": [
-        "ENABLE",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "UNLOCK",
-        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS",
         "GROUP_PROVISIONING",
-        "DIRECT_PERMISSIONS"
+        "UNLOCK",
+        "ENABLE",
+        "DISCOVER_SCHEMA"
     ],
     "schemas": [
         {

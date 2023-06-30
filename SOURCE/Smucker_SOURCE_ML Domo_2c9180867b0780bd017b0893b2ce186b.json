@@ -13,11 +13,11 @@
         "name": "matt.laufer"
     },
     "features": [
-        "PROVISIONING",
-        "UNLOCK",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD"
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK"
     ],
     "schemas": [
         {

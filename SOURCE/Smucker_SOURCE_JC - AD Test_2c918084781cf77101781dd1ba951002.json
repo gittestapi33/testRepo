@@ -15,18 +15,18 @@
     "features": [
         "GROUP_PROVISIONING",
         "GROUPS_HAVE_MEMBERS",
-        "PROVISIONING",
-        "NO_GROUP_PERMISSIONS_PROVISIONING",
-        "SYNC_PROVISIONING",
-        "UNSTRUCTURED_TARGETS",
-        "UNLOCK",
-        "NO_PERMISSIONS_PROVISIONING",
-        "CURRENT_PASSWORD",
+        "ENABLE",
         "SEARCH",
         "AUTHENTICATE",
-        "MANAGER_LOOKUP",
+        "NO_PERMISSIONS_PROVISIONING",
         "PASSWORD",
-        "ENABLE"
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "MANAGER_LOOKUP",
+        "UNLOCK",
+        "CURRENT_PASSWORD",
+        "UNSTRUCTURED_TARGETS",
+        "NO_GROUP_PERMISSIONS_PROVISIONING"
     ],
     "schemas": [
         {

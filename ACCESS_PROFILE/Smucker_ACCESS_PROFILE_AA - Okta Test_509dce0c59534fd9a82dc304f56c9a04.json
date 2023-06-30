@@ -17,14 +17,14 @@
     },
     "entitlements": [
         {
-            "id": "272d542a5e55462abc6ad4b4d9eef969",
-            "type": "ENTITLEMENT",
-            "name": "Disable Test"
-        },
-        {
             "id": "228658e5c3c747a6bf29c149f6281e86",
             "type": "ENTITLEMENT",
             "name": "Bio Test"
+        },
+        {
+            "id": "272d542a5e55462abc6ad4b4d9eef969",
+            "type": "ENTITLEMENT",
+            "name": "Disable Test"
         }
     ],
     "requestable": true,

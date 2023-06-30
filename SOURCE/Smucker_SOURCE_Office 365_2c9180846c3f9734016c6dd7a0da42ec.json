@@ -14,11 +14,11 @@
     },
     "features": [
         "ENABLE",
-        "AUTHENTICATE",
         "PASSWORD",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "SEARCH"
+        "SEARCH",
+        "AUTHENTICATE"
     ],
     "schemas": [
         {

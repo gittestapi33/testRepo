@@ -17,14 +17,14 @@
     },
     "entitlements": [
         {
-            "id": "2c9180877962e25001796672f62206ec",
-            "type": "ENTITLEMENT",
-            "name": "Standard"
-        },
-        {
             "id": "2c918086795c4708017966739dac784f",
             "type": "ENTITLEMENT",
             "name": "Power Users"
+        },
+        {
+            "id": "2c9180877962e25001796672f62206ec",
+            "type": "ENTITLEMENT",
+            "name": "Standard"
         }
     ],
     "requestable": true,

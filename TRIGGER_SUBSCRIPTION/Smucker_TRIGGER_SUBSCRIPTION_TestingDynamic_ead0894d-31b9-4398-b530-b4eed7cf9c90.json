@@ -1,6 +1,6 @@
 {
-    "triggerId": "idn:access-request-dynamic-approver",
     "responseDeadline": "PT25H",
+    "triggerId": "idn:access-request-dynamic-approver",
     "httpConfig": {
         "httpDispatchMode": "ASYNC",
         "httpAuthenticationType": "NO_AUTH",
@@ -10,8 +10,8 @@
     },
     "triggerName": "Access Request Dynamic Approver",
     "description": "TestingDynamic",
-    "id": "ead0894d-31b9-4398-b530-b4eed7cf9c90",
     "enabled": false,
+    "id": "ead0894d-31b9-4398-b530-b4eed7cf9c90",
     "type": "HTTP",
     "name": "TestingDynamic"
 }

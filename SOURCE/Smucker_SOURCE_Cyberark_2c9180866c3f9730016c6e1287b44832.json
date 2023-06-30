@@ -13,11 +13,11 @@
         "name": "Scott_Geske"
     },
     "features": [
+        "ENABLE",
+        "PASSWORD",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "DISCOVER_SCHEMA",
-        "ENABLE",
-        "PASSWORD"
+        "DISCOVER_SCHEMA"
     ],
     "schemas": [
         {

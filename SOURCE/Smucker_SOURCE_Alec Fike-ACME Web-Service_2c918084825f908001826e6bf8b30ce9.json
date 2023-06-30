@@ -14,10 +14,10 @@
     },
     "features": [
         "PROVISIONING",
-        "AUTHENTICATE",
         "PASSWORD",
+        "UNLOCK",
         "ENABLE",
-        "UNLOCK"
+        "AUTHENTICATE"
     ],
     "schemas": [
         {

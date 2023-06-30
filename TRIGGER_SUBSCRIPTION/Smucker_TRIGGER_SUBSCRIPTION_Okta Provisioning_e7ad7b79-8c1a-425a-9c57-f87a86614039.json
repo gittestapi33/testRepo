@@ -1,6 +1,6 @@
 {
-    "triggerId": "idn:post-provisioning",
     "responseDeadline": "PT1H",
+    "triggerId": "idn:post-provisioning",
     "httpConfig": {
         "httpDispatchMode": "SYNC",
         "httpAuthenticationType": "NO_AUTH",
@@ -10,8 +10,8 @@
     },
     "triggerName": "Provisioning Completed",
     "description": "",
-    "id": "e7ad7b79-8c1a-425a-9c57-f87a86614039",
     "enabled": false,
+    "id": "e7ad7b79-8c1a-425a-9c57-f87a86614039",
     "type": "HTTP",
     "name": "Okta Provisioning"
 }

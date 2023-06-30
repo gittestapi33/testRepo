@@ -13,20 +13,20 @@
         "name": "Eric.Mendes_admin"
     },
     "features": [
+        "CURRENT_PASSWORD",
         "ENABLE",
-        "MANAGER_LOOKUP",
-        "AUTHENTICATE",
-        "PASSWORD",
+        "SYNC_PROVISIONING",
         "UNSTRUCTURED_TARGETS",
+        "NO_PERMISSIONS_PROVISIONING",
+        "SEARCH",
+        "MANAGER_LOOKUP",
+        "PROVISIONING",
+        "PASSWORD",
+        "AUTHENTICATE",
+        "UNLOCK",
         "GROUP_PROVISIONING",
         "NO_GROUP_PERMISSIONS_PROVISIONING",
-        "CURRENT_PASSWORD",
-        "NO_PERMISSIONS_PROVISIONING",
-        "UNLOCK",
-        "PROVISIONING",
-        "GROUPS_HAVE_MEMBERS",
-        "SYNC_PROVISIONING",
-        "SEARCH"
+        "GROUPS_HAVE_MEMBERS"
     ],
     "schemas": [
         {

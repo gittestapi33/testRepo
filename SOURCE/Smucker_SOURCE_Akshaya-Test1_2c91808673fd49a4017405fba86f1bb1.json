@@ -13,12 +13,12 @@
         "name": "Akshaya_Iyer"
     },
     "features": [
-        "SEARCH",
         "PROVISIONING",
-        "AUTHENTICATE",
         "SYNC_PROVISIONING",
         "PASSWORD",
-        "ENABLE"
+        "ENABLE",
+        "AUTHENTICATE",
+        "SEARCH"
     ],
     "schemas": [
         {

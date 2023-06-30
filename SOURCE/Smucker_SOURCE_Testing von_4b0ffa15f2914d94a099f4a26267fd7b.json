@@ -13,13 +13,13 @@
         "name": "Chatter Expert"
     },
     "features": [
-        "ENABLE",
-        "GROUP_PROVISIONING",
         "PROVISIONING",
-        "UNLOCK",
+        "SYNC_PROVISIONING",
         "DIRECT_PERMISSIONS",
+        "GROUP_PROVISIONING",
+        "UNLOCK",
         "DISCOVER_SCHEMA",
-        "SYNC_PROVISIONING"
+        "ENABLE"
     ],
     "schemas": [
         {

@@ -13,9 +13,9 @@
         "name": "Alex_Alvarez"
     },
     "features": [
-        "PROVISIONING",
-        "PASSWORD",
         "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
         "SEARCH"
     ],
     "schemas": [

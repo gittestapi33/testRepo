@@ -13,10 +13,10 @@
         "name": "jack.boike"
     },
     "features": [
-        "PROVISIONING",
-        "PASSWORD",
-        "UNLOCK",
         "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK",
         "AUTHENTICATE"
     ],
     "schemas": [

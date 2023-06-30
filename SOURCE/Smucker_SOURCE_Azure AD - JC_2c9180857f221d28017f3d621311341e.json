@@ -13,12 +13,12 @@
         "name": "Joaquin_Conti"
     },
     "features": [
+        "ENABLE",
+        "PASSWORD",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "ENABLE",
         "SEARCH",
-        "AUTHENTICATE",
-        "PASSWORD"
+        "AUTHENTICATE"
     ],
     "schemas": [
         {

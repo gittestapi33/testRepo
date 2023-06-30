@@ -13,10 +13,10 @@
         "name": "Alec_Fike"
     },
     "features": [
+        "PROVISIONING",
+        "PASSWORD",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD",
-        "PROVISIONING",
         "UNLOCK"
     ],
     "schemas": [

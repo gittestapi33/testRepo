@@ -13,10 +13,10 @@
         "name": "joshua_goldwasser"
     },
     "features": [
-        "PROVISIONING",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD"
+        "PASSWORD",
+        "PROVISIONING"
     ],
     "schemas": [
         {

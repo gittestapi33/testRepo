@@ -13,9 +13,9 @@
         "name": "jack.boike"
     },
     "features": [
+        "SEARCH",
         "PROVISIONING",
-        "SYNC_PROVISIONING",
-        "SEARCH"
+        "SYNC_PROVISIONING"
     ],
     "schemas": [
         {

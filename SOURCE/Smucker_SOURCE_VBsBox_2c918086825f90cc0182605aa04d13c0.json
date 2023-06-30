@@ -14,10 +14,10 @@
     },
     "features": [
         "ENABLE",
+        "GROUP_PROVISIONING",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "SEARCH",
-        "GROUP_PROVISIONING"
+        "SEARCH"
     ],
     "schemas": [
         {

@@ -1,6 +1,6 @@
 {
-    "triggerId": "idn:identity-attributes-changed",
     "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
     "httpConfig": {
         "httpDispatchMode": "SYNC",
         "httpAuthenticationType": "BASIC_AUTH",
@@ -13,8 +13,8 @@
     },
     "triggerName": "Identity Attributes Changed",
     "description": "Terminated user remove role access",
-    "id": "ec345872-0594-46ad-bdf0-430169d43fbc",
     "enabled": false,
+    "id": "ec345872-0594-46ad-bdf0-430169d43fbc",
     "type": "HTTP",
     "name": "Ganesh P"
 }

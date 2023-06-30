@@ -15,10 +15,10 @@
     "features": [
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "DIRECT_PERMISSIONS",
         "ENABLE",
         "PASSWORD",
-        "DIRECT_PERMISSIONS"
+        "NO_GROUP_PERMISSIONS_PROVISIONING"
     ],
     "schemas": [
         {

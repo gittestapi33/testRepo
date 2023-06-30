@@ -13,13 +13,13 @@
         "name": "Alec_Fike"
     },
     "features": [
-        "GROUP_PROVISIONING",
-        "DISCOVER_SCHEMA",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "ENABLE",
         "DIRECT_PERMISSIONS",
-        "UNLOCK"
+        "GROUP_PROVISIONING",
+        "UNLOCK",
+        "ENABLE",
+        "DISCOVER_SCHEMA"
     ],
     "schemas": [
         {

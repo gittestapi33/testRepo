@@ -13,11 +13,11 @@
         "name": "Alex_Alvarez"
     },
     "features": [
+        "PROVISIONING",
+        "PASSWORD",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD",
-        "UNLOCK",
-        "PROVISIONING"
+        "UNLOCK"
     ],
     "schemas": [
         {

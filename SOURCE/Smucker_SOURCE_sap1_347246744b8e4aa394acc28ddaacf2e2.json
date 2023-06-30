@@ -13,14 +13,14 @@
         "name": "a1"
     },
     "features": [
-        "ENABLE",
-        "NO_GROUP_PERMISSIONS_PROVISIONING",
-        "PASSWORD",
         "PROVISIONING",
+        "PASSWORD",
         "SYNC_PROVISIONING",
+        "ENABLE",
+        "AUTHENTICATE",
         "UNLOCK",
-        "SEARCH",
-        "AUTHENTICATE"
+        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "SEARCH"
     ],
     "schemas": [
         {

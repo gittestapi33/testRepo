@@ -17,14 +17,14 @@
     },
     "entitlements": [
         {
-            "id": "2c9180846ecd33e1016ed23606e30954",
-            "type": "ENTITLEMENT",
-            "name": "Win-Admins"
-        },
-        {
             "id": "2c9180866c6d6a8e016c7283be355ca2",
             "type": "ENTITLEMENT",
             "name": "Human Resources"
+        },
+        {
+            "id": "2c9180846ecd33e1016ed23606e30954",
+            "type": "ENTITLEMENT",
+            "name": "Win-Admins"
         }
     ],
     "requestable": true,

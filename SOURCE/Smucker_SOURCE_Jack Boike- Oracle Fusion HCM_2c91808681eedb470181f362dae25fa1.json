@@ -13,8 +13,8 @@
         "name": "jack.boike"
     },
     "features": [
-        "PROVISIONING",
-        "SEARCH"
+        "SEARCH",
+        "PROVISIONING"
     ],
     "schemas": [
         {

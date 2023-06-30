@@ -13,20 +13,20 @@
         "name": "viswanathan.balakumar"
     },
     "features": [
-        "PASSWORD",
-        "MANAGER_LOOKUP",
-        "SEARCH",
-        "CURRENT_PASSWORD",
-        "GROUP_PROVISIONING",
-        "NO_PERMISSIONS_PROVISIONING",
         "ENABLE",
-        "NO_GROUP_PERMISSIONS_PROVISIONING",
-        "PROVISIONING",
-        "SYNC_PROVISIONING",
-        "UNLOCK",
-        "UNSTRUCTURED_TARGETS",
+        "MANAGER_LOOKUP",
         "AUTHENTICATE",
-        "GROUPS_HAVE_MEMBERS"
+        "PASSWORD",
+        "UNSTRUCTURED_TARGETS",
+        "GROUP_PROVISIONING",
+        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "CURRENT_PASSWORD",
+        "NO_PERMISSIONS_PROVISIONING",
+        "PROVISIONING",
+        "UNLOCK",
+        "GROUPS_HAVE_MEMBERS",
+        "SYNC_PROVISIONING",
+        "SEARCH"
     ],
     "schemas": [
         {

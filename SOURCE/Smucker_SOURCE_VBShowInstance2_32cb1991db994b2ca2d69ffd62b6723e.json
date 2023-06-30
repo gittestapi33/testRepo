@@ -15,11 +15,11 @@
     "features": [
         "ENABLE",
         "PASSWORD",
+        "GROUP_PROVISIONING",
+        "UNLOCK",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "UNLOCK",
-        "SEARCH",
-        "GROUP_PROVISIONING"
+        "SEARCH"
     ],
     "schemas": [
         {

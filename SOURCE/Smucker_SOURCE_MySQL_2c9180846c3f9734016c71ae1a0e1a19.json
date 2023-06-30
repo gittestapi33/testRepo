@@ -14,11 +14,11 @@
     },
     "features": [
         "ENABLE",
-        "GROUP_PROVISIONING",
         "PROVISIONING",
+        "SYNC_PROVISIONING",
         "UNLOCK",
         "DISCOVER_SCHEMA",
-        "SYNC_PROVISIONING"
+        "GROUP_PROVISIONING"
     ],
     "schemas": [
         {

@@ -14,14 +14,14 @@
     },
     "features": [
         "ENABLE",
-        "CURRENT_PASSWORD",
-        "AUTHENTICATE",
         "PASSWORD",
-        "UNLOCK",
         "PROVISIONING",
-        "DISCOVER_SCHEMA",
         "SYNC_PROVISIONING",
-        "SEARCH"
+        "UNLOCK",
+        "SEARCH",
+        "CURRENT_PASSWORD",
+        "DISCOVER_SCHEMA",
+        "AUTHENTICATE"
     ],
     "schemas": [
         {

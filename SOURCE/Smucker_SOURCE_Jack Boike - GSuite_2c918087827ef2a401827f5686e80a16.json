@@ -13,12 +13,12 @@
         "name": "jack.boike"
     },
     "features": [
-        "ENABLE",
-        "PASSWORD",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "SEARCH",
-        "GROUP_PROVISIONING"
+        "GROUP_PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "SEARCH"
     ],
     "schemas": [
         {

@@ -13,14 +13,14 @@
         "name": "jack.boike"
     },
     "features": [
+        "GROUP_PROVISIONING",
+        "SEARCH",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "GROUP_PROVISIONING",
         "MANAGER_LOOKUP",
         "PASSWORD",
-        "UNLOCK",
         "ENABLE",
-        "SEARCH"
+        "UNLOCK"
     ],
     "schemas": [
         {

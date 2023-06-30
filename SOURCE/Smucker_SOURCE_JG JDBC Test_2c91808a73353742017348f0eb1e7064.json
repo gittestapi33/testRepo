@@ -13,12 +13,12 @@
         "name": "joshua_goldwasser"
     },
     "features": [
-        "PROVISIONING",
-        "SYNC_PROVISIONING",
-        "UNLOCK",
+        "ENABLE",
         "GROUP_PROVISIONING",
+        "PROVISIONING",
+        "UNLOCK",
         "DISCOVER_SCHEMA",
-        "ENABLE"
+        "SYNC_PROVISIONING"
     ],
     "schemas": [
         {

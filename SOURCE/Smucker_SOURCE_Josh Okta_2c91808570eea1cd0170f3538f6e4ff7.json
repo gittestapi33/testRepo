@@ -13,15 +13,15 @@
         "name": "joshua_goldwasser"
     },
     "features": [
-        "SYNC_PROVISIONING",
-        "PROVISIONING",
-        "UNLOCK",
-        "CURRENT_PASSWORD",
-        "DISCOVER_SCHEMA",
         "ENABLE",
-        "SEARCH",
+        "CURRENT_PASSWORD",
         "AUTHENTICATE",
-        "PASSWORD"
+        "PASSWORD",
+        "UNLOCK",
+        "PROVISIONING",
+        "DISCOVER_SCHEMA",
+        "SYNC_PROVISIONING",
+        "SEARCH"
     ],
     "schemas": [
         {

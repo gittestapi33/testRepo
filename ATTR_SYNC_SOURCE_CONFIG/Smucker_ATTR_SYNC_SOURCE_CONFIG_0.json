@@ -1,14 +1,14 @@
 {
     "attributes": [
         {
-            "enabled": true,
             "displayName": "Title",
+            "enabled": true,
             "name": "title",
             "target": "title"
         },
         {
-            "enabled": true,
             "displayName": "Department",
+            "enabled": true,
             "name": "department",
             "target": "department"
         }

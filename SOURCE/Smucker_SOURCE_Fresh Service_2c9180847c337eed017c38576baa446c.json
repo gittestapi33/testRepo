@@ -13,10 +13,10 @@
         "name": "ryan.blocker"
     },
     "features": [
+        "PROVISIONING",
+        "PASSWORD",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD",
-        "PROVISIONING",
         "UNLOCK"
     ],
     "schemas": [

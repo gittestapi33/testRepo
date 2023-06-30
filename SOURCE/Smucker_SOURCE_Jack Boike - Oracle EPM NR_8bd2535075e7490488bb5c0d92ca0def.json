@@ -15,8 +15,8 @@
     "features": [
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "PASSWORD",
-        "ENABLE"
+        "ENABLE",
+        "PASSWORD"
     ],
     "schemas": [
         {

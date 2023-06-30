@@ -13,9 +13,9 @@
         "name": "a11"
     },
     "features": [
-        "PROVISIONING",
+        "ENABLE",
         "PASSWORD",
-        "ENABLE"
+        "PROVISIONING"
     ],
     "schemas": [
         {

@@ -13,13 +13,13 @@
         "name": "Alex_Alvarez"
     },
     "features": [
-        "PROVISIONING",
-        "SYNC_PROVISIONING",
-        "DIRECT_PERMISSIONS",
         "GROUP_PROVISIONING",
-        "UNLOCK",
+        "DISCOVER_SCHEMA",
+        "SYNC_PROVISIONING",
+        "PROVISIONING",
         "ENABLE",
-        "DISCOVER_SCHEMA"
+        "UNLOCK",
+        "DIRECT_PERMISSIONS"
     ],
     "schemas": [
         {

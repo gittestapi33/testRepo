@@ -13,20 +13,20 @@
         "name": "a1"
     },
     "features": [
-        "ENABLE",
-        "MANAGER_LOOKUP",
-        "AUTHENTICATE",
-        "PASSWORD",
-        "UNSTRUCTURED_TARGETS",
         "GROUP_PROVISIONING",
-        "NO_GROUP_PERMISSIONS_PROVISIONING",
-        "CURRENT_PASSWORD",
-        "NO_PERMISSIONS_PROVISIONING",
-        "PROVISIONING",
-        "UNLOCK",
+        "ENABLE",
         "GROUPS_HAVE_MEMBERS",
+        "SEARCH",
+        "AUTHENTICATE",
+        "NO_PERMISSIONS_PROVISIONING",
+        "PASSWORD",
+        "PROVISIONING",
         "SYNC_PROVISIONING",
-        "SEARCH"
+        "MANAGER_LOOKUP",
+        "UNLOCK",
+        "CURRENT_PASSWORD",
+        "UNSTRUCTURED_TARGETS",
+        "NO_GROUP_PERMISSIONS_PROVISIONING"
     ],
     "schemas": [
         {

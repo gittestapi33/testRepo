@@ -13,8 +13,8 @@
         "name": "ashis.maity"
     },
     "features": [
-        "DISCOVER_SCHEMA",
         "DIRECT_PERMISSIONS",
+        "DISCOVER_SCHEMA",
         "NO_RANDOM_ACCESS"
     ],
     "schemas": [

@@ -13,10 +13,10 @@
         "name": "Akshaya_Iyer"
     },
     "features": [
-        "SEARCH",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "MANAGER_LOOKUP"
+        "MANAGER_LOOKUP",
+        "SEARCH"
     ],
     "schemas": [
         {

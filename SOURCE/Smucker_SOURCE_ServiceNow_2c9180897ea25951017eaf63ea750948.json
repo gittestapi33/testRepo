@@ -13,13 +13,13 @@
         "name": "Priyanka Vangala"
     },
     "features": [
-        "ENABLE",
-        "PASSWORD",
         "PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
         "SYNC_PROVISIONING",
         "UNLOCK",
-        "SEARCH",
-        "GROUP_PROVISIONING"
+        "GROUP_PROVISIONING",
+        "SEARCH"
     ],
     "schemas": [
         {

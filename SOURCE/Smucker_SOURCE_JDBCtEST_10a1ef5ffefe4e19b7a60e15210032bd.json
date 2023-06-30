@@ -13,13 +13,13 @@
         "name": "a10"
     },
     "features": [
-        "GROUP_PROVISIONING",
-        "DISCOVER_SCHEMA",
         "PROVISIONING",
         "SYNC_PROVISIONING",
-        "ENABLE",
+        "DIRECT_PERMISSIONS",
+        "GROUP_PROVISIONING",
         "UNLOCK",
-        "DIRECT_PERMISSIONS"
+        "DISCOVER_SCHEMA",
+        "ENABLE"
     ],
     "schemas": [
         {

@@ -13,11 +13,11 @@
         "name": "Uriel_Sanchez"
     },
     "features": [
+        "PROVISIONING",
+        "UNLOCK",
         "ENABLE",
         "AUTHENTICATE",
-        "PASSWORD",
-        "PROVISIONING",
-        "UNLOCK"
+        "PASSWORD"
     ],
     "schemas": [
         {

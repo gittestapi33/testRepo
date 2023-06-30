@@ -13,9 +13,9 @@
         "name": "jack.boike"
     },
     "features": [
-        "NO_RANDOM_ACCESS",
+        "DIRECT_PERMISSIONS",
         "DISCOVER_SCHEMA",
-        "DIRECT_PERMISSIONS"
+        "NO_RANDOM_ACCESS"
     ],
     "schemas": [
         {

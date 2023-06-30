@@ -1,6 +1,6 @@
 {
-    "triggerId": "idn:post-provisioning",
     "responseDeadline": "PT1H",
+    "triggerId": "idn:post-provisioning",
     "httpConfig": {
         "httpDispatchMode": "SYNC",
         "httpAuthenticationType": "BASIC_AUTH",
@@ -13,8 +13,8 @@
     },
     "triggerName": "Provisioning Completed",
     "description": "",
-    "id": "41b0039f-1ee4-45d4-8b49-8181c97b2b30",
     "enabled": false,
+    "id": "41b0039f-1ee4-45d4-8b49-8181c97b2b30",
     "type": "HTTP",
     "name": "Test Provisioning Completed"
 }
