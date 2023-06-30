@@ -1,0 +1,492 @@
+{
+    "id": "6d86b72c1d0b46128acef0f9316b1726",
+    "name": "Jack Boike - EBS JDBC",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "Jack Boike - EBS JDBC",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "DIRECT_PERMISSIONS",
+        "GROUP_PROVISIONING",
+        "UNLOCK",
+        "DISCOVER_SCHEMA",
+        "ENABLE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "USER_ID",
+            "displayAttribute": "USER_NAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "USER_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USER_NAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USER_ID",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "USER_ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMPLOYEE_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CUSTOMER_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SUPPLIER_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PERSON_PARTY_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PERSON_PARTY_ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "START_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "START_DATE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "END_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USER_DESCRIPTION",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMAIL_ADDRESS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LAST_LOGON_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "RESPONSIBILITY_ID",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "3d706a8559d249b5b6f09ac76e9dd29b",
+                        "name": "Responsibilities"
+                    },
+                    "description": "RESPONSIBILITY_ID",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "813c470558cb4d64a5e9e7725072b53f",
+            "name": "account",
+            "created": "2023-04-30T16:59:25.926Z",
+            "modified": "2023-04-30T16:59:26.764Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [],
+            "id": "c79df92463be4684931d9b235033b304",
+            "name": "group",
+            "created": "2023-04-30T16:59:25.926Z",
+            "modified": "2023-04-30T16:59:26.046Z"
+        },
+        {
+            "nativeObjectType": "Responsibilities",
+            "identityAttribute": "RESPONSIBILITY_ID",
+            "displayAttribute": "RESPONSIBILITY_NAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {
+                "description": "Oracle EBS Responsibilities"
+            },
+            "attributes": [
+                {
+                    "name": "RESPONSIBILITY_ID",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "Responsibility ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "RESPONSIBILITY_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "APPLICATION_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Application Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "APPLICATION_ID",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "Application ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SECURITY_GROUP_ID",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "Security Group ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "START_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Start Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "END_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "End Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Responsibility Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "3d706a8559d249b5b6f09ac76e9dd29b",
+            "name": "Responsibilities",
+            "created": "2023-04-30T16:59:26.819Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "deltaAggregationEnabled": false,
+        "isAdvance": "false",
+        "group.url": "jdbc:oracle:thin:@10.0.0.1:1521:EBSDB",
+        "useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "useStoredProcedureDirectPermission": false,
+        "driverClass": "oracle.jdbc.driver.OracleDriver",
+        "useExecuteQuery": false,
+        "group.useExecuteQuery": false,
+        "indexColumns": [
+            "USER_ID"
+        ],
+        "Responsibilities.isPermissionEnabled": false,
+        "Responsibilities.getObjectSQL": "select d.Responsibility_ID,\n    ftl.application_name || '::' || d.responsibility_name  as RESPONSIBILITY_NAME,\n    d.Description as Description,\n    ftl.application_name,\n    d.responsibility_name as name,\n    d.SECURITY_GROUP_ID,\n    ftl.APPLICATION_ID,\n    r.start_date,r.end_date\nfrom fnd_responsibility_tl d,\n    fnd_application_tl ftl,\n    fnd_responsibility r\nWHERE d.LANGUAGE='US' \n    AND r.responsibility_id = d.responsibility_id\n    AND d.application_id = ftl.application_id\n    AND d.application_id is not null\n    AND (r.start_date <= SYSDATE OR r.start_date IS null)\n    AND (r.end_date >= SYSDATE OR r.end_date IS null)\n   AND d.responsibility_id = '$(identity)'\nORDER BY Responsibility_ID",
+        "Responsibilities.driverClass": "oracle.jdbc.driver.OracleDriver",
+        "sourceConnected": true,
+        "deltaTable": "USER_DELTA",
+        "Responsibilities.useExecuteQuery": false,
+        "isPermissionEnabled": false,
+        "Responsibilities.mergeRows": false,
+        "Responsibilities.url": "jdbc:oracle:thin:@10.0.0.1:1521:EBSDB",
+        "SQL": "SELECT b.user_name AS USER_NAME,\n         b.user_id AS USER_ID,\n         b.employee_id,\n         b.customer_id,\n         b.supplier_id,\n         b.person_party_id,\n         b.start_date,\n         b.end_date,        \n         b.description AS User_Description,\n         b.email_address,\n         b.last_logon_date,\n         d.responsibility_id\n    FROM fnd_user_resp_groups_direct a,\n         fnd_user b,\n         fnd_responsibility_vl c,        \n         fnd_responsibility_tl d,        \n         fnd_application fa,\n         fnd_application_tl ftl\n    WHERE  a.user_id = b.user_id\n        AND a.responsibility_id = c.responsibility_id\n        AND a.responsibility_id = d.responsibility_id\n        AND fa.application_id = a.responsibility_application_id\n        AND fa.application_id = ftl.application_id\n        AND ftl.language   = USERENV('LANG')\n        AND SYSDATE BETWEEN a.start_date AND NVL(a.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN b.start_date AND NVL(b.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN c.start_date AND NVL(c.end_date,SYSDATE + 1)\n        AND b.USER_ID > 1000100\n UNION ALL\nSELECT DISTINCT b.user_name AS USER_NAME,\n        b.user_id AS USER_ID,\n        b.employee_id,\n        b.customer_id,\n        b.supplier_id,\n        b.person_party_id,\n        b.start_date,\n        b.end_date,        \n        b.description as User_Description,\n        b.email_address,\n        b.last_logon_date,\n        d.responsibility_id\n   FROM fnd_user_resp_groups_indirect a,\n         fnd_user b,\n         fnd_responsibility_vl c,        \n         fnd_responsibility_tl d,        \n         fnd_application fa,\n         fnd_application_tl ftl\n    WHERE  a.user_id = b.user_id\n        AND a.responsibility_id = c.responsibility_id\n        AND a.responsibility_id = d.responsibility_id\n        AND fa.application_id = a.responsibility_application_id\n        AND fa.application_id = ftl.application_id\n        AND ftl.language   = USERENV('LANG')\n       AND SYSDATE BETWEEN a.start_date AND NVL(a.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN b.start_date AND NVL(b.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN c.start_date AND NVL(c.end_date,SYSDATE + 1)\n        AND b.USER_ID > 1000100\nORDER BY USER_ID, RESPONSIBILITY_ID",
+        "group.useStoredProcedureGetObject": false,
+        "cloudCacheUpdate": 1682874031519,
+        "Responsibilities.useStoredProcedureGetObject": false,
+        "group.SQL": "select * from apps.fnd_responsibility_tl\nwhere LANGUAGE='US'",
+        "connectorName": "JDBC",
+        "group.useStoredProcedureDirectPermission": false,
+        "since": "2023-04-30T16:59:25.926Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+        "mergeColumns": [
+            "RESPONSIBILITY_ID"
+        ],
+        "supportsDeltaAgg": "true",
+        "group.mergeRows": false,
+        "useStoredProcedureTestConn": false,
+        "mergeRows": true,
+        "Responsibilities.user": "apps",
+        "hasFullAggregationCompleted": true,
+        "jdbcExceptionBucketing": true,
+        "connector_files": "ojdbc8.jar",
+        "testConnQuery": "SELECT 1 FROM DUAL",
+        "group.user": "apps",
+        "deleteThresholdPercentage": 10,
+        "Responsibilities.SQL": "select d.Responsibility_ID,\n    ftl.application_name || '::' || d.responsibility_name  as RESPONSIBILITY_NAME,\n    d.Description as Description,\n    ftl.application_name,\n    d.responsibility_name as name,\n    d.SECURITY_GROUP_ID,\n    ftl.APPLICATION_ID,\n    r.start_date,r.end_date\nfrom fnd_responsibility_tl d,\n    fnd_application_tl ftl,\n    fnd_responsibility r\nWHERE d.LANGUAGE='US' \n    AND r.responsibility_id = d.responsibility_id\n    AND d.application_id = ftl.application_id\n    AND d.application_id is not null\n    AND (r.start_date <= SYSDATE OR r.start_date IS null)\n    AND (r.end_date >= SYSDATE OR r.end_date IS null)\nORDER BY Responsibility_ID",
+        "group.useStoredProcedureSqlStmt": false,
+        "url": "jdbc:oracle:thin:@10.0.0.1:1521:EBSDB",
+        "Responsibilities.useStoredProcedureSqlStmt": false,
+        "templateApplication": "JDBC Template",
+        "group.driverClass": "oracle.jdbc.driver.OracleDriver",
+        "encrypted": "password,group.password,Responsibilities.password",
+        "group.isPermissionEnabled": false,
+        "Responsibilities.useStoredProcedureDirectPermission": false,
+        "healthy": false,
+        "cloudDisplayName": "Jack Boike - EBS JDBC",
+        "getObjectSQL": "SELECT distinct b.user_name AS USER_NAME,\n         b.user_id AS USER_ID,\n         b.employee_id,\n         b.customer_id,\n         b.supplier_id,\n         b.person_party_id,\n         b.start_date,\n         b.end_date,        \n         b.description as User_Description,\n         b.email_address,\n         b.last_logon_date,\n         d.responsibility_id\n    FROM fnd_user_resp_groups_direct a,\n         fnd_user b,\n         fnd_responsibility_vl c,        \n         fnd_responsibility_tl d,        \n         fnd_application fa,\n         fnd_application_tl ftl\n    WHERE a.user_id = b.user_id\n        AND a.responsibility_id = c.responsibility_id\n        AND a.responsibility_id = d.responsibility_id\n        AND fa.application_id = a.responsibility_application_id\n        AND fa.application_id = ftl.application_id\n        AND ftl.language   = USERENV('LANG')\n        AND SYSDATE BETWEEN a.start_date AND NVL(a.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN b.start_date AND NVL(b.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN c.start_date AND NVL(c.end_date,SYSDATE + 1)\n        AND b.USER_ID = $(identity)\n UNION ALL\nSELECT DISTINCT b.user_name AS USER_NAME,\n        b.user_id AS USER_ID,\n        b.employee_id,\n        b.customer_id,\n        b.supplier_id,\n        b.person_party_id,\n        b.start_date,\n        b.end_date,        \n        b.description as User_Description,\n        b.email_address,\n        b.last_logon_date,\n        d.responsibility_id\n   FROM fnd_user_resp_groups_indirect a,\n         fnd_user b,\n         fnd_responsibility_vl c,        \n         fnd_responsibility_tl d,        \n         fnd_application fa,\n         fnd_application_tl ftl\n    WHERE  a.user_id = b.user_id\n        AND a.responsibility_id = c.responsibility_id\n        AND a.responsibility_id = d.responsibility_id\n        AND fa.application_id = a.responsibility_application_id\n        AND fa.application_id = ftl.application_id\n        AND ftl.language   = USERENV('LANG')\n        AND SYSDATE BETWEEN a.start_date AND NVL(a.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN b.start_date AND NVL(b.end_date,SYSDATE + 1)\n        AND SYSDATE BETWEEN c.start_date AND NVL(c.end_date,SYSDATE + 1)\n        AND b.USER_ID = $(identity)\nORDER BY responsibility_id",
+        "useStoredProcedureSqlStmt": false,
+        "group.getObjectSQL": "sselect d.Responsibility_ID , \n    ftl.application_name || '::' || d.responsibility_name ,\n    d.Description,\n    ftl.application_name,\n    d.SECURITY_GROUP_ID,\n    ftl.APPLICATION_ID\nfrom fnd_responsibility_tl d,\n    fnd_application_tl ftl\nWHERE d.LANGUAGE='US' \n    AND d.application_id = ftl.application_id\n    AND d.application_id is not null\nAND d.responsibility_id = '$(identity)'",
+        "user": "apps"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "USER_NAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "uid"
+                        }
+                    },
+                    "attributes": {
+                        "template": "$(uid)",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudMaxSize": "20",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "OWNER",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "SEED"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "S@ilp0int"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "DESCRIPTION",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "displayName"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "START_DATE",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "startDate"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "date",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "END_DATE",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "endDate"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "date",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "PASSWORD_DATE",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "date",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "PASSWORD_EXPR",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "PASSWORD_NO_OF_DAYS",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EMPLOYEE_ID",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "identificationNumber"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EMAIL_ADDRESS",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "FAX",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "CUSTOMER_ID",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

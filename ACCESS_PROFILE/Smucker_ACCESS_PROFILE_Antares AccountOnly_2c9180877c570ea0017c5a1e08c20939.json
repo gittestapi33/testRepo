@@ -1,0 +1,37 @@
+{
+    "id": "2c9180877c570ea0017c5a1e08c20939",
+    "name": "Antares AccountOnly",
+    "description": "Account_only  For testing",
+    "created": "2021-10-07T09:38:10.243Z",
+    "modified": "2022-11-10T20:08:02.761Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877c3c73d7017c4a1a4492640a",
+        "name": "Ganesh Pagar (TRANSFORM)"
+    },
+    "source": {
+        "id": "2c9180847c337ee0017c4a0ef0e71a8b",
+        "type": "SOURCE",
+        "name": "Antares test"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180867c3c732c017c4a932a620fd6",
+            "type": "ENTITLEMENT",
+            "name": "Account_Only"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

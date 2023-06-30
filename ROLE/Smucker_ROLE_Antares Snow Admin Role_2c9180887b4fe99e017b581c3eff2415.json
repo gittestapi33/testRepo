@@ -1,0 +1,69 @@
+{
+    "id": "2c9180887b4fe99e017b581c3eff2415",
+    "name": "Antares Snow Admin Role",
+    "created": "2021-08-18T07:14:11.327Z",
+    "modified": "2022-11-10T20:08:02.698Z",
+    "description": "test role for Antares test integration",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180837ae54ded017ae71ac79064dc",
+        "name": "priyanka_vangala"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "2c9180887b4fe99e017b58198dc82411",
+            "type": "ACCESS_PROFILE",
+            "name": "Antares Snow Admin "
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec444e6505",
+                "name": "Aaron.Nichols",
+                "aliasName": "106"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180867a111c17017a1ad53042497c",
+                "name": "Alan Bradley",
+                "aliasName": "Alan.Bradley"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c91808473bae8d60173e149e79f414e",
+                "name": "Ankita Katare",
+                "aliasName": "Ankita_Katare"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180886c6377f4016c6ca17ebb1f34",
+                "name": "Ganesh Pagar",
+                "aliasName": "Ganesh_Pagar"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180837ae54ded017ae71ac79064dc",
+                "name": "priyanka_vangala",
+                "aliasName": "priyanka_vangala"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

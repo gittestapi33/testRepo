@@ -1,0 +1,31 @@
+{
+    "id": "2c9180867fd734ff017fda7aa6860cb3",
+    "name": "Admin test- test",
+    "description": "testing",
+    "created": "2022-03-30T10:59:05.478Z",
+    "modified": "2023-03-02T17:24:04.029Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877c3c73d7017c4a1a4494640c",
+        "name": "Priyanka Vangala (TRANSFORM)"
+    },
+    "source": {
+        "id": "2c9180867acb0c31017aec4e058a0a0b",
+        "type": "SOURCE",
+        "name": "SNOW -IDN"
+    },
+    "entitlements": [],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

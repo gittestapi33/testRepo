@@ -1,0 +1,900 @@
+{
+    "id": "9dd425db15ef4500be5f65214a7ab19e",
+    "name": "Test Salesforce",
+    "type": "Salesforce",
+    "connectorClass": "sailpoint.connector.ForceConnector",
+    "connectorScriptName": "salesforce-angularsc",
+    "description": "Test Salesforce",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "SYNC_PROVISIONING",
+        "PROVISIONING",
+        "DIRECT_PERMISSIONS",
+        "ENABLE",
+        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "PASSWORD"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "Id",
+            "displayAttribute": "Username",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Alias",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "City",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CommunityNickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CompanyName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CallCenterId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Division",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EmployeeNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Extension",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Fax",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IsActive",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IsFrozen",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Flag that indicates if the user is frozen in Salesforce.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FirstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EmailEncodingKey",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "UserPermissionsMarketingUser",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "UserPermissionsMobileUser",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "UserPermissionsOfflineUser",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "UserPermissionsSFContentUser",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Phone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ProfileId",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "9b9f6bfe214547dfbd84a1310ee3c2b8",
+                        "name": "group"
+                    },
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "ProfileName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PublicGroups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "d50f3c5eba364d37bc4e619afa2f792d",
+                        "name": "PublicGroups"
+                    },
+                    "description": null,
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "QueueNames",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Queues assigned to the user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "ReceivesAdminInfoEmails",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Role",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "6929709519fd4b54966b23f2488ab22a",
+                        "name": "Role"
+                    },
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "UserType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "State",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ReceivesInfoEmails",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PermissionSet",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "07374cbfb28d41c6b675c516080b6832",
+                        "name": "PermissionSet"
+                    },
+                    "description": null,
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "ManagerId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PermissionSetGroup",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "117f0e7dde2d4efaab29a6150b9bd3c4",
+                        "name": "PermissionSetGroup"
+                    },
+                    "description": null,
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "PermissionSetLicense",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "151f716a7ceb4034b35b17f10b81f1f7",
+                        "name": "PermissionSetLicense"
+                    },
+                    "description": null,
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "ManagedPackage",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "7a7e5a7c6a7b4c9ba900b116b391dc89",
+                        "name": "ManagedPackage"
+                    },
+                    "description": "Managed Package assigned to a user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "CollaborationGroup",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "53140964bcbe41e7847c7082309c12aa",
+                        "name": "CollaborationGroup"
+                    },
+                    "description": "Collaboration Group Id assigned to a user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "a9ce9e31913942b184920d01bde30b4a",
+            "name": "account",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Profile",
+            "identityAttribute": "Id",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": true,
+            "features": [
+                "NO_PERMISSIONS_PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "UserType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "9b9f6bfe214547dfbd84a1310ee3c2b8",
+            "name": "group",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": "2022-11-30T21:24:36.359Z"
+        },
+        {
+            "nativeObjectType": "Role",
+            "identityAttribute": "Id",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "6929709519fd4b54966b23f2488ab22a",
+            "name": "Role",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "PublicGroups",
+            "identityAttribute": "Name",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "d50f3c5eba364d37bc4e619afa2f792d",
+            "name": "PublicGroups",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "PermissionSet",
+            "identityAttribute": "Name",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {
+                "descriptionAttribute": "Description"
+            },
+            "attributes": [
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Label",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "07374cbfb28d41c6b675c516080b6832",
+            "name": "PermissionSet",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "PermissionSetGroup",
+            "identityAttribute": "Id",
+            "displayAttribute": "MasterLabel",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {
+                "descriptionAttribute": "Description"
+            },
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "MasterLabel",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "117f0e7dde2d4efaab29a6150b9bd3c4",
+            "name": "PermissionSetGroup",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "PermissionSetLicense",
+            "identityAttribute": "Id",
+            "displayAttribute": "MasterLabel",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "MasterLabel",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "151f716a7ceb4034b35b17f10b81f1f7",
+            "name": "PermissionSetLicense",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "ManagedPackage",
+            "identityAttribute": "Id",
+            "displayAttribute": "NamespacePrefix",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Managed Package Id.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "NamespacePrefix",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Managed Package NamespacePrefix.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "7a7e5a7c6a7b4c9ba900b116b391dc89",
+            "name": "ManagedPackage",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "CollaborationGroup",
+            "identityAttribute": "Id",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Collaboration Group Id.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Collaboration Group Name.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CollaborationType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Collaboration Group Type.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "53140964bcbe41e7847c7082309c12aa",
+            "name": "CollaborationGroup",
+            "created": "2022-11-30T21:24:36.151Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "customTimeOut": "1",
+        "sysDescriptions": {},
+        "nativeChangeDetectionEnabled": false,
+        "nativeChangeDetectionAttributeScope": "entitlements",
+        "PublicGroupIdentityAttributeAsDeveloperName": true,
+        "deleteThresholdPercentage": 10,
+        "isActive": false,
+        "connectionType": "direct",
+        "url": "https://login.salesforce.com/services/Soap/u/",
+        "isOAuth2ConfigEnabled": false,
+        "disableUserCreationEmail": false,
+        "cloudCacheUpdate": 1669843494202,
+        "templateApplication": "Salesforce Template",
+        "encrypted": "clientSecret, private_key, privateKeyPassword, refreshToken",
+        "healthy": false,
+        "cloudDisplayName": "Test Salesforce",
+        "connectorName": "SalesForce",
+        "excludeFrozen": false,
+        "OAuth2TokenURL": "https://login.salesforce.com/services/oauth2/token",
+        "since": "2022-11-30T21:24:36.151Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "Email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Salesforce Template Account Correlation Config",
+        "id": "2c9180846b6c6937016b740d1b743522"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "Alias",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "IsActive",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Username",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Email",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "FirstName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "LastName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "CommunityNickname",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "TimeZoneSidKey",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "LocaleSidKey",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "LanguageLocaleKey",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EmailEncodingKey",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

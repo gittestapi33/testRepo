@@ -1,0 +1,37 @@
+{
+    "id": "2c91808d6e18f914016e4c89786621f3",
+    "name": "IT Access TIer III",
+    "description": "Tier III",
+    "created": "2019-11-08T19:41:48.006Z",
+    "modified": "2023-01-08T19:43:04.455Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180896c971d14016c974c41fc4c97",
+        "name": "emmanuel_martinez"
+    },
+    "source": {
+        "id": "2c9180846c3f9731016c6dd24fec48a4",
+        "type": "SOURCE",
+        "name": "AD - Employees"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180866c6d6a8e016c7283bdb15c9f",
+            "type": "ENTITLEMENT",
+            "name": "Accounting"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

@@ -1,0 +1,131 @@
+{
+    "id": "2c9180866c3f9730016c6e1287b44832",
+    "name": "Cyberark",
+    "type": "SCIM 2.0",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "scim20-angularsc",
+    "description": "Cyberark SCIM Connection",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180846c6377ef016c6c7b2f6a3eb4",
+        "name": "Scott_Geske"
+    },
+    "features": [
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "DISCOVER_SCHEMA"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180866c3f9730016c6e1287b44833",
+            "name": "account",
+            "created": "2019-08-07T21:53:23.892Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Entitlement",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180866c3f9730016c6e1287b44834",
+            "name": "entitlements",
+            "created": "2019-08-07T21:53:23.892Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Role",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180866c3f9730016c6e1287b44835",
+            "name": "roles",
+            "created": "2019-08-07T21:53:23.892Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique identifier for the group ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Displayable Name of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180866c3f9730016c6e1287b44836",
+            "name": "group",
+            "created": "2019-08-07T21:53:23.892Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "load-by-sysclassloader": [
+            "json.jar"
+        ],
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": "false",
+        "deleteThresholdPercentage": 10,
+        "pageSize": "50",
+        "useForAccounts": "true",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.scim2.SCIM2Connector",
+        "cloudCacheUpdate": 1646682219395,
+        "templateApplication": "SCIM 2.0",
+        "encrypted": "refresh_token,oauthTokenInfo,client_secret,oauthBearerToken,additional_payload,private_key, private_key_password,oauth2password",
+        "grant_type": "REFRESH_TOKEN",
+        "healthy": false,
+        "host": "http://10.1.100.63:8080/CyberArk/scim/v2",
+        "cloudDisplayName": "Cyberark",
+        "connectorName": "SCIM 2.0",
+        "authType": "Basic",
+        "user": "SailPoint-user",
+        "explicitAttributesRequest": false,
+        "md5": "24919d1b7fceef795a9987037d59be1b",
+        "since": "2019-08-07T21:53:23.892Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

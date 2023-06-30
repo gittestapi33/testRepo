@@ -1,0 +1,168 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 230,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c9180877dba99d2017dbb1cfd7c0d2a",
+        "name": "Geis - Flat File Auth"
+    },
+    "identityRefreshRequired": true,
+    "identityCount": 8,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "id",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "e-mail",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "familyName",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "givenName",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "name",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "endDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Contract End Date",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "licenseStatus",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "Contract Start Date",
+                                "sourceName": "Geis - Flat File Auth",
+                                "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "LCM flags for geisinger"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "cloudLifecycleState",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "Contract Start Date",
+                                "sourceName": "Geis - Flat File Auth",
+                                "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "LCM state for Geisinger"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "startDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Contract Start Date",
+                        "sourceName": "Geis - Flat File Auth",
+                        "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "testEndDate",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "Contract End Date",
+                                "sourceName": "Geis - Flat File Auth",
+                                "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "LCM End Date Value"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "testStartDate",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "Contract Start Date",
+                                "sourceName": "Geis - Flat File Auth",
+                                "sourceId": "2c9180877dba99d2017dbb1cfd7c0d2a"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Now dateMath"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "ff3df1faa72e43aa9ca49289961daaf0",
+    "name": "Geisinger - Testing",
+    "created": "2021-12-14T22:44:35.234Z",
+    "modified": "2022-11-23T17:06:07.070Z"
+}

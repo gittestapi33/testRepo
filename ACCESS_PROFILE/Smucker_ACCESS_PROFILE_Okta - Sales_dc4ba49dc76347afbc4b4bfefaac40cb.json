@@ -1,0 +1,47 @@
+{
+    "id": "dc4ba49dc76347afbc4b4bfefaac40cb",
+    "name": "Okta - Sales",
+    "description": null,
+    "created": "2022-06-28T15:41:38.467Z",
+    "modified": "2022-11-10T20:08:02.644Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c9180846c3f972e016c729271cb3148",
+        "type": "SOURCE",
+        "name": "AA  - Okta dev214367"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180876c637806016c7294ec7a09b2",
+            "type": "ENTITLEMENT",
+            "name": "Sales Approval Team"
+        },
+        {
+            "id": "2c9180876c637806016c7294ec4309ad",
+            "type": "ENTITLEMENT",
+            "name": "Sales"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

@@ -1,0 +1,310 @@
+{
+    "id": "2c9180857f221d28017f2d28017e6ffb",
+    "name": "AHTestSharepoint",
+    "type": "Microsoft SharePoint Online",
+    "connectorClass": "sailpoint.connector.O365SharepointOnlineConnector",
+    "connectorScriptName": "microsoft-sharepoint-online-angularsc",
+    "description": "AHTest",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877864d273017865ad39104a10",
+        "name": "amit_hansalia"
+    },
+    "features": [
+        "MANAGER_LOOKUP",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "SEARCH"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "LoginName",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "LoginName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Login Name of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display Name of user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "E-mail address of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FirstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First Name of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Name of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Member ID of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180857f221d28017f2d28017e6ffd",
+                        "name": "group"
+                    },
+                    "description": "It specifies all the groups to which user belongs to.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "SiteCollections",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "It specifies all the Site Collections to which user belongs to.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AdminOfSites",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "It specifies all the Site Collections to which user is admin of.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180857f221d28017f2d28017e6ffc",
+            "name": "account",
+            "created": "2022-02-24T19:14:30.910Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "Group URL",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifier (ID) for the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Group URL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "URL to group in a site collection.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display name of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "OwnerTitle",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Owner title of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Azure AD Groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Security DomainGroups for SharePoint Online.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AutoAcceptRequestToJoinLeave",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gets or sets a value that indicates whether the request to join or leave the group can be accepted automatically.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AllowMembersEditMembership",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gets or sets a value that indicates whether the group members can edit membership in the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "RequestToJoinLeaveEmailSetting",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gets or sets the email address to which the requests of the membership are sent.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "OnlyAllowMembersViewMembership",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gets or sets a value that indicates whether only group members are allowed to view the membership of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AllowRequestToJoinLeave",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gets or sets a value that indicates whether to allow users to request membership in the group and request to leave the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180857f221d28017f2d28017e6ffd",
+            "name": "group",
+            "created": "2022-02-24T19:14:30.910Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "deleteThresholdPercentage": 10,
+        "pageSize": "500",
+        "allSites": false,
+        "connectionType": "direct",
+        "useTLSForIQService": "false",
+        "cloudCacheUpdate": 1646682219159,
+        "templateApplication": "Microsoft SharePoint Template",
+        "encrypted": "client_Secret,refresh_token,clientCertificate,private_key,privateKeyPassword,IQServicePassword",
+        "healthy": false,
+        "userPartitions": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9,-,',_",
+        "cloudDisplayName": "AHTestSharepoint",
+        "userExclusionList": "_SPOCache,_SPOCrawler,_SPOCacheRead,_spocrawler,System Account",
+        "connectorName": "Microsoft SharePoint Online",
+        "grantType": "CLIENT_CREDENTIALS",
+        "since": "2022-02-24T19:14:30.910Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "Email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "AccountName",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "displayName",
+                "operation": "EQ",
+                "value": "DisplayName",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Microsoft SharePoint Template Account Correlation Config",
+        "id": "2c9180846b6c6937016b740cc8e034ff"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "UserName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

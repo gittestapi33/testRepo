@@ -1,0 +1,37 @@
+{
+    "id": "937c48fcba9d4097b966fe8e48d7a7ed",
+    "name": "US - Domo participant",
+    "description": "US - Domo participant Access profile",
+    "created": "2023-04-05T15:15:43.899Z",
+    "modified": "2023-04-05T15:17:42.103Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918088837fb78a0183a8cce52f7b4f",
+        "name": "Uriel Sanchez"
+    },
+    "source": {
+        "id": "2c91808a7933afa6017948b7ca2c3008",
+        "type": "SOURCE",
+        "name": "US Domo"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180877966aab30179673e0bc17b6b",
+            "type": "ENTITLEMENT",
+            "name": "Participant"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

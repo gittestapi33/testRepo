@@ -1,0 +1,436 @@
+{
+    "id": "2c91808681eedb470181f362dae25fa1",
+    "name": "Jack Boike- Oracle Fusion HCM",
+    "type": "Oracle Fusion HCM",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "oracle-fusion-hcm-angularsc",
+    "description": "Jack Boike- Oracle Fusion HCM",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "PROVISIONING",
+        "SEARCH"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "PERSON_NUMBER",
+            "displayAttribute": "DISPLAY_NAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "PERSON_NUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique identifier of Person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DISPLAY_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's display name.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "HOME_TELEPHONE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's home telephone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "REGION",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's region",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TERMINATION_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's termination date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CITY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's City",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORK_EMAIL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary work email of person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORKER_TYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person type i.e. Employee, Contingent",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_POSITION_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment position id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_DEPARTMENT_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment department id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_MANAGER_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment manager id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_LOCATION_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment location id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_ACTION_CODE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment's action code i.e. HIRE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_TERMINATION_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment termination date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_JOB_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": " Person' primary assignment job id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_BUSINESS_UNIT_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment business unit id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_WORKER_CATEGORY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment worker category",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_MANAGER_TYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment's manager type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_MANAGER_NUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person number of assignment's manager",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_EFFECTIVE_START_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment effective start date.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_EFFECTIVE_END_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment effective end date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_STATUS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ASSIGNMENT_STATUS_TYPE_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's primary assignment status type Id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LEGAL_ENTITY_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Id of legal employer's legal entity",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "NATIONAL_ID_TYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of person's national Id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "NATIONAL_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's national Id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "NATIONAL_ID_EXPIRATION_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's national Id expiration date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LAST_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last name of Person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FIRST_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First name of Person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ADDRESS_LINE_1",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address line number 1",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ADDRESS_LINE_2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address line number 2",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ADDRESS_LINE_3",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address line number 3",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "HIRE_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's hire date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "COUNTRY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person' Country  ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORK_TELEPHONE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's telephone number of type work  ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORK_MOBILE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's mobile number of type work  ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FUTURE_DATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's future hire or termination date ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FUTURE_ACTION",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person's future action",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808681eedb470181f362dae25fa2",
+            "name": "account",
+            "created": "2022-07-12T17:09:11.010Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "attributeMappings": {
+            "WORK_MOBILE": "phones[?(@.PhoneType=='WM')].PhoneNumber",
+            "ADDRESS_LINE_1": "addresses[?(@.PrimaryFlag==true)].AddressLine1",
+            "ADDRESS_LINE_3": "addresses[?(@.PrimaryFlag==true)].AddressLine3",
+            "ADDRESS_LINE_2": "addresses[?(@.PrimaryFlag==true)].AddressLine2",
+            "PERSON_NUMBER": "PersonNumber",
+            "WORK_TELEPHONE": "phones[?(@.PhoneType=='W1')].PhoneNumber",
+            "LAST_NAME": "names[0].LastName",
+            "DISPLAY_NAME": "names[0].DisplayName",
+            "FIRST_NAME": "names[0].FirstName",
+            "HOME_TELEPHONE": "phones[?(@.PhoneType=='H1')].PhoneNumber",
+            "REGION": "Region",
+            "CITY": "addresses[?(@.PrimaryFlag==true)].TownOrCity",
+            "COUNTRY": "addresses[?(@.PrimaryFlag==true)].Country",
+            "NATIONAL_ID": "nationalIdentifiers[?(@.PrimaryFlag==true)].NationalIdentifierNumber",
+            "NATIONAL_ID_TYPE": "nationalIdentifiers[?(@.PrimaryFlag==true)].NationalIdentifierType",
+            "WORK_EMAIL": "emails[?(@.EmailType=='W1')].EmailAddress",
+            "NATIONAL_ID_EXPIRATION_DATE": "nationalIdentifiers[?(@.PrimaryFlag==true)].ExpirationDate"
+        },
+        "deleteThresholdPercentage": 10,
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.oraclefusionhcm.OracleFusionHCMConnector",
+        "useWorkersApi": true,
+        "cloudCacheUpdate": 1657645762256,
+        "templateApplication": "Oracle Fusion HCM",
+        "doNotMigrate": true,
+        "healthy": false,
+        "cloudDisplayName": "Jack Boike- Oracle Fusion HCM",
+        "connectorName": "Oracle Fusion HCM",
+        "since": "2022-07-12T17:09:11.010Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "WORK_EMAIL",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Oracle Fusion HCM Account Correlation Config",
+        "id": "2c9180846b6c6937016b740cebef350a"
+    },
+    "provisioningPolicies": []
+}

@@ -1,0 +1,42 @@
+{
+    "id": "ee48b00ebdee456f8ec1c9e563b45e03",
+    "name": "Oracle EPM Demo - FCCS Auditor Group",
+    "description": "Oracle EPM Demo - FCCS Auditor Group",
+    "created": "2023-06-08T02:15:11.756Z",
+    "modified": "2023-06-08T02:18:32.808Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "d224187aeb56499390e6e53a7e26565c",
+            "type": "ENTITLEMENT",
+            "name": "Auditor-FCCS"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

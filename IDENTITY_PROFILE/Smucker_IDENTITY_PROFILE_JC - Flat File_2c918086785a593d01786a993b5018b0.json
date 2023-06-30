@@ -1,0 +1,100 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 130,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c918088785b46f70178605b20065393",
+        "name": "JG - Flat File Source"
+    },
+    "identityRefreshRequired": true,
+    "identityCount": 10,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "name",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "e-mail",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "familyName",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "givenName",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "country",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "location",
+                        "sourceName": "JC - Flat File Source",
+                        "sourceId": "2c91808c786a8b7e01786a97e177010f"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "name",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "identificationNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "id",
+                        "sourceName": "JG - Flat File Source",
+                        "sourceId": "2c918088785b46f70178605b20065393"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "2c918086785a593d01786a993b5018b0",
+    "name": "JC - Flat File",
+    "created": "2021-03-25T18:15:30.384Z",
+    "modified": "2022-11-23T17:06:06.943Z"
+}

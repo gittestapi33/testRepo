@@ -1,0 +1,29 @@
+{
+    "members": [
+        {
+            "type": "IDENTITY",
+            "id": "2c9180846c6377ef016c71c41fd444bd",
+            "name": "249"
+        },
+        {
+            "type": "IDENTITY",
+            "id": "2c9180867a111c17017a1ad52fc44978",
+            "name": "Allen.Burton"
+        }
+    ],
+    "connections": null,
+    "description": "Test",
+    "owner": {
+        "displayName": null,
+        "emailAddress": null,
+        "type": "IDENTITY",
+        "id": "2c91808680d7be480180d84eaadc2c23",
+        "name": "JackBoike0008"
+    },
+    "memberCount": 0,
+    "connectionCount": 0,
+    "id": "6e3420cf-fa7e-4975-8cd9-0563736a3823",
+    "name": "Anshul Test",
+    "created": null,
+    "modified": null
+}

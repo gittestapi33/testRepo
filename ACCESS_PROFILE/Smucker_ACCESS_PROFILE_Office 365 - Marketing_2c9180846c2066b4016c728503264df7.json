@@ -1,0 +1,37 @@
+{
+    "id": "2c9180846c2066b4016c728503264df7",
+    "name": "Office 365 - Marketing",
+    "description": "Marketing License",
+    "created": "2019-08-08T18:36:55.462Z",
+    "modified": "2022-11-10T20:08:01.429Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c9180846c3f9734016c6dd7a0da42ec",
+        "type": "SOURCE",
+        "name": "Office 365"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180846c6d8653016c7283bdb31ba3",
+            "type": "ENTITLEMENT",
+            "name": "Marketing"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

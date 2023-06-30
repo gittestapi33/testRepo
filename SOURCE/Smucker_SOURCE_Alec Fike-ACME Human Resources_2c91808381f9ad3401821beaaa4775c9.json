@@ -1,0 +1,351 @@
+{
+    "id": "2c91808381f9ad3401821beaaa4775c9",
+    "name": "Alec Fike-ACME Human Resources",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "Alec Fike-ACME Human Resources",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "features": [
+        "PROVISIONING",
+        "ENABLE",
+        "SYNC_PROVISIONING",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS",
+        "UNLOCK",
+        "GROUP_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "EMPLOYEENUMBER",
+            "displayAttribute": "EMPLOYEENUMBER",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "EMPLOYEENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FIRSTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LASTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PREFERREDFIRSTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PREFERREDLASTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "JOBTITLE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DEPARTMENT",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DEPARTMENTNUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "JOBCODE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "STARTDATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LASTDAYOFWORK",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMPLOYEESTATUS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "COUNTRY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "STATE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CITY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ZIP",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ZIP",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ADDRESS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PREFERREDLANGUUAGE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "MANAGEREMPLOYEENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORKMOBILEPHONENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "WORKPHONENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PERSONALPHONENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PERSONALMOBILEPHONENUMBER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMAIL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PERSONALEMAIL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMPLOYEETYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TRAINEE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808381f9ad3401821beaaa4875ca",
+            "name": "account",
+            "created": "2022-07-20T14:02:20.104Z",
+            "modified": "2022-08-03T13:41:29.248Z"
+        },
+        {
+            "nativeObjectType": "MemberOf",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c918088831421bb0183376509d23e0a",
+            "name": "MemberOf",
+            "created": "2022-09-13T15:08:32.082Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "MemberOf.mergeRows": false,
+        "deltaAggregationEnabled": false,
+        "group.mergeRows": false,
+        "useStoredProcedureTestConn": false,
+        "isAdvance": "false",
+        "mergeRows": false,
+        "useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "useStoredProcedureDirectPermission": false,
+        "driverClass": "com.mysql.cj.jdbc.Driver",
+        "jdbcExceptionBucketing": true,
+        "useExecuteQuery": false,
+        "connector_files": "mysql-connector-java-8.0.29.jar",
+        "testConnQuery": "select count(*)",
+        "jdbcProvisionRule": "jdbcProvisionRule",
+        "cloudIdentityProfileName": "Alec Fike - ACME Human Resources",
+        "sourceConnected": true,
+        "deltaTable": "USER_DELTA",
+        "isPermissionEnabled": false,
+        "deleteThresholdPercentage": 10,
+        "url": "jdbc:mysql://192.168.64.137:3306/identitynowhr",
+        "SQL": "SELECT EMPLOYEENUMBER, FIRSTNAME, LASTNAME, PREFERREDFIRSTNAME, PREFERREDLASTNAME, JOBTITLE, DEPARTMENT, DEPARTMENTNUMBER, JOBCODE, STARTDATE, LASTDAYOFWORK, EMPLOYEESTATUS, COUNTRY, STATE, CITY, ZIP, ADDRESS, PREFERREDLANGUUAGE, MANAGEREMPLOYEENUMBER, WORKMOBILEPHONENUMBER, WORKPHONENUMBER, PERSONALPHONENUMBER, PERSONALMOBILEPHONENUMBER, EMAIL, PERSONALEMAIL, EMPLOYEETYPE, TRAINEE FROM users",
+        "cloudAuthoritativeSourcePrecedence": 310,
+        "cloudCacheUpdate": "1663081712126",
+        "templateApplication": "JDBC Template",
+        "encrypted": "password",
+        "group.isPermissionEnabled": false,
+        "healthy": true,
+        "cloudDisplayName": "Alec Fike-ACME Human Resources",
+        "connectorName": "JDBC",
+        "getObjectSQL": "SELECT EMPLOYEENUMBER, FIRSTNAME, LASTNAME, PREFERREDFIRSTNAME, PREFERREDLASTNAME, JOBTITLE, DEPARTMENT, DEPARTMENTNUMBER, JOBCODE, STARTDATE, LASTDAYOFWORK, EMPLOYEESTATUS, COUNTRY, STATE, CITY, ZIP, ADDRESS, PREFERREDLANGUUAGE, MANAGEREMPLOYEENUMBER, WORKMOBILEPHONENUMBER, WORKPHONENUMBER, PERSONALPHONENUMBER, PERSONALMOBILEPHONENUMBER, EMAIL, PERSONALEMAIL, EMPLOYEETYPE, TRAINEE FROM users WHERE EMPLOYEENUMBER = '$(Identity)'",
+        "useStoredProcedureSqlStmt": false,
+        "user": "root",
+        "since": "2022-09-02T17:45:00.112497Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "uid",
+                "operation": "EQ",
+                "value": "EMPLOYEENUMBER",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Alec Fike-ACME Human Resources [source] Account Correlation",
+        "id": "2c9180858215e19701821cf8c6bf6fc5"
+    },
+    "provisioningPolicies": []
+}

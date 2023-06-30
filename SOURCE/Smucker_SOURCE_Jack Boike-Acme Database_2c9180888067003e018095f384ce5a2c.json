@@ -1,0 +1,316 @@
+{
+    "id": "2c9180888067003e018095f384ce5a2c",
+    "name": "Jack Boike-Acme Database",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "Jack Boike-Acme Database",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "GROUP_PROVISIONING",
+        "UNLOCK",
+        "PROVISIONING",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS",
+        "SYNC_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "USERNAME",
+            "displayAttribute": "USERNAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "USERNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USERNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FIRSTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FIRSTNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LASTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "LASTNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TITLE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "TITLE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USERTYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USERTYPE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DISPLAYNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DISPLAYNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "STATUS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "STATUS",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IIQDisabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "IIQDisabled",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ROLE",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918082818616da0181a2c2113269b9",
+                        "name": "role"
+                    },
+                    "description": "ROLE",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180888067003e018095f384ce5a2d",
+            "name": "account",
+            "created": "2022-05-05T20:40:06.094Z",
+            "modified": "2022-05-17T20:51:45.538Z"
+        },
+        {
+            "nativeObjectType": "role",
+            "identityAttribute": "ROLE",
+            "displayAttribute": "ROLE",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ROLE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ROLE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918082818616da0181a2c2113269b9",
+            "name": "role",
+            "created": "2022-06-27T01:23:56.338Z",
+            "modified": "2022-06-27T01:26:44.711Z"
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "mergeColumns": [
+            "ROLE"
+        ],
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": "false",
+        "group.mergeRows": false,
+        "useStoredProcedureTestConn": false,
+        "isAdvance": "false",
+        "mergeRows": true,
+        "useStoredProcedureGetObject": false,
+        "role.useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "usePrepareCall": false,
+        "driverClass": "com.mysql.jdbc.Driver",
+        "hasFullAggregationCompleted": true,
+        "jdbcExceptionBucketing": true,
+        "role.useExecuteQuery": false,
+        "connector_files": "mysql-connector-java-5.1.39-bin.jar,JackBoikeACMEProvisioning.jar",
+        "indexColumns": [
+            "USERNAME"
+        ],
+        "jdbcProvisionRule": "MKT_Jack Boike_ACMEJDBC_JDBCProvision",
+        "testConnSQL": "select count(*)",
+        "group": "[SQL:SELECT r.ROLENAME AS rolename from acmedatabase.role r, getObjectSQL:]",
+        "deltaTable": "USER_DELTA",
+        "role.useStoredProcedureSqlStmt": false,
+        "isPermissionEnabled": false,
+        "role.isPermissionEnabled": false,
+        "deleteThresholdPercentage": 10,
+        "group.useStoredProcedureSqlStmt": false,
+        "url": "jdbc:mysql://192.168.164.133/acmedatabase",
+        "SQL": "SELECT u.USERNAME, u.FIRSTNAME, u.LASTNAME, u.TITLE, u.USERTYPE, u.DISPLAYNAME, u.STATUS, CASE WHEN u.STATUS = 'Disabled' THEN \"true\" ELSE \"false\" END as IIQDisabled, ur.ROLENAME AS ROLE FROM acmedatabase.user u, acmedatabase.userrole ur WHERE u.USERNAME = ur.USERNAME",
+        "group.useStoredProcedureGetObject": false,
+        "cloudCacheUpdate": 1666620608481,
+        "templateApplication": "JDBC Template",
+        "encrypted": "password,role.password",
+        "group.isPermissionEnabled": false,
+        "group.SQL": "SELECT r.ROLENAME AS rolename from acmedatabase.role r",
+        "healthy": true,
+        "cloudDisplayName": "Jack Boike-Acme Database",
+        "connectorName": "JDBC",
+        "role.useStoredProcedureDirectPermission": false,
+        "getObjectSQL": "SELECT u.USERNAME, u.FIRSTNAME, u.LASTNAME, u.TITLE, u.USERTYPE, u.DISPLAYNAME, u.STATUS, CASE WHEN u.STATUS = 'Disabled' THEN \"true\" ELSE \"false\" END as IIQDisabled, ur.ROLENAME AS ROLE FROM acmedatabase.user u, acmedatabase.userrole ur WHERE u.USERNAME = ur.USERNAME AND u.USERNAME = '$(Identity)'",
+        "useStoredProcedureSqlStmt": false,
+        "role.SQL": "SELECT r.ROLENAME from acmedatabase.role r WHERE r.ROLENAME IS NOT NULL",
+        "user": "root",
+        "since": "2022-06-23T02:27:41.884742Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "identificationNumber",
+                "operation": "EQ",
+                "value": "USERNAME",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Jack Boike-Acme Database [source] Account Correlation",
+        "id": "2c9180868067004d018095fe7bd45c7f"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "USERNAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "identificationNumber"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "FIRSTNAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "LASTNAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "TITLE",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "title"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "USERTYPE",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "Employee"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "DISPLAYNAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "displayName"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "STATUS",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "Enabled"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

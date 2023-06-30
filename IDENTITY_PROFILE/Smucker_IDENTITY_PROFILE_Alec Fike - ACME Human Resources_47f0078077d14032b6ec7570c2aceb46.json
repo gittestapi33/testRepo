@@ -1,0 +1,139 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 310,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c91808381f9ad3401821beaaa4775c9",
+        "name": "Alec Fike-ACME Human Resources"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 2,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMAIL",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "LASTNAME",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "FIRSTNAME",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "alias",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalEmail",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALEMAIL",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "startDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "STARTDATE",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workMobile",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "WORKMOBILEPHONENUMBER",
+                        "sourceName": "Alec Fike-ACME Human Resources",
+                        "sourceId": "2c91808381f9ad3401821beaaa4775c9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workflowAttribute",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "AdminOf",
+                                "sourceName": "Test Client - Alec Fike",
+                                "sourceId": "2c91808a82cda8720182d01643432a35"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Workflow Attribute - Alec Fike"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "47f0078077d14032b6ec7570c2aceb46",
+    "name": "Alec Fike - ACME Human Resources",
+    "created": "2022-08-03T13:52:26.231Z",
+    "modified": "2022-11-23T17:06:07.180Z"
+}

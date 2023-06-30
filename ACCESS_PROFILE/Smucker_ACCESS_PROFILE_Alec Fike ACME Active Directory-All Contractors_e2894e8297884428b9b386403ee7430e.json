@@ -1,0 +1,37 @@
+{
+    "id": "e2894e8297884428b9b386403ee7430e",
+    "name": "Alec Fike ACME Active Directory-All Contractors",
+    "description": "Alec Fike ACME Active Directory-All Contractors",
+    "created": "2022-07-25T13:51:56.858Z",
+    "modified": "2022-11-10T20:08:02.454Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "source": {
+        "id": "2c9180858215e1970182227d841c3e4f",
+        "type": "SOURCE",
+        "name": "Alec Fike - ACME Active Directory"
+    },
+    "entitlements": [
+        {
+            "id": "4621fa3182fb440eba2d4095b5938dbd",
+            "type": "ENTITLEMENT",
+            "name": "VendorCare"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

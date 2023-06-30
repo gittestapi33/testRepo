@@ -1,0 +1,184 @@
+{
+    "id": "2c91808383e6f7620183e75943d6097f",
+    "name": "Jack Boike-MDH Test Source",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Jack Boike-MDH Test Source",
+    "deleteThreshold": 100,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "ENABLE",
+        "AUTHENTICATE",
+        "PASSWORD",
+        "UNLOCK",
+        "PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "email",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "employeeNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "employeeNumber",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "createdDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "createdDate",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808383e6f7620183e75943d60980",
+            "name": "account",
+            "created": "2022-10-17T19:08:50.518Z",
+            "modified": "2022-10-25T13:08:54.872Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808383e6f7620183e75943d60981",
+            "name": "group",
+            "created": "2022-10-17T19:08:50.518Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "enableHasMore": false,
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "1",
+        "genericWebServiceBaseUrl": "https://c01-usa-east.hub.boomi.com/mdm/universes/856aa21b-289d-4a68-a68d-13b804e90c73/",
+        "connectionParameters": [
+            {
+                "contextUrl": "/records/0b8ccb90-9847-445a-a3ae-7c1fe3754ad2",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/xml"
+                },
+                "operationType": "Test Connection",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "<RecordQueryRequest limit=\"\" offsetToken=\"\">\n\n</RecordQueryRequest>",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            },
+            {
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "rootPath": "/RecordQueryResponse//Record",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "<RecordQueryRequest limit=\"\" offsetToken=\"\">\n\n</RecordQueryRequest>",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ],
+                "resMappingObj": {
+                    "departmentName": "employee_organization_info/department_name/text()",
+                    "employeeTypeDescription": "employee_position/employee_type_description/text()",
+                    "lastName": "employee_individual_details/last_name/text()",
+                    "hireDate": "employee_job_details/hire_date/text()",
+                    "administrativeStaff": "additional_attributes/administrative_staff/text()",
+                    "jobTitle": "employee_position/job_title/text()",
+                    "exemptNonExempt": "employee_job_details/exempt_status/text()",
+                    "jobCode": "employee_position/job_code/text()",
+                    "employeeNumber": "Fields/pcbemployee/identifiers/employee_number/text()",
+                    "firstName": "employee_individual_details/first_name/text()",
+                    "employeeStatusCode": "employee_position/employee_status_code/text()",
+                    "id": "@recordId",
+                    "email": "Fields/pcbemployee/employee_email_address/employee_email_address[email_type/text()='Work Email']/email_id/text()"
+                },
+                "contextUrl": "records/query",
+                "pagingSize": 200,
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "text/xml"
+                },
+                "operationType": "Account Aggregation"
+            }
+        ],
+        "partitionAggregationEnabled": false,
+        "possibleHttpErrors": {},
+        "sourceConnected": true,
+        "throwProvAfterRuleException": true,
+        "lastAggregationDate_account": "2022-10-25T13:35:18Z",
+        "deleteThresholdPercentage": 100,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1667395474245,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "authenticationMethod": "BasicLogin",
+        "httpCookieSpecsStandard": "true",
+        "healthy": true,
+        "cloudDisplayName": "Jack Boike-MDH Test Source",
+        "connectorName": "Web Services",
+        "since": "2022-10-21T00:33:32.599377Z",
+        "status": "SOURCE_STATE_HEALTHY",
+        "username": "postholdings-F2FS4Z.YCUJW3"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

@@ -1,0 +1,71 @@
+{
+    "id": "2c91808882a1b6870182ab849cf62f12",
+    "name": "VBs Snow Instance",
+    "description": "VBs Snow Instance",
+    "type": "ServiceNow SDIM",
+    "ownerRef": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "Viswanathan Balakumar"
+    },
+    "provisioningConfig": {
+        "universalManager": false,
+        "managedResourceRefs": [
+            {
+                "type": "SOURCE",
+                "id": "2c918086825f90cc0182605aa04d13c0",
+                "name": "VBsBox"
+            }
+        ],
+        "planInitializerScript": {
+            "source": null
+        },
+        "noProvisioningRequests": false,
+        "provisioningRequestExpiration": 0
+    },
+    "attributes": {
+        "provisioningTimeout": "180",
+        "tokenUrl": "https://demo.service-now.com/oauth_token.do",
+        "serviceRequest": {
+            "checkStatus": {
+                "statusMap": {
+                    "closed_complete": "Committed",
+                    "closed_rejected": "Failed",
+                    "requested": "Queued",
+                    "in_process": "Queued",
+                    "closed_cancelled": "Failed",
+                    "closed_incomplete": "Failed",
+                    "closed_skipped": "Failed"
+                },
+                "resource": "/api/now/table/sc_request?number=$ticketId&sysparm_fields=request_state",
+                "responseElement": "$.result[0].request_state"
+            },
+            "provision": {
+                "request": {
+                    "short_description": "SailPoint Access Request $!plan.arguments.identityRequestId",
+                    "opened_by": "$!{plan.arguments.opened_by|'Default_ServiceNow_Account_Sys_ID'}",
+                    "req_description": "Service Request created by Service Desk Integration Module (SIM)",
+                    "description": "#if($request.operation == 'Create') Create Account on application $request.resource #else For $request.id in application $request.resource #end #if ($request.items) $newline  #foreach ($item in $request.items) #if ($item.name == '*disabled*' && $item.value == 'true') Disable Account. $newline #elseif ($item.name == '*disabled*' && $item.value == 'false') Enable Account. $newline #elseif ($item.name == '*locked*' && $item.value == 'false') Unlock Account. $newline #else $!item.Operation $item.name: $item.value $newline #end #end #else $newline $!request.Operation Account #end",
+                    "requested_for": "$!plan.arguments.requested_for"
+                },
+                "requestRootElement": "items",
+                "resource": "/api/x_sap_sdim/sailpoint_cart_js_api/create_ticket",
+                "responseElement": "$.result.request_number",
+                "catalogItem": {
+                    "2c918086825f90cc0182605aa04d13c0": "test"
+                }
+            }
+        },
+        "ticketType": "serviceRequest",
+        "authenticationType": "Basic",
+        "connectorClass": "openconnector.connector.servicedesk.ServiceDeskConnector",
+        "requesterSource": "2c9180898222e59b01823b2daa3e0080",
+        "url": "VBs Snow Instance",
+        "username": "admin"
+    },
+    "beforeProvisioningRule": {
+        "type": "RULE",
+        "id": "2c91808a7ae8844f017ae89249970df6",
+        "name": "Sample Before Provisioning Rule for SDIM"
+    }
+}

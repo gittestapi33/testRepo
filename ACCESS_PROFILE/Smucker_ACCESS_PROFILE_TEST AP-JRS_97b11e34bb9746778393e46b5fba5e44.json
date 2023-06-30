@@ -1,0 +1,31 @@
+{
+    "id": "97b11e34bb9746778393e46b5fba5e44",
+    "name": "TEST AP-JRS",
+    "description": "test access profile",
+    "created": "2022-12-15T19:41:37.505855Z",
+    "modified": "2023-01-08T19:43:04.415Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "96720296dd5644729252cf8d356a6224",
+        "name": "joseph_sands"
+    },
+    "source": {
+        "id": "2c9180846c3f9731016c6dd24fec48a4",
+        "type": "SOURCE",
+        "name": "AD - Employees"
+    },
+    "entitlements": [],
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

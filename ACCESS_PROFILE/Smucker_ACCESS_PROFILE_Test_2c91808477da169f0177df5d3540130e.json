@@ -1,0 +1,37 @@
+{
+    "id": "2c91808477da169f0177df5d3540130e",
+    "name": "Test",
+    "description": "Test Access Profile",
+    "created": "2021-02-26T17:22:43.648Z",
+    "modified": "2022-11-10T20:08:01.207Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180857725bbd301773b0543d55f41",
+        "name": "Joaquin_Conti"
+    },
+    "source": {
+        "id": "2c91808477a6a9f00177d4d3dd620036",
+        "type": "SOURCE",
+        "name": "JC - SalesForce Test"
+    },
+    "entitlements": [
+        {
+            "id": "2c91808377d9f8be0177df1851af31a4",
+            "type": "ENTITLEMENT",
+            "name": "System Administrator"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

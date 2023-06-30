@@ -1,0 +1,31 @@
+{
+    "id": "3343d451660b40ebada12967d9ae9838",
+    "name": "Alec Fike ACME Active Directory-All Employees",
+    "description": null,
+    "created": "2022-07-22T15:07:39.123Z",
+    "modified": "2022-11-10T20:08:01.519Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "source": {
+        "id": "2c91808381f9ad3401821beaaa4775c9",
+        "type": "SOURCE",
+        "name": "Alec Fike-ACME Human Resources"
+    },
+    "entitlements": [],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

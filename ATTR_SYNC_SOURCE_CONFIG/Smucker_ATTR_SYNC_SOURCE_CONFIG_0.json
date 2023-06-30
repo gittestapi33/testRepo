@@ -1,0 +1,21 @@
+{
+    "attributes": [
+        {
+            "enabled": true,
+            "displayName": "Title",
+            "name": "title",
+            "target": "title"
+        },
+        {
+            "enabled": true,
+            "displayName": "Department",
+            "name": "department",
+            "target": "department"
+        }
+    ],
+    "source": {
+        "id": "2c918084703112a701703667c7405c60",
+        "type": "SOURCE",
+        "name": null
+    }
+}

@@ -1,0 +1,281 @@
+{
+    "id": "2c9180867acb0c5d017ae9d8a5e66572",
+    "name": "Zoom Test",
+    "type": "Zoom",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "zoom-angularsc",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "SEARCH"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "id",
+            "displayAttribute": "full_name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique Zoom User  ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "full_name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Full name of a user. First Name + Last name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "first_name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's First name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "last_name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's Last name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's email address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "status",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's Status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "dept",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Department if User has provided",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "verified",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Displays whether user has verified his email or not",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "last_login_time",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's Last login time",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's license type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "group_ids",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180867acb0c5d017ae9d8a5e66574",
+                        "name": "group"
+                    },
+                    "description": "IDs of Web groups user belongs to",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180867acb0c5d017ae9d8a5e66573",
+            "name": "account",
+            "created": "2021-07-27T21:22:07.462Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "id",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Web group ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Web group name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180867acb0c5d017ae9d8a5e66574",
+            "name": "group",
+            "created": "2021-07-27T21:22:07.462Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "templateApplication": "Zoom",
+        "encrypted": "apiSecret",
+        "healthy": false,
+        "aggregatePendingUsers": true,
+        "deleteThresholdPercentage": 10,
+        "cloudDisplayName": "Zoom Test",
+        "connectorName": "Zoom",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.zoom.ZoomConnector",
+        "url": "https://api.zoom.us/v2/",
+        "since": "2021-07-27T21:22:07.462Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "uid",
+                "operation": "EQ",
+                "value": "id",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Zoom Account Correlation Config",
+        "id": "2c91808472ecb4560172ed68160b29f8"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "first_name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "last_name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "email",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "action",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "type",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

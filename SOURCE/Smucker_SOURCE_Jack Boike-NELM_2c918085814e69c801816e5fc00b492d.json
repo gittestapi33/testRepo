@@ -1,0 +1,176 @@
+{
+    "id": "2c918085814e69c801816e5fc00b492d",
+    "name": "Jack Boike-NELM",
+    "type": "Non-Employee",
+    "connectorClass": "com.sailpoint.connector.NesrConnector",
+    "connectorScriptName": "non-employee",
+    "description": "Jack Boike-NELM",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "NO_RANDOM_ACCESS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "accountName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "accountName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Account Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "phone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Phone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Manager's name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "startDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Start Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "endDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "End Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "testCustomAttribute",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918085814e69c801816e5fc00b492e",
+            "name": "account",
+            "created": "2022-06-16T21:16:17.803Z",
+            "modified": "2022-07-05T21:23:29.863Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c918085814e69c801816e5fc00b492f",
+            "name": "group",
+            "created": "2022-06-16T21:16:17.803Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "cloudAuthoritativeSourcePrecedence": 270,
+        "templateApplication": "Non-Employee Source Template",
+        "healthy": true,
+        "deleteThresholdPercentage": 10,
+        "cloudDisplayName": "Jack Boike-NELM",
+        "connectorName": "Non-Employee",
+        "connectionType": "file",
+        "cloudIdentityProfileName": "Jack Boike-NELM",
+        "since": "2023-02-20T21:45:56.351503Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "accountName",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Non-Employee Source Template Account Correlation Config",
+        "id": "2c91808472a518ca0172a542a1201762"
+    },
+    "provisioningPolicies": []
+}

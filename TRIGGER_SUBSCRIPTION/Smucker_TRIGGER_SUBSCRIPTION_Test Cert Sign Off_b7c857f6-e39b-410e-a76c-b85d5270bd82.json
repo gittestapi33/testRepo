@@ -1,0 +1,17 @@
+{
+    "triggerId": "idn:certification-signed-off",
+    "responseDeadline": "PT1H",
+    "httpConfig": {
+        "httpDispatchMode": "SYNC",
+        "httpAuthenticationType": "NO_AUTH",
+        "url": "Test",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": null
+    },
+    "triggerName": "Certification Signed Off",
+    "description": "",
+    "id": "b7c857f6-e39b-410e-a76c-b85d5270bd82",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "Test Cert Sign Off"
+}

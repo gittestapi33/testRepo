@@ -1,0 +1,208 @@
+{
+    "id": "2c91808482552bfd01825a423a314e85",
+    "name": "Alec Fike-ACME Database",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "Alec Fike-ACME Database",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "features": [
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "ENABLE",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS",
+        "UNLOCK",
+        "GROUP_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "USERNAME",
+            "displayAttribute": "USERNAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "USERNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USERNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FIRSTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FIRSTNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LASTNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "LASTNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TITLE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "TITLE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USERTYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USERTYPE",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DISPLAYNAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DISPLAYNAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "STATUS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "STATUS",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IIQDisabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "IIQDisabled",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ROLE",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c91808482552bfd01825a423a314e87",
+                        "name": "group"
+                    },
+                    "description": "ROLE",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c91808482552bfd01825a423a314e86",
+            "name": "account",
+            "created": "2022-08-01T16:34:25.969Z",
+            "modified": "2022-08-05T14:23:12.576Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808482552bfd01825a423a314e87",
+            "name": "group",
+            "created": "2022-08-01T16:34:25.969Z",
+            "modified": "2022-08-01T16:34:26.025Z"
+        }
+    ],
+    "connectorAttributes": {
+        "mergeColumns": [
+            "ROLE"
+        ],
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "group.mergeRows": false,
+        "useStoredProcedureTestConn": false,
+        "isAdvance": "false",
+        "mergeRows": true,
+        "group.url": "jdbc:mysql://192.168.64.137:3306/acmedatabase",
+        "useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "useStoredProcedureDirectPermission": false,
+        "driverClass": "com.mysql.jdbc.Driver",
+        "hasFullAggregationCompleted": true,
+        "jdbcExceptionBucketing": true,
+        "useExecuteQuery": false,
+        "connector_files": "mysql-connector-java-8.0.29.jar",
+        "testConnQuery": "select count(*)",
+        "group.useExecuteQuery": false,
+        "indexColumns": [
+            "USERNAME"
+        ],
+        "sourceConnected": true,
+        "deltaTable": "USER_DELTA",
+        "isPermissionEnabled": false,
+        "group.user": "root",
+        "deleteThresholdPercentage": 10,
+        "group.useStoredProcedureSqlStmt": false,
+        "url": "jdbc:mysql://192.168.64.137:3306/acmedatabase",
+        "SQL": "SELECT u.USERNAME, u.FIRSTNAME, u.LASTNAME, u.TITLE, u.USERTYPE, u.DISPLAYNAME, u.STATUS, CASE WHEN u.STATUS = 'Disabled' THEN \"true\" ELSE \"false\" END as IIQDisabled, ur.ROLENAME AS ROLE FROM acmedatabase.user u, acmedatabase.userrole ur WHERE u.USERNAME = ur.USERNAME",
+        "group.useStoredProcedureGetObject": false,
+        "cloudCacheUpdate": 1659709446459,
+        "templateApplication": "JDBC Template",
+        "group.driverClass": "com.mysql.jdbc.Driver",
+        "encrypted": "password,group.password",
+        "group.isPermissionEnabled": false,
+        "group.SQL": "SELECT r.ROLENAME from acmedatabase.role r",
+        "healthy": true,
+        "cloudDisplayName": "Alec Fike-ACME Database",
+        "connectorName": "JDBC",
+        "getObjectSQL": "SELECT u.USERNAME, u.FIRSTNAME, u.LASTNAME, u.TITLE, u.USERTYPE, u.DISPLAYNAME, u.STATUS, CASE WHEN u.STATUS = 'Disabled' THEN \"true\" ELSE \"false\" END as IIQDisabled, ur.ROLENAME AS ROLE FROM acmedatabase.user u, acmedatabase.userrole ur WHERE u.USERNAME = ur.USERNAME AND u.USERNAME = '$(Identity)'",
+        "useStoredProcedureSqlStmt": false,
+        "group.getObjectSQL": "SELECT u.USERNAME, u.FIRSTNAME, u.LASTNAME, u.TITLE, u.USERTYPE, u.DISPLAYNAME, u.STATUS, CASE WHEN u.STATUS = 'Disabled' THEN \"true\" ELSE \"false\" END as IIQDisabled, ur.ROLENAME AS ROLE FROM acmedatabase.user u, acmedatabase.userrole ur WHERE u.USERNAME = ur.USERNAME AND u.USERNAME = '$(Identity)'",
+        "group.useStoredProcedureDirectPermission": false,
+        "user": "root",
+        "since": "2022-08-05T14:20:39.841408Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "identificationNumber",
+                "operation": "EQ",
+                "value": "USERNAME",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Alec Fike-ACME Database [source] Account Correlation",
+        "id": "2c918086825f90cc01826e6458e30eb6"
+    },
+    "provisioningPolicies": []
+}

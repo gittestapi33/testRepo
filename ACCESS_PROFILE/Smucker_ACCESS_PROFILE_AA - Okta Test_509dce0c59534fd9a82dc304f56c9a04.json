@@ -1,0 +1,47 @@
+{
+    "id": "509dce0c59534fd9a82dc304f56c9a04",
+    "name": "AA - Okta Test",
+    "description": null,
+    "created": "2023-02-02T22:14:14.089Z",
+    "modified": "2023-04-13T16:24:13.995Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex Alvarez"
+    },
+    "source": {
+        "id": "2c9180846c3f972e016c729271cb3148",
+        "type": "SOURCE",
+        "name": "AA  - Okta dev214367"
+    },
+    "entitlements": [
+        {
+            "id": "272d542a5e55462abc6ad4b4d9eef969",
+            "type": "ENTITLEMENT",
+            "name": "Disable Test"
+        },
+        {
+            "id": "228658e5c3c747a6bf29c149f6281e86",
+            "type": "ENTITLEMENT",
+            "name": "Bio Test"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

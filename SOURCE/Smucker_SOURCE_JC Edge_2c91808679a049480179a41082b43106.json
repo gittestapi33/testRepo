@@ -1,0 +1,111 @@
+{
+    "id": "2c91808679a049480179a41082b43106",
+    "name": "JC Edge",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180857725bbd301773b0543d55f41",
+        "name": "Joaquin_Conti"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK",
+        "AUTHENTICATE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808679a049480179a41082b43107",
+            "name": "account",
+            "created": "2021-05-25T15:06:56.052Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808679a049480179a41082b43108",
+            "name": "group",
+            "created": "2021-05-25T15:06:56.052Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "oAuthJwtHeader": {
+            "alg": "RS256"
+        },
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "30",
+        "genericWebServiceBaseUrl": "https://allieduniversaledge.exceedlms.com/api/v3",
+        "connectionParameters": [
+            {
+                "contextUrl": "/users?records_per_page=1",
+                "httpMethodType": "GET",
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "header": {
+                    "Accept": "application/json"
+                },
+                "operationType": "Test Connection",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            }
+        ],
+        "cloudAuthEnabled": true,
+        "grant_type": "JWT_BEARER",
+        "token_url": "https://allieduniversaledge.exceedlms.com/oauth2/token",
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1646682221057,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "authenticationMethod": "OAuth2Login",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "JC Edge",
+        "connectorName": "Web Services",
+        "oAuthJwtPayload": {
+            "aud": "https://allieduniversaledge.exceedlms.com",
+            "sub": "jconti@highmetric.com",
+            "iss": "f677a2310ab39efe4f1ed6bcc73d256a9bffe6d25464db6260e0521e3536aca9",
+            "exp": "1622125927"
+        },
+        "since": "2021-05-25T15:06:56.052Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+        "username": "Joaquin_Conti"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

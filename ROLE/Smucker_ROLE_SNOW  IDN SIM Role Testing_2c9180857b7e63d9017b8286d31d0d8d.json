@@ -1,0 +1,75 @@
+{
+    "id": "2c9180857b7e63d9017b8286d31d0d8d",
+    "name": "SNOW  IDN SIM Role Testing",
+    "created": "2021-08-26T12:54:39.133Z",
+    "modified": "2022-11-10T20:08:02.1Z",
+    "description": "SNOW  IDN SIM Role Testing",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180886c6377f4016c6ca17ebb1f34",
+        "name": "Ganesh Pagar"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "2c9180857b7e63d9017b8285bd760d76",
+            "type": "ACCESS_PROFILE",
+            "name": "SNOW SIM Integration "
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c91808a6c6377e8016c6dec40ac50c0",
+                "name": "Angela.Bell",
+                "aliasName": "43"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec3f7564cf",
+                "name": "Alice.Ford",
+                "aliasName": "75"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180907088f04a01708d327cf65c37",
+                "name": "Albert.Woods",
+                "aliasName": "78"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec422664f5",
+                "name": "Adam.Kennedy",
+                "aliasName": "96"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c91808d6fede9b4016ffd21bf7f7f5f",
+                "name": "Adam Kennedy",
+                "aliasName": "Adam.Kennedy"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180846ccef11c016ce305d6bd4da1",
+                "name": "Ganesh Kandekar",
+                "aliasName": "Ganesh_Kandekar"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

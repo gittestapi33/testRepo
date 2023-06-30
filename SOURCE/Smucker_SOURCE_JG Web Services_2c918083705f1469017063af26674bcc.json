@@ -1,0 +1,223 @@
+{
+    "id": "2c918083705f1469017063af26674bcc",
+    "name": "JG Web Services",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Web Services based source.",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180846fede9ad0170118ff24e066f",
+        "name": "joshua_goldwasser"
+    },
+    "features": [
+        "PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "AUTHENTICATE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "username",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Email address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique identifier",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "phone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Phone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "enabled",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Boolean value representing whether the user is enabled",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Employee type (Employee vs. Contractor)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "jobTitle",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Job Title",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "arraytest",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "arraytest not multivalued",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918083705f1469017063af26674bcd",
+            "name": "account",
+            "created": "2020-02-20T17:39:47.943Z",
+            "modified": "2020-02-26T18:56:54.612Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c918083705f1469017063af26674bce",
+            "name": "group",
+            "created": "2020-02-20T17:39:47.943Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "useForAccounts": "true",
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "isGetObjectRequiredForPTA": true,
+        "genericWebServiceBaseUrl": "http://www.mocky.io/v2/5e56bbe0300000355b28e9d6",
+        "cloudCacheUpdate": 1646682213926,
+        "templateApplication": "Web Services Template",
+        "connectionParameters": [
+            {
+                "resMappingObj": {
+                    "firstname": "firstname",
+                    "arraytest": "arraytest[-1]",
+                    "phone": "phone",
+                    "displayName": "displayName",
+                    "jobTitle": "jobTitle",
+                    "type": "type",
+                    "email": "email",
+                    "enabled": "enabled",
+                    "lastname": "lastname",
+                    "username": "username"
+                },
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "header": {
+                    "Accept": "application/json"
+                },
+                "operationType": "Account Aggregation",
+                "rootPath": "$.[*]",
+                "body": {
+                    "bodyFormData": null,
+                    "bodyFormat": "formData"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "httpMethodType": "GET",
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Test Connection",
+                "operationType": "Test Connection",
+                "body": {
+                    "bodyFormData": null,
+                    "bodyFormat": "formData"
+                }
+            }
+        ],
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword",
+        "cloudAuthEnabled": true,
+        "authenticationMethod": "No Auth",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "JG Web Services",
+        "connectorName": "Web Services",
+        "md5": "3e3f447a1ebaf8dc7ee5ceea37988930",
+        "since": "2020-02-20T17:39:47.943Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "username",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "JG Web Services [source-120092] Account Correlation",
+        "id": "2c91808a705f144d017064102fc551a5"
+    },
+    "provisioningPolicies": []
+}

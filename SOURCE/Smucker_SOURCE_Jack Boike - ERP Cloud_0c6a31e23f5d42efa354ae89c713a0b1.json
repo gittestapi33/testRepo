@@ -1,0 +1,467 @@
+{
+    "id": "0c6a31e23f5d42efa354ae89c713a0b1",
+    "name": "Jack Boike - ERP Cloud",
+    "type": "Oracle ERP Cloud",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "oracle-erp-cloud-angularsc",
+    "description": "Jack Boike - ERP Cloud",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "ENABLE",
+        "PASSWORD"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "ID",
+            "displayAttribute": "Display Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the user resource in Oracle Applications Cloud",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Display Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The display name of the user, usually the full name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The primary e-mail address of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the user to authenticate with the service provider directly",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Status",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Indicates the administrative status of the user. ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "First Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The first name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Last Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The last name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Last Modified Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The last modified date of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Created Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The created date of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Category",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user category of the user. By default, the value is DEFAULT",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Account Type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The account type of a user to indicate person or party association",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The manager associated to the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Person Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The worker ID or person number associated to the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Business Unit",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The business unit to which the user belongs",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The department to which the user belongs",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Job",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The job title of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Roles",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "a4e48f87d0064bc9bc50d0f2d3b37a74",
+                        "name": "group"
+                    },
+                    "description": "The list of roles assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Data Access",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "3faadae08e444833b3aaa12fe3bbe986",
+                        "name": "data access"
+                    },
+                    "description": "Combination of role, security context and its values assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "4c16a6ac44964b728b2a510307d51b1f",
+            "name": "account",
+            "created": "2023-05-04T22:05:02.988Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "role",
+            "identityAttribute": "ID",
+            "displayAttribute": "Display Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the role resource in Oracle Applications Cloud",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of the role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Category",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The category of role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the role to authenticate with the service provider directly",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Last Modified Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The last modified date of the role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Created Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The created date of the role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Display Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The display name of the role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "a4e48f87d0064bc9bc50d0f2d3b37a74",
+            "name": "group",
+            "created": "2023-05-04T22:05:02.989Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "data access",
+            "identityAttribute": "Data Access",
+            "displayAttribute": "Data Access",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Data Access",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Combination of role, security context and its values",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "3faadae08e444833b3aaa12fe3bbe986",
+            "name": "data access",
+            "created": "2023-05-04T22:05:02.989Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "accounts_filter": "active eq true",
+        "enableDataAccessForUserDefinedRoles": true,
+        "rateLimitRetryAfterMinute": "1",
+        "deleteThresholdPercentage": 10,
+        "pageSize": "100",
+        "data_access_delimiter": "$",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.oracleerp.OracleERPCloudConnector",
+        "connTimeout": "1",
+        "cloudCacheUpdate": 1683567831812,
+        "templateApplication": "Oracle ERP Cloud",
+        "rateLimitMaxRetryCount": "3",
+        "healthy": false,
+        "cloudDisplayName": "Jack Boike - ERP Cloud",
+        "connectorName": "Oracle ERP Cloud",
+        "enableDataAccessForSeededRoles": true,
+        "since": "2023-05-04T22:05:02.988Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "Email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "User Name",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Oracle ERP Cloud Account Correlation Config",
+        "id": "2c918089786ad449017881ec22485547"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "User Name",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        }
+                    },
+                    "attributes": {
+                        "template": "$(firstname)$(lastname)$(uniqueCounter)",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Password",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Password"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "User Category",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "DEFAULT"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "First Name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Last Name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Email",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Person Number",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": ""
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

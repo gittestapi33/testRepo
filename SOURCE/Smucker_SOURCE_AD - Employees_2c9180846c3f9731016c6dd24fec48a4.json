@@ -1,0 +1,1412 @@
+{
+    "id": "2c9180846c3f9731016c6dd24fec48a4",
+    "name": "AD - Employees",
+    "type": "Active Directory - Direct",
+    "connectorClass": "sailpoint.connector.ADLDAPConnector",
+    "connectorScriptName": "active-directory-angularsc",
+    "description": "Employees",
+    "deleteThreshold": 100,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180896c971d14016c974c41fc4c97",
+        "name": "emmanuel_martinez"
+    },
+    "features": [
+        "PASSWORD",
+        "MANAGER_LOOKUP",
+        "CURRENT_PASSWORD",
+        "SEARCH",
+        "GROUP_PROVISIONING",
+        "NO_PERMISSIONS_PROVISIONING",
+        "ENABLE",
+        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "UNLOCK",
+        "UNSTRUCTURED_TARGETS",
+        "AUTHENTICATE",
+        "GROUPS_HAVE_MEMBERS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "distinguishedName",
+            "displayAttribute": "sAMAccountName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "businessCategory",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "business category",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "carLicense",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "vehicle license or registration plate",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "cn",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "common name(s) for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "departmentNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "identifies a department within an organization",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "descriptive information",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "destinationIndicator",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "destination indicator",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "preferred name to be used when displaying entries",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "distinguishedName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "distinguished name for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "employeeNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "numerically identifies an employee within an organization",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "employeeType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "type of employment for a person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "facsimileTelephoneNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Facsimile (Fax) Telephone Number",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "first name(s) for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "homePhone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "home telephone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "homePostalAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "home postal address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "initials",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "initials of some or all of names, but not the surname(s).",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "internationaliSDNNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "international ISDN number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "l",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "RFC822 Mailbox",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DN of manager",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mobile",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "mobile telephone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "o",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "organization this object belongs to",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ou",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "organizational unit this object belongs to",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "pager telephone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "physicalDeliveryOfficeName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Physical Delivery Office Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "postOfficeBox",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Post Office Box",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "postalAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "postal address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "postalCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "postal code",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "preferredDeliveryMethod",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "preferred delivery method",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "preferredLanguage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "preferred written or spoken language for a person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "registeredAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "registered postal address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "roomNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "room number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "secretary",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DN of secretary",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "seeAlso",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DN of related object",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "sn",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "last (family) name(s) for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "st",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "state or province which this object resides in",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "street",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "street address of this object",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "telephoneNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telephone Number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "teletexTerminalIdentifier",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Teletex Terminal Identifier",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "telexNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telex Number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "title associated with the entity",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "uid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "user identifier",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectClass",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "object classes of the entity",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "memberOf",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180887184447701718936437a596d",
+                        "name": "group"
+                    },
+                    "description": "Group Membership",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "objectSid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Windows Security Identifier",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectguid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Object globally unique identifier ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "sAMAccountName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "sAMAccountName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primaryGroupID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "RID of users primary group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primaryGroupDN",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DN of users primary group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "accountFlags",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of the flags enabled on an account",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's department",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msNPCallingStationID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "CallingStationID",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msRADIUSFramedRoute",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Static Routes for Dial-In connection",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msNPAllowDialin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is dial-in allowed",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msRADIUSCallbackNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Callback Number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msRADIUSFramedIPAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Define Static IP Address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mailNickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Exchange Alias",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "homeMDB",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Exchange Database",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msExchHideFromAddressLists",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Hide from Exchange address lists",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msRTCSIP-UserEnabled",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "User enabled for Lync Server",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SipAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Lync sipAddress",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "RegistrarPool",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Lync Registrar pool",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LyncPinSet",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Lync user pin set status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LyncPinLockedOut",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Lync user pin lock status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pwdLastSet",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Time of last password reset",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msDS-PrincipalName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the entity in the format \"NetBIOS domain name\\sAMAccountName\"",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "userPrincipalName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The unique name of the entity within the domain, in the format \"name@domain\"",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "passwordLastSet",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last set",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180887184447701718936437a596c",
+            "name": "account",
+            "created": "2020-04-17T17:36:07.034Z",
+            "modified": "2020-07-22T19:43:48.767Z"
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "distinguishedName",
+            "displayAttribute": "sAMAccountName",
+            "hierarchyAttribute": "memberOf",
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING",
+                "NO_PERMISSIONS_PROVISIONING",
+                "GROUPS_HAVE_MEMBERS"
+            ],
+            "configuration": {
+                "groupMemberAttribute": "member"
+            },
+            "attributes": [
+                {
+                    "name": "cn",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "common name(s) for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "distinguishedName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "distinguished name for which the entity is known by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "o",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "organization this object belongs to",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ou",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "organizational unit this object belongs to",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "owner",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "owner (of the object)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "descriptive information",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "memberOf",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group Membership",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectSid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Windows Security Identifier",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectguid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Object globally unique identifier ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mailNickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Exchange Distribution Group Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GroupType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group Type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GroupScope",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group Scope",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "sAMAccountName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "sAMAccountName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "msDS-PrincipalName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the entity in the format \"NetBIOS domain name\\sAMAccountName\"",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180887184447701718936437a596d",
+            "name": "group",
+            "created": "2020-04-17T17:36:07.034Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "forestSettings": [
+            {
+                "isResourceForest": false,
+                "gcServer": "sp-ad-2012.columndemo12.com:3268",
+                "forestName": "default",
+                "authorizationType": "simple",
+                "user": "columndemo12\\idn_admin",
+                "useSSL": false
+            }
+        ],
+        "deltaAggregationEnabled": false,
+        "deltaIterationMode": "dirSync",
+        "IQServicePort": "5050",
+        "groupMemberAttribute": "member",
+        "pageSize": "100",
+        "connectionType": "direct",
+        "disableSort": false,
+        "preloadEntitlements": false,
+        "validateGC": true,
+        "source-config": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Form xmlns=\"http://www.sailpoint.com/xsd/sailpoint_form_1_0.xsd\" name=\"Active Directory\" connectorName=\"Active Directory - Direct\" type=\"SourceConfig\" directConnect=\"true\" status=\"released\">\n  <Field name=\"cloudAuthEnabled\" type=\"boolean\" hidden=\"true\" defaultValue=\"true\"/>\n  <Section layout=\"horizontal\">\n    <Section label=\"CONNECTION_CREDS\" layout=\"horizontal\">\n      <Field name=\"user\" type=\"String\" required=\"true\"/>\n      <Field name=\"password\" type=\"password\"/>\n    </Section>\n    <Section label=\"SERVER_HOST\" layout=\"horizontal\">\n      <Field name=\"host\" type=\"Hostname\" required=\"true\"/>\n      <Field name=\"port\" type=\"PortNumber\" defaultValue=\"389\" required=\"true\"/>\n    </Section>\n  </Section>\n  <Section layout=\"horizontal\">\n    <Section label=\"GLOBAL_CATALOG_CREDS\" layout=\"horizontal\">\n      <Field name=\"forestAdmin\" type=\"String\"/>\n      <Field name=\"forestAdminPassword\" type=\"password\"/>\n    </Section>\n    <Section label=\"GLOBAL_CATALOG_SERVER\" layout=\"horizontal\">\n      <Field name=\"forestGC\" type=\"String\"/>\n    </Section>\n  </Section>\n  <Section layout=\"horizontal\">\n    <Section label=\"ACCOUNT_SETTINGS\">\n      <Field name=\"searchDN\" type=\"String\" required=\"true\"/>\n      <Field name=\"iterateSearchFilter\" type=\"String\"/>\n    </Section>\n    <Section label=\"INTEGRATION_SERVICE\">\n      <Button action=\"download\" helpKey=\"IQ_SERVICE_DOWNLOAD_HELP\" parameter=\"IQ_SERVICE_URL\"/>\n      <Section layout=\"horizontal\">\n        <Field name=\"useTLSForIQService\" type=\"boolean\" defaultValue=\"false\"/>\n      </Section>\n      <Section layout=\"horizontal\">\n        <Field name=\"IQServiceHost\" type=\"Hostname\"/>\n        <Field name=\"IQServicePort\" type=\"PortNumber\"/>\n      </Section>\n      <Section layout=\"horizontal\">\n        <Field name=\"IQServiceUser\" type=\"String\"/>\n        <Field name=\"IQServicePassword\" type=\"password\"/>\n      </Section>\n    </Section>\n  </Section>\n  <Section layout=\"advanced\">\n    <Field name=\"useSSL\" type=\"boolean\"/>\n    <Field name=\"deltaAggregation\" type=\"boolean\" required=\"true\" defaultValue=\"false\"/>\n    <Field name=\"enforcePasswordPolicy\" type=\"boolean\" required=\"true\" defaultValue=\"true\"/>\n    <Field name=\"buildPartialROOnAuthentication\" type=\"boolean\" required=\"false\" defaultValue=\"false\"/>\n    <Field name=\"kerberosDomain\" type=\"Hostname\"/>\n    <Section layout=\"horizontal\">\n      <Section label=\"EXCHANGE\" layout=\"horizontal\">\n        <Field name=\"exchangeversion\" type=\"String\" defaultValue=\"DEFAULT\" displayName=\"EXCHANGE_VERSION\">\n          <AllowedValues>\n            <Option value=\"DEFAULT\" label=\"NONE\"/>\n            <Option value=\"2010\" label=\"2010\"/>\n            <Option value=\"2013\" label=\"2013\"/>\n            <Option value=\"2016\" label=\"2016\"/>\n          </AllowedValues>\n        </Field>\n        <Field name=\"ExchHost\" type=\"Hostname\" displayName=\"EXCHANGE_HOST\"/>\n      </Section>\n      <Section>\n        <Section label=\"LYNC\">\n          <Field name=\"manageLync\" type=\"boolean\" displayName=\"MANAGE_LYNC\"/>\n        </Section>\n        <Section label=\"PROVISIONING\">\n          <Field name=\"cloudUniqueSearchDN\" type=\"String\" displayName=\"UNIQUE_SEARCH_DN\"/>\n        </Section>\n      </Section>\n    </Section>\n  </Section>\n  <StaticProperties>\n    <Field name=\"connector_supportsPasswordSetDate\" type=\"String\" value=\"true\"/>\n  </StaticProperties>\n</Form>\n",
+        "authorizationType": "simple",
+        "buildPartialROOnAuthentication": true,
+        "group.searchDNs": [
+            {
+                "searchDN": "OU=Security Groups,OU=groups,DC=columndemo12,DC=com",
+                "searchScope": "SUBTREE",
+                "iterateSearchFilter": "(objectclass=group)"
+            }
+        ],
+        "exchangeAttributes": [
+            "msExchRecipientTypeDetails",
+            "msExchRecipientDisplayType"
+        ],
+        "group": "[searchDNs:[{\"iterateSearchFilter\":\"(objectclass=group)\",\"searchDN\":\"OU=Security Groups,OU=groups,DC=columndemo12,DC=com\",\"searchScope\":\"SUBTREE\"}]]",
+        "manageLync": false,
+        "domainSettings": [
+            {
+                "servers": [
+                    "sp-ad-2012.columndemo12.com"
+                ],
+                "port": "389",
+                "forestName": "default",
+                "authorizationType": "simple",
+                "user": "columndemo12\\idn_admin",
+                "domainDN": "dc=columndemo12,dc=com",
+                "useSSL": false
+            }
+        ],
+        "searchScope": "SUBTREE",
+        "group.searchScope": "SUBTREE",
+        "rollbackCreatedAccountOnError": false,
+        "useSSL": "false",
+        "IQServiceHost": "10.1.100.12",
+        "cloudAuthoritativeSourcePrecedence": 380,
+        "cloudCacheUpdate": 1686547547782,
+        "port": "389",
+        "upgraderSkip": "true",
+        "connectorName": "Active Directory",
+        "secondaryPort": "0",
+        "lyncAttributes": "RegistrarPool,SipAddressType,SipAddress,SipDomain,msRTCSIP-UserEnabled",
+        "since": "2022-06-28T05:08:29.043371Z",
+        "status": "SOURCE_STATE_HEALTHY",
+        "supportsDeltaAgg": "true",
+        "authSearchAttributes": [
+            "sAMAccountName"
+        ],
+        "enableSMBForIDN": false,
+        "useTLSForIQService": false,
+        "IQServiceUser": "columndemo12\\idn_admin",
+        "enforcePasswordPolicy": true,
+        "cloudAuthEnabled": true,
+        "useHasMoreElements": "false",
+        "ADAppVersion": "V2",
+        "manageRecycleBin": false,
+        "cloudIdentityProfileName": "Test",
+        "ldapExtendedControls": [
+            "1.2.840.113556.1.4.1339"
+        ],
+        "deleteThresholdPercentage": 100,
+        "deletedObjectsContainer": "CN=Deleted Objects,DOMAIN",
+        "useForAccounts": "true",
+        "secondaryTlsPort": "0",
+        "templateApplication": "Active Directory Template",
+        "encrypted": "forestAdminPassword,IQServicePassword",
+        "healthy": true,
+        "aiqAccountName": "sAMAccountName",
+        "cloudDisplayName": "AD - Employees",
+        "disableFspAggregation": false,
+        "searchDNs": [
+            {
+                "searchDN": "ou=Employees,ou=IDN,ou=IDN,dc=columndemo12,dc=com",
+                "searchScope": "SUBTREE",
+                "iterateSearchFilter": "(objectClass=person)"
+            }
+        ],
+        "groupHierarchyAttribute": "memberOf",
+        "md5": "eb311dd72dec0813cc1472c98c56aeb4"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "mail",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "displayName",
+                "operation": "EQ",
+                "value": "displayName",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "AD - Employees [source-107384] Account Correlation",
+        "id": "2c9180846c3f972e016c6ddf998d4538"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "ObjectType",
+                    "transform": {
+                        "attributes": {
+                            "value": "User"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "distinguishedName",
+                    "transform": {
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "template": "CN=$(firstname).$(lastname)$(uniqueCounter),OU=OrangeHRM,OU=Employees,OU=IDN,OU=IDN,DC=columndemo12,DC=com",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "sAMAccountName",
+                    "transform": {
+                        "attributes": {
+                            "fn": {
+                                "attributes": {
+                                    "name": "firstname"
+                                },
+                                "type": "identityAttribute"
+                            },
+                            "ln": {
+                                "attributes": {
+                                    "name": "lastname"
+                                },
+                                "type": "identityAttribute"
+                            },
+                            "patterns": [
+                                "${fn}~${ln}",
+                                "${fn}~${ln}${uniqueCounter}"
+                            ],
+                            "sourceCheck": true
+                        },
+                        "type": "usernameGenerator"
+                    },
+                    "attributes": {
+                        "cloudMaxUniqueChecks": "10",
+                        "cloudMaxSize": "20",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "personalTitle",
+                    "transform": null,
+                    "attributes": {
+                        "template": "$(firstname).$(lastname)$(uniqueCounter)"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "description",
+                    "transform": null,
+                    "attributes": {
+                        "template": "$(firstname) $(lastname)$(uniqueCounter)"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "displayName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": {
+                        "attributes": {
+                            "name": "Get Manager LDAP DN"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mail",
+                    "transform": {
+                        "attributes": {
+                            "name": "email"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "attributes": {
+                            "value": "Co1umn!t123456"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": {
+                        "attributes": {
+                            "name": "firstname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "sn",
+                    "transform": {
+                        "attributes": {
+                            "name": "lastname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "pwdLastSet",
+                    "transform": {
+                        "attributes": {
+                            "value": "false"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "IIQDisabled",
+                    "transform": {
+                        "attributes": {
+                            "value": "true"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "primaryGroupDN",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "telephoneNumber",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msNPAllowDialin",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "homeMDB",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mailNickname",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msExchHideFromAddressLists",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "SipAddress",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "SipDomain",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "title",
+                    "transform": {
+                        "attributes": {
+                            "name": "title"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "department",
+                    "transform": {
+                        "attributes": {
+                            "name": "department"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "userPrincipalName",
+                    "transform": {
+                        "attributes": {
+                            "name": "Create Unique LDAP Attribute"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "template": "$(firstname).$(lastname)$(uniqueCounter)@columndemo.com"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "c",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "SipAddressType",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msNPCallingStationID",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msRADIUSCallbackNumber",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msRADIUSFramedRoute",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "msRADIUSFramedIPAddress",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "RegistrarPool",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Exch_msExchRecipientTypeDetails",
+                    "transform": {
+                        "attributes": {
+                            "value": "128"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Exch_msExchRecipientDisplayType",
+                    "transform": {
+                        "attributes": {
+                            "value": " -2147483642"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Create Group",
+            "description": null,
+            "usageType": "CREATE_GROUP",
+            "fields": [
+                {
+                    "name": "distinguishedName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "sAMAccountName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Update Group",
+            "description": null,
+            "usageType": "UPDATE_GROUP",
+            "fields": [
+                {
+                    "name": "GroupType",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "GroupScope",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "description",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mailNickname",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "DISABLE",
+            "fields": [
+                {
+                    "name": "AC_NewParent",
+                    "transform": {
+                        "attributes": {
+                            "value": "ou=Staged,ou=IDN,ou=IDN,dc=columndemo12,dc=com"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "ENABLE",
+            "fields": [
+                {
+                    "name": "AC_NewParent",
+                    "transform": {
+                        "attributes": {
+                            "value": "ou=OrangeHRM,ou=Employees,ou=IDN,ou=IDN,dc=columndemo12,dc=com"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

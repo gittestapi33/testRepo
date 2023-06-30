@@ -1,0 +1,37 @@
+{
+    "id": "88edc3f36bf346f8820f87b21ec49538",
+    "name": "Oracle EPM Demo - NR Admin Role",
+    "description": "Oracle EPM Demo - NR Admin Role. Detailed description of access can go here.",
+    "created": "2023-06-08T02:11:56.538Z",
+    "modified": "2023-06-08T02:17:03.928Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "c68ce5c4e86d4cdca8341be75ee711a4",
+            "type": "ENTITLEMENT",
+            "name": "Admin-NR"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

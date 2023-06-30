@@ -1,0 +1,42 @@
+{
+    "id": "f7fa26d209ca49b488dce87918c102a4",
+    "name": "Oracle EPM Demo - NR Auditor Group",
+    "description": "Oracle EPM Demo - NR Auditor Group",
+    "created": "2023-06-08T02:16:02.059Z",
+    "modified": "2023-06-08T02:17:04.021Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "bc2b085f81c54e63907a4ed3f61a0312",
+            "type": "ENTITLEMENT",
+            "name": "Auditor-NR"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": true,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

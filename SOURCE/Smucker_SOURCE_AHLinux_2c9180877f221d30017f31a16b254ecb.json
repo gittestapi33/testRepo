@@ -1,0 +1,714 @@
+{
+    "id": "2c9180877f221d30017f31a16b254ecb",
+    "name": "AHLinux",
+    "type": "Linux - Direct",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "linux-angularsc",
+    "description": "AHLinux",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877864d273017865ad39104a10",
+        "name": "amit_hansalia"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "UNLOCK",
+        "UNSTRUCTURED_TARGETS",
+        "SEARCH",
+        "CURRENT_PASSWORD",
+        "GROUP_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "username",
+            "displayAttribute": "username",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "uid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "home",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pwdlastchg",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pwdmin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pwdmax",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "pwdwarn",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primgrp",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "comment",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "expiration",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "inactive",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastLogin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "shell",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180877f221d30017f31a16b264ecd",
+                        "name": "group"
+                    },
+                    "description": null,
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180877f221d30017f31a16b264ecc",
+            "name": "account",
+            "created": "2022-02-25T16:05:36.678Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "name",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groupid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180877f221d30017f31a16b264ecd",
+            "name": "group",
+            "created": "2022-02-25T16:05:36.678Z",
+            "modified": "2022-02-25T16:05:36.727Z"
+        }
+    ],
+    "connectorAttributes": {
+        "get.usershadowrow": "cat /etc/shadow | grep",
+        "get.loginsyslimit": "cat /etc/pam.d/system-auth",
+        "groupdel": {
+            "exitsts": {
+                "2": "Invalid command syntax. A usage message for the groupdel command is displayed.",
+                "6": "group does not exist.",
+                "10": "Cannot update the /etc/group file."
+            }
+        },
+        "SudoBasicErrorCode": "127",
+        "sshTimeOut": "120000",
+        "sshWaitTime": "500",
+        "unlock.account": "pam_tally2 -u",
+        "connectionType": "direct",
+        "disable.account": "passwd -l",
+        "groupmod": {
+            "flags": {
+                "newgroupname": "-n",
+                "groupid": "-g",
+                "dupgid": "-o"
+            },
+            "exitsts": {
+                "2": "Invalid command syntax. A usage message for the groupmod command is displayed.",
+                "3": "An invalid argument was provided to an option.",
+                "4": "gid is not unique (when the -o option is not used).",
+                "6": "group does not exist.",
+                "9": "name already exists as a group name.",
+                "10": "Cannot update the /etc/group file."
+            }
+        },
+        "SudoError": "Sorry, try again.",
+        "IsSudoUser": true,
+        "SetPrompt": "PS1='SAILPOINT>'",
+        "testconnection": "echo 'TestConnection'",
+        "host": "172.16.0.35",
+        "remove.remotefile": "\\rm -f",
+        "setDelay": "1",
+        "create.group": "groupadd",
+        "delete.group": "groupdel",
+        "NoOutput": "none",
+        "get.userfailedlogin": "pam_tally2",
+        "get.userpwdrow": "cat /etc/passwd | grep",
+        "enable.account": "passwd -u",
+        "modify.account": "usermod",
+        "aggregation.lockstatus": "pam_tally2 | awk '{print $1} {print $2}'",
+        "cloudCacheUpdate": 1646856229759,
+        "modify.group": "groupmod",
+        "ShadowDBFormat": [
+            "username",
+            "password",
+            "pwdlastchg",
+            "pwdmin",
+            "pwdmax",
+            "pwdwarn",
+            "inactive",
+            "expiration",
+            "keyword1"
+        ],
+        "passwd": {
+            "flags": {
+                "pwdwarn": "-w",
+                "inactive": "-i",
+                "unlock": "-u",
+                "forcepwdchg": "-e",
+                "pwdmax": "-x",
+                "pwdmin": "-n"
+            },
+            "exitsts": {
+                "11": "Password information unchanged.",
+                "1": "Permission denied.",
+                "2": "Invalid combination of options.",
+                "3": "Unexpected failure. Password file unchanged.",
+                "4": "Unexpected failure. Password file(s) missing.",
+                "5": "Password file(s) busy. Try again later.",
+                "6": "Invalid argument to option.",
+                "7": "Aging option is disabled.",
+                "8": "No memory.",
+                "9": "System error.",
+                "10": " Account expired."
+            }
+        },
+        "fileTransport": "sftp",
+        "connectorName": "Linux",
+        "chmod u-": {
+            "flags": {
+                "read": "r",
+                "execute": "x",
+                "write": "w"
+            }
+        },
+        "since": "2022-02-25T16:05:36.677Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+        "get.oldaccountval": "groups",
+        "remove.account.permission": "chmod u-",
+        "aggregation.group": "cat /etc/group | grep -v '^+' | grep -v '^-'",
+        "PasswdSuccess": [
+            "passwd: all authentication tokens updated successfully."
+        ],
+        "SshPort": "22",
+        "useradd": {
+            "flags": {
+                "crthomedir": "-m",
+                "uid": "-u",
+                "primgrp": "-g",
+                "shell": "-s",
+                "groups": "-G",
+                "comment": "-c",
+                "expiration": "-e",
+                "dupuid": "-o",
+                "lastlog": "-l",
+                "home": "-d"
+            },
+            "exitsts": {
+                "11": "Insufficient space to move the home directory (-m option).",
+                "22": "Does not have label.",
+                "12": "Unable to create, remove, or move the new home directory.",
+                "23": "Does not have group.",
+                "13": "Requested login is already in use.",
+                "24": "System not running Trusted Extensions.",
+                "14": "Unexpected failure.",
+                "25": "Does not have project.",
+                "26": "Unable to update auto_home.",
+                "16": "Unable to update the group database.",
+                "17": "Unable to update the project database.",
+                "18": "Insufficient authorization.",
+                "19": "Does not have role.",
+                "1": "No permission for attempted operation",
+                "2": "The command syntax was invalid. A usage message for the usermod command is displayed.",
+                "3": "An invalid argument was provided to an option.",
+                "4": "The gid or uid given with the -u option is already in use.",
+                "5": "The password and shadow files are not consistent with each other. pwconv(1M) might be of use to correct possible errors. See passwd(4) and shadow(4).",
+                "6": "The login to be modified does not exist, the gid or the uid does not exist.",
+                "7": "The group, passwd, or shadow file is missing.",
+                "9": "A group or user name is already in use",
+                "20": "Does not have profile.",
+                "10": "Cannot update the passwd, shadow, or user_attr file.",
+                "21": "Does not have privilege."
+            }
+        },
+        "connectorClass": "openconnector.connector.unix.LinuxConnector",
+        "chmod g-": {
+            "flags": {
+                "read": "r",
+                "execute": "x",
+                "write": "w"
+            }
+        },
+        "retryableErrors": [
+            "Login failed"
+        ],
+        "DEFAULT_SSH_SHELL": "sh",
+        "SSHLoginTimeout": "1000",
+        "create.account": "useradd",
+        "change.password": "passwd",
+        "SudoBasicError": "sudo: Command not found.",
+        "SudoUser": "root",
+        "userdel": {
+            "flags": {
+                "removeHome": "-r"
+            },
+            "exitsts": {
+                "12": "Cannot remove or otherwise modify the home directory.",
+                "2": "Invalid command syntax. A usage message for the userdel command is displayed.",
+                "6": "The account to be removed does not exist.",
+                "8": "The account to be removed is in use.",
+                "10": "Cannot update the /etc/group or /etc/user_attr file but the login is removed from the /etc/passwd file."
+            }
+        },
+        "connect": "ssh",
+        "SudoErrorCode": "1",
+        "echo 'TestConnection'": {
+            "exitsts": {
+                "Success": "TestConnection"
+            }
+        },
+        "remove.group.permission": "chmod g-",
+        "PasswdBasicErrors": {
+            "paswd: Command not found.": "paswd: Command not found.",
+            "passwd: Only root can specify a user name.": "passwd: Only root can specify a user name."
+        },
+        "ConnectorCode": "LINUX",
+        "deleteThresholdPercentage": 10,
+        "groupadd": {
+            "flags": {
+                "groupid": "-g",
+                "dupgid": "-o"
+            },
+            "exitsts": {
+                "2": "Invalid command syntax. A usage message for the groupadd command is displayed.",
+                "3": "An invalid argument was provided to an option.",
+                "4": "The gid is not unique (when -o option is not used).",
+                "9": "The group is not unique.",
+                "10": "The /etc/group file cannot be updated."
+            }
+        },
+        "usermod": {
+            "flags": {
+                "crthomedir": "-m",
+                "uid": "-u",
+                "primgrp": "-g",
+                "unlock": "-U",
+                "shell": "-s",
+                "groups": "-G",
+                "comment": "-c",
+                "expiration": "-e",
+                "dupuid": "-o",
+                "lastlog": "-l",
+                "home": "-d"
+            },
+            "exitsts": {
+                "11": "Insufficient space to move the home directory (-m option). Other update requests will be implemented.",
+                "12": "Unable to complete the move of the home directory to the new home directory.",
+                "2": "The command syntax was invalid. A usage message for the usermod command is displayed.",
+                "3": "An invalid argument was provided to an option.",
+                "4": "The uid given with the -u option is already in use.",
+                "5": "The password files contain an error. pwconv(1M) can be used to correct possible errors. See passwd(4)",
+                "6": "The login to be modified does not exist, the group does not exist, or the login shell does not exist.",
+                "8": "The login to be modified is in use.",
+                "9": "The new_logname is already in use.",
+                "10": "Cannot update the /etc/group or /etc/user_attr file. Other update requests will be implemented."
+            }
+        },
+        "aggregation.passwd": "cat /etc/shadow | grep -v '^+' | grep -v '^-'",
+        "templateApplication": "Linux - Direct",
+        "PwdDBFormat": [
+            "username",
+            "password",
+            "uid",
+            "primgrp",
+            "comment",
+            "home",
+            "shell"
+        ],
+        "changepassword.resetmode": "chage -d 0",
+        "encrypted": "SudoUserPassword,PassphraseForPrivateKey",
+        "PasswdErrors": {
+            "passwd: Authentication token manipulation error": "Invalid current user password.",
+            "BAD PASSWORD: it is based on a dictionary word": "BAD PASSWORD: Password is based on a dictionary word.",
+            "Error changing password": "Error changing password.",
+            "BAD PASSWORD: is too similar to the old one": "BAD PASSWORD: Password is too similar to the old one.",
+            "Sorry, try again.": "Invalid sudo user password.",
+            "Sorry, passwords do not match.": "Passwords do not match.",
+            "is not in the sudoers file.  This incident will be reported.": "sudo user not configured."
+        },
+        "get.group": "getent group",
+        "healthy": false,
+        "aggregation.account": "cat /etc/passwd | grep -v '^+' | grep -v '^-'",
+        "cloudDisplayName": "AHLinux",
+        "GroupDBFormat": [
+            "name",
+            "password",
+            "groupid",
+            "memberlist"
+        ],
+        "PasswdPrompts": {
+            "0": {
+                "(current) UNIX password:": "CurrentPassword"
+            },
+            "1": {
+                "Current password:": "CurrentPassword"
+            },
+            "2": {
+                "Old Password:": "CurrentPassword"
+            },
+            "3": {
+                "New password:": "NewPassword"
+            },
+            "4": {
+                "New Password:": "NewPassword"
+            },
+            "5": {
+                "Retype new password:": "NewPassword"
+            },
+            "6": {
+                "Reenter New Password:": "NewPassword"
+            }
+        },
+        "Prompt": "SAILPOINT>",
+        "delete.account": "userdel"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "username",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Linux - Direct Account Correlation Config",
+        "id": "2c9180846b6c6937016b740cbfd634f9"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "username",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        }
+                    },
+                    "attributes": {
+                        "template": "$(firstname).$(lastname)$(uniqueCounter)",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "home",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "shell",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "uid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Password"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "pwdmin",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "pwdmax",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "pwdwarn",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "primgrp",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "comment",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "expiration",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "inactive",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "crthomedir",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "lastlog",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "dupuid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "forcepwdchg",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "false"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "create group",
+            "description": null,
+            "usageType": "CREATE_GROUP",
+            "fields": [
+                {
+                    "name": "name",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "groupid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "dupgid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "update group",
+            "description": null,
+            "usageType": "UPDATE_GROUP",
+            "fields": [
+                {
+                    "name": "groupid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "dupgid",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

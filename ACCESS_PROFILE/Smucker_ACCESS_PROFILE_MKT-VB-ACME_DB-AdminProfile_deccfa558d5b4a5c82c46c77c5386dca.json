@@ -1,0 +1,37 @@
+{
+    "id": "deccfa558d5b4a5c82c46c77c5386dca",
+    "name": "MKT-VB-ACME_DB-AdminProfile",
+    "description": "Admin Profile",
+    "created": "2022-08-12T14:56:10.893Z",
+    "modified": "2022-11-10T20:08:02.593Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "viswanathan.balakumar"
+    },
+    "source": {
+        "id": "2c918086827ef2f90182845698a866e1",
+        "type": "SOURCE",
+        "name": "VB-ACME Database"
+    },
+    "entitlements": [
+        {
+            "id": "2c918088828282e601829283fdd070a1",
+            "type": "ENTITLEMENT",
+            "name": "Admin"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

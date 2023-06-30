@@ -1,0 +1,24 @@
+{
+    "members": [
+        {
+            "type": "IDENTITY",
+            "id": "2c9180877c3c73d7017c4a1a4494640c",
+            "name": "Priyanka Vangala"
+        }
+    ],
+    "connections": null,
+    "description": "Testing",
+    "owner": {
+        "displayName": null,
+        "emailAddress": null,
+        "type": "IDENTITY",
+        "id": "2c9180877c3c73d7017c4a1a4494640c",
+        "name": "Priyanka Vangala"
+    },
+    "memberCount": 0,
+    "connectionCount": 0,
+    "id": "08863c09-5d6a-4b5c-98e8-cadc9aa042f4",
+    "name": "TestGovernanceGroup",
+    "created": null,
+    "modified": null
+}

@@ -1,0 +1,78 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 270,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c918085814e69c801816e5fc00b492d",
+        "name": "Jack Boike-NELM"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 2,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "accountName",
+                        "sourceName": "Jack Boike-NELM",
+                        "sourceId": "2c918085814e69c801816e5fc00b492d"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "email",
+                        "sourceName": "Jack Boike-NELM",
+                        "sourceId": "2c918085814e69c801816e5fc00b492d"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "lastName",
+                        "sourceName": "Jack Boike-NELM",
+                        "sourceId": "2c918085814e69c801816e5fc00b492d"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "firstName",
+                        "sourceName": "Jack Boike-NELM",
+                        "sourceId": "2c918085814e69c801816e5fc00b492d"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "accountName",
+                        "sourceName": "Jack Boike-NELM",
+                        "sourceId": "2c918085814e69c801816e5fc00b492d"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "19155d138d5a40189ea8f3f5db4ddf22",
+    "name": "Jack Boike-NELM",
+    "created": "2022-06-16T21:17:28.964Z",
+    "modified": "2022-11-23T17:06:07.129Z"
+}

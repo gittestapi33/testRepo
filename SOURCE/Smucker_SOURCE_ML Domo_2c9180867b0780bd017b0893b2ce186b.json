@@ -1,0 +1,79 @@
+{
+    "id": "2c9180867b0780bd017b0893b2ce186b",
+    "name": "ML Domo",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Matt Laufer Domo",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918089790fc20301791431e75b4d8f",
+        "name": "matt.laufer"
+    },
+    "features": [
+        "PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "AUTHENTICATE",
+        "UNLOCK"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180867b0780bd017b0893b2cf186c",
+            "name": "account",
+            "created": "2021-08-02T20:35:02.479Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180867b0780bd017b0893b2cf186d",
+            "name": "group",
+            "created": "2021-08-02T20:35:02.479Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "version": "v2",
+        "isGetObjectRequiredForPTA": true,
+        "genericWebServiceBaseUrl": "https://majorkeytech.domo.com/",
+        "cloudCacheUpdate": 1646682221726,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "cloudAuthEnabled": true,
+        "authenticationMethod": "BasicLogin",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "ML Domo",
+        "connectorName": "Web Services",
+        "since": "2021-08-02T20:35:02.479Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

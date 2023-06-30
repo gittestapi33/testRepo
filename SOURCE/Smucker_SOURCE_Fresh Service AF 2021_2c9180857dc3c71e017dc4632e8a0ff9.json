@@ -1,0 +1,80 @@
+{
+    "id": "2c9180857dc3c71e017dc4632e8a0ff9",
+    "name": "Fresh Service AF 2021",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Fresh Service connected",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "features": [
+        "PROVISIONING",
+        "AUTHENTICATE",
+        "ENABLE",
+        "PASSWORD",
+        "UNLOCK"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180857dc3c71e017dc4632e8a0ffa",
+            "name": "account",
+            "created": "2021-12-16T17:56:14.090Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180857dc3c71e017dc4632e8a0ffb",
+            "name": "group",
+            "created": "2021-12-16T17:56:14.090Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "version": "v2",
+        "isGetObjectRequiredForPTA": true,
+        "genericWebServiceBaseUrl": "https://majorkeytechservicedesk.myfreshworks.com/",
+        "cloudCacheUpdate": 1646682218714,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "cloudAuthEnabled": true,
+        "authenticationMethod": "BasicLogin",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "Fresh Service AF 2021",
+        "connectorName": "Web Services",
+        "since": "2021-12-16T17:56:14.090Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+        "username": "Alec_Fike"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

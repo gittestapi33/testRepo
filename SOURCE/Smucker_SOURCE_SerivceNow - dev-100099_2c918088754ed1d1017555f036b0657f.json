@@ -1,0 +1,335 @@
+{
+    "id": "2c918088754ed1d1017555f036b0657f",
+    "name": "SerivceNow - dev-100099",
+    "type": "DelimitedFile",
+    "connectorClass": "sailpoint.connector.DelimitedFileConnector",
+    "connectorScriptName": "delimited-file-angularsc",
+    "description": "Testing SIM INtegration",
+    "deleteThreshold": 10,
+    "provisionAsCsv": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808473bae8d60173e149e79f414e",
+        "name": "Ankita_Katare"
+    },
+    "features": [
+        "NO_RANDOM_ACCESS",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "id",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The unique ID for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typical username etc",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The first or given name of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "familyName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The last, family name, or surname of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "e-mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The primary e-mail address of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The location associated with this account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Reference to the manager of this particular account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918088754ed1d1017555f036b16581",
+                        "name": "group"
+                    },
+                    "description": "The groups, roles etc. that reference account group objects",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c918088754ed1d1017555f036b16580",
+            "name": "account",
+            "created": "2020-10-23T14:50:07.409Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique ID for Group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typically groupname etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The preferred display name for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was created (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Multi-purpose field used to capture a description or comments",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "modified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was modified (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "entitlements",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The access rights, entitlements etc. that the account has access to.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The groups, roles etc. that reference to account group objects",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "permissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The permissions associated with the account",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918088754ed1d1017555f036b16581",
+            "name": "group",
+            "created": "2020-10-23T14:50:07.409Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "mergeColumns": [
+            "groups"
+        ],
+        "group.mergeRows": true,
+        "group.delimiter": ",",
+        "mergeRows": true,
+        "group.filetransport": "local",
+        "partitionMode": "disabled",
+        "connectionType": "file",
+        "group.host": "local",
+        "group.indexColumn": "id",
+        "file": "/qpoc-server/tmp/5614bd57c3eb453bafa584b808f228f8.csv",
+        "delimiter": ",",
+        "host": "local",
+        "group.mergeColumns": [
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "hasHeader": true,
+        "filterEmptyRecords": true,
+        "filetransport": "local",
+        "deleteThresholdPercentage": 10,
+        "group.filterEmptyRecords": true,
+        "group.hasHeader": true,
+        "group.partitionMode": "disabled",
+        "group.columnNames": [
+            "id",
+            "name",
+            "displayName",
+            "created",
+            "description",
+            "modified",
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "templateApplication": "DelimitedFile Template",
+        "group.file": "/var/lib/identityiq_workspace/4b3c74b7-d9ea-4698-a0ac-8c1cf5f7f84e-groups.csv",
+        "indexColumn": "id",
+        "healthy": true,
+        "cloudDisplayName": "SerivceNow - dev-100099",
+        "connectorName": "Delimited File",
+        "cloudOriginalApplicationType": "Delimited File",
+        "since": "2023-05-16T17:50:36.198909Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Create Policy",
+            "description": "Create Policy",
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "id",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "name",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "familyName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "e-mail",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "location",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "groups",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

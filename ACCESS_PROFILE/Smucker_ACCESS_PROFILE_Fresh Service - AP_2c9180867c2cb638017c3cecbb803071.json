@@ -1,0 +1,42 @@
+{
+    "id": "2c9180867c2cb638017c3cecbb803071",
+    "name": "Fresh Service - AP",
+    "description": "Fresh service access profile for Ryan Blocker",
+    "created": "2021-10-01T17:35:19.936Z",
+    "modified": "2022-11-10T20:08:02.242Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867c045e25017c09d31bd91fb7",
+        "name": "ryan.blocker"
+    },
+    "source": {
+        "id": "2c9180847c337eed017c38576baa446c",
+        "type": "SOURCE",
+        "name": "Fresh Service"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180877c387afe017c38da80b712e0",
+            "type": "ENTITLEMENT",
+            "name": "Network Team"
+        },
+        {
+            "id": "2c9180877c387afe017c38da7f8b12dc",
+            "type": "ENTITLEMENT",
+            "name": "Database Team"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

@@ -1,0 +1,356 @@
+{
+    "id": "2c91808b73c07d2e0173e833eb3a2659",
+    "name": "Testing Alpha Application",
+    "type": "DelimitedFile",
+    "connectorClass": "sailpoint.connector.DelimitedFileConnector",
+    "connectorScriptName": "delimited-file-angularsc",
+    "description": "Testing Alpha Application",
+    "deleteThreshold": 10,
+    "provisionAsCsv": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808473bae8d60173e149e8084151",
+        "name": "Akshaya_Iyer"
+    },
+    "features": [
+        "DIRECT_PERMISSIONS",
+        "DISCOVER_SCHEMA",
+        "NO_RANDOM_ACCESS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "username",
+            "displayAttribute": "username",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FirstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "e-mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Locked",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Status",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Region",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": null,
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808b73c07d2e0173e833eb3a265a",
+            "name": "account",
+            "created": "2020-08-13T14:23:03.482Z",
+            "modified": "2020-08-13T15:32:29.570Z"
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique ID for Group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typically groupname etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The preferred display name for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was created (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Multi-purpose field used to capture a description or comments",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "modified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was modified (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "entitlements",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The access rights, entitlements etc. that the account has access to.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The groups, roles etc. that reference to account group objects",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "permissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The permissions associated with the account",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808b73c07d2e0173e833eb3a265b",
+            "name": "group",
+            "created": "2020-08-13T14:23:03.482Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "mergeColumns": [
+            "groups"
+        ],
+        "group.mergeRows": true,
+        "group.delimiter": ",",
+        "mergeRows": true,
+        "group.filetransport": "local",
+        "partitionMode": "disabled",
+        "connectionType": "file",
+        "group.host": "local",
+        "group.indexColumn": "id",
+        "file": "/qpoc-server/tmp/af3d4c4ae7664f8dae285fdf5d2d6adf.csv",
+        "delimiter": ",",
+        "host": "local",
+        "group.mergeColumns": [
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "hasHeader": true,
+        "filterEmptyRecords": true,
+        "filetransport": "local",
+        "deleteThresholdPercentage": 10,
+        "group.filterEmptyRecords": true,
+        "group.hasHeader": true,
+        "useForAccounts": "false",
+        "group.partitionMode": "disabled",
+        "group.columnNames": [
+            "id",
+            "name",
+            "displayName",
+            "created",
+            "description",
+            "modified",
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "templateApplication": "DelimitedFile Template",
+        "group.file": "/var/lib/identityiq_workspace/bc61eaf2-6ee1-4c4a-9d4f-964c896d028e-groups.csv",
+        "indexColumn": "username",
+        "healthy": true,
+        "cloudDisplayName": "Testing Alpha Application",
+        "connectorName": "Delimited File",
+        "cloudOriginalApplicationType": "Delimited File",
+        "since": "2023-05-16T17:50:37.405035Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "uid",
+                "operation": "EQ",
+                "value": "username",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "identificationNumber",
+                "operation": "EQ",
+                "value": "id",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Testing Alpha Application [source-136807] Account Correlation",
+        "id": "2c91808473c077640173e839942b2863"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "id",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "uid"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "familyName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "e-mail",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "location",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "groups",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

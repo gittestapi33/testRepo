@@ -1,0 +1,13 @@
+{
+    "triggerId": "idn:access-request-post-approval",
+    "responseDeadline": "PT1H",
+    "workflowConfig": {
+        "workflowId": "8367e59f-1db8-4757-bad9-60fa7186b97b"
+    },
+    "triggerName": "Access Request Decision",
+    "description": "Managed by Workflows",
+    "id": "8367e59f-1db8-4757-bad9-60fa7186b97b",
+    "enabled": false,
+    "type": "WORKFLOW",
+    "name": "AA - Director Identification - Main"
+}

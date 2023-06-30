@@ -1,0 +1,51 @@
+{
+    "id": "171aad3a9524496c88f25f11b85a7949",
+    "name": "VBs-WebServiceTest_Role1",
+    "created": "2023-03-08T19:05:53.977Z",
+    "modified": "2023-03-08T19:14:07.09Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "Viswanathan Balakumar"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "045d1497c9394182a303a68fee1fcf38",
+            "type": "ACCESS_PROFILE",
+            "name": "VBs-WebServiceTest1"
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c637806016c71c41b5306df",
+                "name": "Amy.Cox",
+                "aliasName": "176"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c91808482602d5401826c0054bc3471",
+                "name": "Kamal Hasan",
+                "aliasName": "Emp99123"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

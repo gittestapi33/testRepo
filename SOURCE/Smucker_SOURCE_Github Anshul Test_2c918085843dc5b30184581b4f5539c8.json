@@ -1,0 +1,487 @@
+{
+    "id": "2c918085843dc5b30184581b4f5539c8",
+    "name": "Github Anshul Test",
+    "type": "21d38687-94b1-432a-87df-c60c0d10c48d",
+    "connectorClass": "",
+    "connectorScriptName": "21d38687-94b1-432a-87df-c60c0d10c48d",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877b16d7bd017b1832e6cd4b0c",
+        "name": "Anshul_Chaudhary"
+    },
+    "features": [],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "login",
+            "displayAttribute": "login",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "databaseId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the primary key from the database",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "login",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The username used to login",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's publicly visible profile email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "twitterUsername",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's Twitter username",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "url",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "URL pointing to the user's public profile",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "bio",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile bio",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "bioHTML",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile bio as HTML",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile location",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "company",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "companyHTML",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's public profile company as HTML",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isBountyHunter",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a participant in the GitHub Security Bug Bounty",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isHireable",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not the user has marked themselves as for hire",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isEmployee",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a GitHub employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isSiteAdmin",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a site administrator",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isGitHubStar",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a member of the GitHub Stars Program",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isViewer",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is the viewing use",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isCampusExpert",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a participant in the GitHub Campus Experts Program",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isDeveloperProgramMember",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Whether or not this user is a GitHub Developer Program member",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "hasSponsorsListing",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "True if this user/organization has a GitHub Sponsors listing",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "followers",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The number of users the given user is followed by",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "following",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The number of users the given user is following",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "gists",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The number of gists the user has created",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "repositories",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The number of repositories that the user owns",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "watching",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The number of repositories that the user is watching",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "estimatedNextSponsorsPayoutInCents",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The estimated next GitHub Sponsors payout for this user/organization in cents (USD)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "monthlyEstimatedSponsorsIncomeInCents",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The estimated monthly GitHub Sponsors income for this user/organization in cents (USD)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "websiteUrl",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A URL pointing to the user's public website/blog",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "createdAt",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the date and time when the user was created",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "updatedAt",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the date and time when the user was last updated",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "teams",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918085843dc5b30184581b4f5539ca",
+                        "name": "group"
+                    },
+                    "description": "A list of teams the user is a member of",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c918085843dc5b30184581b4f5539c9",
+            "name": "account",
+            "created": "2022-11-08T16:38:15.637Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "slug",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "databaseId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the primary key from the database",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "slug",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The slug corresponding to the team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The description of the team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "privacy",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The level of privacy the team has",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "combinedSlug",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The slug corresponding to the organization and team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "url",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "URL pointing to the team's page",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "members",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "A number of users who are members of this team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "repositories",
+                    "type": "INT",
+                    "schema": null,
+                    "description": "The parent team of the team<",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "parentTeam",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The parent team of the team",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "createdAt",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the date and time when the object was created",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "updatedAt",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identifies the date and time when the team was last updated",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918085843dc5b30184581b4f5539ca",
+            "name": "group",
+            "created": "2022-11-08T16:38:15.637Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "spConnectorInstanceId": "dae54af8-aed7-41cf-ad7a-423ec537b251",
+        "idnProxyType": "sp-connect",
+        "cloudCacheUpdate": 1667925495637,
+        "templateApplication": "GitHub",
+        "healthy": false,
+        "spConnectorSpecId": "21d38687-94b1-432a-87df-c60c0d10c48d",
+        "deleteThresholdPercentage": 10,
+        "cloudDisplayName": "Github Anshul Test",
+        "connectorName": "GitHub",
+        "connectionType": "direct",
+        "since": "2022-11-08T16:38:15.637Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "GitHub Account Correlation Config",
+        "id": "2c9180867c387d7e017c38c39aac0c4e"
+    },
+    "provisioningPolicies": []
+}

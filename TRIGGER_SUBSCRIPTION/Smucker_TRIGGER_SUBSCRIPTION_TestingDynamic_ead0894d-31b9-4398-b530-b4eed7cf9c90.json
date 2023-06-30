@@ -1,0 +1,17 @@
+{
+    "triggerId": "idn:access-request-dynamic-approver",
+    "responseDeadline": "PT25H",
+    "httpConfig": {
+        "httpDispatchMode": "ASYNC",
+        "httpAuthenticationType": "NO_AUTH",
+        "url": "https://webhook.site/6f4b7888-5afd-4993-9bde-457ae8e19ff2",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": null
+    },
+    "triggerName": "Access Request Dynamic Approver",
+    "description": "TestingDynamic",
+    "id": "ead0894d-31b9-4398-b530-b4eed7cf9c90",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "TestingDynamic"
+}

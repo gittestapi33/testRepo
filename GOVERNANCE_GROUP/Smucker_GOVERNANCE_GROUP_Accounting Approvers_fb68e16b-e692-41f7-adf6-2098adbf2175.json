@@ -1,0 +1,24 @@
+{
+    "members": [
+        {
+            "type": "IDENTITY",
+            "id": "2c9180876c637806016c71c41cc806e1",
+            "name": "183"
+        }
+    ],
+    "connections": null,
+    "description": "MKD sample Gov Group",
+    "owner": {
+        "displayName": null,
+        "emailAddress": null,
+        "type": "IDENTITY",
+        "id": "2c91808a6fa5af03016fa5f1cf9f0168",
+        "name": "matt_dirks"
+    },
+    "memberCount": 0,
+    "connectionCount": 0,
+    "id": "fb68e16b-e692-41f7-adf6-2098adbf2175",
+    "name": "Accounting Approvers",
+    "created": null,
+    "modified": null
+}

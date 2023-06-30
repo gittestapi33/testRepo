@@ -1,0 +1,48 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 370,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "29ef80d818824618b1b9d58b8c6f1b1f",
+        "name": "AA - Domo"
+    },
+    "identityRefreshRequired": true,
+    "identityCount": 5,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "sourceName": "AA - Domo",
+                        "attributeName": "email",
+                        "sourceId": "29ef80d818824618b1b9d58b8c6f1b1f"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "sourceName": "AA - Domo",
+                        "attributeName": "email",
+                        "sourceId": "29ef80d818824618b1b9d58b8c6f1b1f"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": {
+        "taskResultId": "806471ec1f3f46b99af429fe73468c8f",
+        "reportName": "emp Identity Exceptions"
+    },
+    "hasTimeBasedAttr": false,
+    "id": "ea57015ccff64f61b63a3d41bc7c2e71",
+    "name": "emp",
+    "created": "2023-06-04T16:30:01.842Z",
+    "modified": "2023-06-07T08:06:48.374Z"
+}

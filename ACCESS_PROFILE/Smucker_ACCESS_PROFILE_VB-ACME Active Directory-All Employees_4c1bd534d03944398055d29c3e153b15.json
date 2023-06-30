@@ -1,0 +1,56 @@
+{
+    "id": "4c1bd534d03944398055d29c3e153b15",
+    "name": "VB-ACME Active Directory-All Employees",
+    "description": "VB's Sample ACME Active Directory Access Profile for All Employees",
+    "created": "2022-07-26T22:40:50.822Z",
+    "modified": "2022-11-10T20:08:02.447Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "viswanathan.balakumar"
+    },
+    "source": {
+        "id": "2c9180898222e59b01823b2daa3e0080",
+        "type": "SOURCE",
+        "name": "VB-ACME Active Directory"
+    },
+    "entitlements": [
+        {
+            "id": "023f574b1a594a75bb8518cc8d6eae87",
+            "type": "ENTITLEMENT",
+            "name": "Employment"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": {
+        "operation": "AND",
+        "attribute": null,
+        "value": null,
+        "children": [
+            {
+                "operation": "OR",
+                "attribute": null,
+                "value": null,
+                "children": [
+                    {
+                        "operation": "EQUALS",
+                        "attribute": "employeeType",
+                        "value": "Employee",
+                        "children": null
+                    }
+                ]
+            }
+        ]
+    },
+    "segmentRefs": []
+}

@@ -1,0 +1,42 @@
+{
+    "id": "8c9027b6c6b848a6a73a15c6c34fb32b",
+    "name": "Oracle EPM Demo - EPBCS Auditor Group",
+    "description": "Oracle EPM Demo - EPBCS Auditor Group. Detailed description of access can go here.",
+    "created": "2023-06-08T02:14:14.671Z",
+    "modified": "2023-06-08T02:19:14.83Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "131b8deb9861408b972d23d15ace5a5d",
+            "type": "ENTITLEMENT",
+            "name": "Auditor-EPBCS"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

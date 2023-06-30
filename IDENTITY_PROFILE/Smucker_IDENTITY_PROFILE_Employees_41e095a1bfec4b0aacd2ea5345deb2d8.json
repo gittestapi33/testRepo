@@ -1,0 +1,45 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 390,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "3fa16e3a6884462f83fdd2eac91ec53e",
+        "name": "aa - hana test"
+    },
+    "identityRefreshRequired": true,
+    "identityCount": 0,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "sourceName": "aa - hana test",
+                        "attributeName": "USER_NAME",
+                        "sourceId": "3fa16e3a6884462f83fdd2eac91ec53e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "sourceName": "aa - hana test",
+                        "attributeName": "USER_NAME",
+                        "sourceId": "3fa16e3a6884462f83fdd2eac91ec53e"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "41e095a1bfec4b0aacd2ea5345deb2d8",
+    "name": "Employees",
+    "created": "2023-06-16T18:19:27.583Z",
+    "modified": "2023-06-16T18:19:27.694Z"
+}

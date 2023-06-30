@@ -1,0 +1,14 @@
+{
+    "triggerId": "idn:identity-attributes-changed",
+    "responseDeadline": "PT1H",
+    "workflowConfig": {
+        "workflowId": "74df0787-8a7d-4a36-b449-c24955710f5a"
+    },
+    "triggerName": "Identity Attributes Changed",
+    "description": "Managed by Workflows",
+    "filter": "$.changes[?(@.attribute == \"cloudLifecycleState\")]",
+    "id": "74df0787-8a7d-4a36-b449-c24955710f5a",
+    "enabled": false,
+    "type": "WORKFLOW",
+    "name": "AA - Control IDN Account Status"
+}

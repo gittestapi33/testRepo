@@ -1,0 +1,527 @@
+{
+    "id": "3fa16e3a6884462f83fdd2eac91ec53e",
+    "name": "aa - hana test",
+    "type": "SAP HANA Database",
+    "connectorClass": "sailpoint.connector.SAPHANAConnector",
+    "connectorScriptName": "sap-hana-angularsc",
+    "description": "test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK",
+        "SYNC_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "USER_ID",
+            "displayAttribute": "USER_NAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "USER_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ID of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USER_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USER_MODE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Mode of the user: 'LOCAL','GLOBAL', 'EXTERNAL'",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CREATOR",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Creator of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "VALID_FROM",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specify a date time from which the user account is valid.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "VALID_UNTIL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specify a date time until which the user account is valid.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EXTERNAL_IDENTITY_KERBEROS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "External identifier for Kerberos.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SAML_PROVIDER",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of Identity Provider for SAML.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EXTERNAL_IDENTITY_SAML",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "External identifier for SAML.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IS_KERBEROS_ENABLED",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Specifies if Kerberos authentication is enabled for user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IS_SAML_ENABLED",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Specifies if SAML authentication is enabled for user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IS_RESTRICTED",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies if the user is a restricted user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IS_CLIENT_CONNECT_ENABLED",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies if the user is able to connect to client",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "HAS_REMOTE_USERS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies if there is a database user in another tenant database as the remote identity of the database user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SESSION_CLIENT",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies the client whose data can be accessed by user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EMAIL_ADDRESS",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Email address of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TIME_ZONE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Time zone of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AUTHENTICATION_TYPE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Different Authentication methods supported by user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SYSTEM_PRIVILEGES",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "System Privileges assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "APPLICATION_PRIVILEGES",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Application Privileges assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "CATALOG_ROLES",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Catalog Roles assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "REPOSITORY_ROLES",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "3f449b07aa874294bbbfb90a0ad9e25d",
+                        "name": "group"
+                    },
+                    "description": "Repository Roles assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "FORCE_PWD_CHG_ON_NEXT_LOGON",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "If value is \"YES\", the password is set in initial mode else it is set in permanent mode",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "a3cc51afc921440cb7b74e7cdac0e691",
+            "name": "account",
+            "created": "2023-04-17T15:47:25.672Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "REPOSITORY_ROLE",
+            "identityAttribute": "ROLE_ID",
+            "displayAttribute": "ROLE_NAME",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ROLE_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ROLE_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ROLE_MODE",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Mode of the role: 'LOCAL' ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GLOBAL_IDENTITY",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Identity specified for role with ROLE_MODE GLOBAL ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CREATOR",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the user who created the role ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GRANTED_ROLES",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The roles which are assigned to the current role ",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "3f449b07aa874294bbbfb90a0ad9e25d",
+            "name": "group",
+            "created": "2023-04-17T15:47:25.672Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "chunkToFetch": "1000",
+        "deleteThresholdPercentage": 10,
+        "connectionType": "direct",
+        "url": "jdbc:sap://<host>:<port>/?databaseName=<dbName>",
+        "cloudAuthoritativeSourcePrecedence": 390,
+        "cloudCacheUpdate": 1686939567740,
+        "manageTerminatedAccounts": "false",
+        "templateApplication": "SAP HANA",
+        "encrypted": "password",
+        "driverClass": "com.sap.db.jdbc.Driver",
+        "healthy": false,
+        "aiqAccountName": "USER_NAME",
+        "cloudDisplayName": "aa - hana test",
+        "connectorName": "SAP HANA",
+        "manageFutureDatedAccounts": "false",
+        "cloudIdentityProfileName": "Employees",
+        "since": "2023-04-17T15:47:25.671Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "EMAIL_ADDRESS",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "USER_NAME",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "SAP HANA Account Correlation Config",
+        "id": "2c9180846b6c6937016b740d249e3526"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Create User",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "USER_NAME",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "uid"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "DISABLE_PASSWORD",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "false"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Password"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "FORCE_PWD_CHG_ON_NEXT_LOGON",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "IS_KERBEROS_ENABLED",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "false"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EXTERNAL_IDENTITY_KERBEROS",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "IS_SAML_ENABLED",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "false"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "SAML_PROVIDER",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EXTERNAL_IDENTITY_SAML",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "ANY"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "IS_RESTRICTED",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "EMAIL_ADDRESS",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "TIME_ZONE",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "VALID_FROM",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "VALID_UNTIL",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,414 @@
+{
+    "id": "01fdd66e372d4dcbb4294eb07fdc59d6",
+    "name": "AA - IDN Loopback",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Manage IDN accounts and permissions",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "AUTHENTICATE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "displayName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "externalId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "externalId",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "identificationNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "identificationNumber",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "capabilities",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "bd6dd0920e50497586887bffb45e30c3",
+                        "name": "group"
+                    },
+                    "description": "capabilities",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "inactive",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "inactive",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "firstName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "lastName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "enabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "enabled",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "fc1e8ec253964576bb33972bf3c69ad2",
+            "name": "account",
+            "created": "2023-01-24T19:45:24.811Z",
+            "modified": "2023-01-24T20:11:19.930Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "value",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "privileged",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "privileged",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "displayName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "value",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "value",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "description",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "bd6dd0920e50497586887bffb45e30c3",
+            "name": "group",
+            "created": "2023-01-24T19:45:24.811Z",
+            "modified": "2023-01-24T20:14:20.484Z"
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "lastAggregationDate_group": "2023-01-24T20:22:32Z",
+        "deltaAggregationEnabled": false,
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "enableHasMore": false,
+        "client_id": "062c1fd20f1744038585a60578cff7be",
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "60",
+        "genericWebServiceBaseUrl": "https://partner018.api.identitynow.com",
+        "connectionParameters": [
+            {
+                "contextUrl": "/beta/search/identities?limit=1",
+                "httpMethodType": "POST",
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "header": {
+                    "Authorization": "$application.accesstoken$ ",
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Test Connection",
+                "body": {
+                    "jsonBody": "{\n  &quot;query&quot;: {\n    &quot;query&quot;: &quot;*&quot;\n  }\n}",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "resMappingObj": {
+                    "firstName": "firstName",
+                    "lastName": "lastName",
+                    "capabilities": "access[?(@.attribute==&#39;assignedGroups&#39;)].value",
+                    "inactive": "inactive",
+                    "displayName": "displayName",
+                    "name": "name",
+                    "externalId": "id",
+                    "email": "email",
+                    "enabled": "enabled"
+                },
+                "contextUrl": "/beta/search/identities?limit=500",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "header": {
+                    "Authorization": "$application.accesstoken$ ",
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Account Aggregation",
+                "rootPath": "$.[*]",
+                "body": {
+                    "jsonBody": "{\n    &quot;query&quot;: {\n        &quot;query&quot;: &quot;*&quot;\n    },\n    &quot;indices&quot;: [\n\t\t&quot;identities&quot;\n\t]\n}",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            },
+            {
+                "contextUrl": "/cc/api/user/enabled",
+                "httpMethodType": "POST",
+                "sequenceNumberForEndpoint": "3",
+                "uniqueNameForEndPoint": "Disable Account",
+                "operationType": "Disable Account",
+                "body": {
+                    "bodyFormData": {
+                        "ids": "$plan.nativeIdentity$",
+                        "enabled": "false"
+                    },
+                    "bodyFormat": "formData"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "contextUrl": "/cc/api/user/enabled",
+                "httpMethodType": "POST",
+                "sequenceNumberForEndpoint": "4",
+                "uniqueNameForEndPoint": "Enable Account",
+                "operationType": "Enable Account",
+                "body": {
+                    "bodyFormData": {
+                        "ids": "$plan.nativeIdentity$",
+                        "enabled": "true"
+                    },
+                    "bodyFormat": "formData"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "resMappingObj": {
+                    "privileged": "privileged",
+                    "displayName": "displayName",
+                    "name": "name",
+                    "description": "description",
+                    "id": "id",
+                    "value": "value"
+                },
+                "contextUrl": "/v3/search?offset=0&amp;limit=50&amp;count=true",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "5",
+                "uniqueNameForEndPoint": "Entitlement Aggregation",
+                "operationType": "Group Aggregation",
+                "rootPath": "$.[*]",
+                "body": {
+                    "jsonBody": "{\n\t&quot;query&quot;: {\n\t\t&quot;query&quot;: &quot;source.name.exact:IdentityNow AND attribute:assignedGroups&quot;\n\t},\n\t&quot;indices&quot;: [\n\t\t&quot;entitlements&quot;\n\t],\n\t&quot;sort&quot;: [\n\t\t&quot;name&quot;\n\t],\n\t&quot;includeNested&quot;: false\n}",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "contextUrl": "/cc/api/user/updatePermissions",
+                "httpMethodType": "POST",
+                "sequenceNumberForEndpoint": "6",
+                "uniqueNameForEndPoint": "Add Entitlement",
+                "operationType": "Add Entitlement",
+                "body": {
+                    "jsonBody": "{\n    &quot;ids&quot;: $plan.nativeIdentity$,\n    &quot;isAdmin&quot;: &quot;1&quot;,\n    &quot;adminType&quot;: &quot;$plan.capabilities$&quot;\n}",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "7",
+                "uniqueNameForEndPoint": "Account Aggregation 2",
+                "rootPath": "$.items[*]",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ],
+                "resMappingObj": {
+                    "id": "id",
+                    "enabled": "enabled"
+                },
+                "contextUrl": "/cc/api/user/list?filters=[{&quot;property&quot;:&quot;email&quot;,&quot;value&quot;:&quot;$response.email$&quot;}]",
+                "pagingSize": 50,
+                "header": {
+                    "Authorization": "$application.accesstoken$ ",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "operationType": "Account Aggregation",
+                "parentEndpointName": "Account Aggregation"
+            },
+            {
+                "contextUrl": "/cc/api/user/updatePermissions",
+                "httpMethodType": "POST",
+                "sequenceNumberForEndpoint": "8",
+                "uniqueNameForEndPoint": "Remove Entitlement",
+                "operationType": "Remove Entitlement",
+                "body": {
+                    "jsonBody": "{\n    &quot;ids&quot;: $plan.nativeIdentity$,\n    &quot;isAdmin&quot;: &quot;0&quot;,\n    &quot;adminType&quot;: &quot;$plan.capabilities$&quot;\n}",
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            }
+        ],
+        "grant_type": "CLIENT_CREDENTIALS",
+        "partitionAggregationEnabled": false,
+        "hasFullAggregationCompleted": true,
+        "token_url": "https://partner018.api.identitynow.com/oauth/token",
+        "possibleHttpErrors": {},
+        "throwProvAfterRuleException": true,
+        "lastAggregationDate_account": "2023-01-24T20:21:59Z",
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1674592338740,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "authenticationMethod": "OAuth2Login",
+        "httpCookieSpecsStandard": "true",
+        "healthy": true,
+        "cloudDisplayName": "AA - IDN Loopback",
+        "connectorName": "Web Services",
+        "since": "2023-01-24T19:49:26.355487Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

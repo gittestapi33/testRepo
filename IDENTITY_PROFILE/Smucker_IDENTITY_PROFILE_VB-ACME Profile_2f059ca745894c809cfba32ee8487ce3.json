@@ -1,0 +1,483 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 290,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c918088821c744701822131bfbc55ff",
+        "name": "ACME-HR VBs"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 0,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMAIL",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "LASTNAME",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "FIRSTNAME",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "alias",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEENUMBER",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_DisplayName_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalEmail",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALEMAIL",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "phone",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALPHONENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "city",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "CITY",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "country",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "COUNTRY",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "department",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "DEPARTMENT",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "departmentNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "DEPARTMENTNUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEENUMBER",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_DisplayName_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "identificationNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "employeeStatus",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEESTATUS",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "employeeType",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEETYPE",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_EmployeeType"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "endDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "LASTDAYOFWORK",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstInitial",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "FIRSTNAME",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_DisplayName_Calculation2"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "jobCode",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "JOBCODE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "cloudLifecycleState",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEESTATUS",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_LCS_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "login",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "sAMAccountName",
+                        "sourceName": "VB-ACME Active Directory",
+                        "sourceId": "2c9180898222e59b01823b2daa3e0080"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "managerDn",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "manager",
+                        "sourceName": "VB-ACME Active Directory",
+                        "sourceId": "2c9180898222e59b01823b2daa3e0080"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "managerEmployeeNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "MANAGEREMPLOYEENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "manager",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "MANAGEREMPLOYEENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalMobile",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALPHONENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalPhone",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "PERSONALPHONENUMBER",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "E.164 Phone Format"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "postalCode",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "ZIP",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredFirstName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDFIRSTNAME",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredLanguage",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDLANGUUAGE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredLastName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDLASTNAME",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "startDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "STARTDATE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "state",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "STATE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "streetAddress",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "ADDRESS",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "title",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "JOBTITLE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "trainee",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "TRAINEE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "type",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEETYPE",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "userType",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEETYPE",
+                                "sourceName": "ACME-HR VBs",
+                                "sourceId": "2c918088821c744701822131bfbc55ff"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_VBs_LCS_Calculation2"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workMobile",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "WORKMOBILEPHONENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workPhone",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "WORKPHONENUMBER",
+                        "sourceName": "ACME-HR VBs",
+                        "sourceId": "2c918088821c744701822131bfbc55ff"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "2f059ca745894c809cfba32ee8487ce3",
+    "name": "VB-ACME Profile",
+    "created": "2022-07-22T18:40:27.251Z",
+    "modified": "2022-11-23T17:06:07.146Z"
+}
