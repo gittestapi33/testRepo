@@ -1,0 +1,947 @@
+{
+    "id": "2c918085843dc5b301845804123b3635",
+    "name": "Okta Anshul Test",
+    "type": "Okta",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "okta-angularsc",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877b16d7bd017b1832e6cd4b0c",
+        "name": "Anshul_Chaudhary"
+    },
+    "features": [
+        "ENABLE",
+        "CURRENT_PASSWORD",
+        "AUTHENTICATE",
+        "PASSWORD",
+        "UNLOCK",
+        "PROVISIONING",
+        "DISCOVER_SCHEMA",
+        "SYNC_PROVISIONING",
+        "SEARCH"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "login",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique key for user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "login",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique identifier for the user (username)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary email address of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "secondEmail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Secondary email address of user typically used for account recovery",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First name of user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last name of user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "middleName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Middle name(s) of user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the user, suitable for display to end users",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "nickName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Casual way to address the user in real life",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User\u2019s title, such as \u201cVice President\u201d",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "honorificPrefix",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Honorific prefix(es) of the user, or title in most Western languages",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "honorificSuffix",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Honorific suffix(es) of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "profileUrl",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "URL of user\u2019s online profile (e.g. a web page)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primaryPhone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary phone number of user such as home number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mobilePhone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Mobile phone number of user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "streetAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Full street address component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "City or locality component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "state",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "State or region component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "zipCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Zip code or postal code component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "countryCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Country name component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "postalAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Mailing address component of user\u2019s address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "preferredLanguage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User\u2019s preferred written or spoken languages",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "locale",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's default location for purposes of localizing items such as currency, date time format, numerical representations etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "timezone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User's time zone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "userType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Used to identify the organization to user relationship such as \u201cEmployee\u201d or \u201cContractor\u201d",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "employeeNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Organization or company assigned unique identifier for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "costCenter",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of cost center assigned to the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "organization",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of user's organization",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "division",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of user\u2019s division",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of user\u2019s department",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display name of the user\u2019s manager",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "managerId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ID of a user\u2019s manager",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "status",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Status of the user. e.g. ACTIVE, PROVISIONED, DEPROVISIONED etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp of user creation",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "activated",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when transition to ACTIVE status completed",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "statusChanged",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when status last changed",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastUpdated",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when user was last updated",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastLogin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp of last login",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "passwordChanged",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when password was last changed",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "providerType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of the credential provider",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "providerName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the credential provider",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918085843dc5b301845804123c3637",
+                        "name": "group"
+                    },
+                    "description": "Groups assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "roles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Administrator roles assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918085843dc5b301845804123c3636",
+            "name": "account",
+            "created": "2022-11-08T16:12:52.668Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "groupId",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "groupId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique key for group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when group was created",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastMembershipUpdated",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when group\u2019s memberships were last updated",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Determines how a group\u2019s profile and memberships are managed",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastUpdated",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Timestamp when group\u2019s profile was last updated",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectClass",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Determines the group\u2019s profile",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918085843dc5b301845804123c3637",
+            "name": "group",
+            "created": "2022-11-08T16:12:52.668Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": "true",
+        "logsPageSize": "1000",
+        "deleteThresholdPercentage": 10,
+        "pageSize": "200",
+        "accountReadOnlyAttribute": [
+            "id",
+            "activated",
+            "created",
+            "status",
+            "lastLogin",
+            "lastUpdated",
+            "passwordChanged",
+            "statusChanged"
+        ],
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.okta.OktaConnector",
+        "groupReadOnlyAttribute": [
+            "id",
+            "lastUpdated",
+            "created",
+            "lastMembershipUpdated",
+            "type",
+            "objectClass"
+        ],
+        "groupAggFilter": "type eq \"BUILT_IN\" or type eq \"OKTA_GROUP\"",
+        "groupsPageSize": "10000",
+        "restEndPointMap": {
+            "currentUser": "/api/v1/users/me",
+            "auth": "/api/v1/authn",
+            "schemas": "/api/v1/meta/schemas/user/default",
+            "groups": "/api/v1/groups",
+            "type": "/api/v1/meta/types/user",
+            "logs": "/api/v1/logs",
+            "users": "/api/v1/users",
+            "apps": "/api/v1/apps"
+        },
+        "aggregateTimeout": "900",
+        "cloudCacheUpdate": 1667923994497,
+        "templateApplication": "Okta",
+        "appsPageSize": "200",
+        "encrypted": "apiToken,private_key,private_key_password,accessToken",
+        "maxPermissibleCalls": "90",
+        "healthy": false,
+        "cloudDisplayName": "Okta Anshul Test",
+        "connectorName": "Okta",
+        "since": "2022-11-08T16:12:52.668Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "login",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Okta Account Correlation Config",
+        "id": "2c9180846b6c6937016b740cd9143504"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "login",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "email",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "firstName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "lastName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "activate",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "true"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "middleName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "secondEmail",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "displayName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "title",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "honorificPrefix",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "honorificSuffix",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "profileUrl",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "primaryPhone",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mobilePhone",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "streetAddress",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "city",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "state",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "zipCode",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "countryCode",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "postalAddress",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "preferredLanguage",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "locale",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "timezone",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "userType",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "employeeNumber",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "costCenter",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "organization",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "division",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "department",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "managerId",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "providerType",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "providerName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "recoveryQuestion",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "recoveryAnswer",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "factors",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "setPasswordInPermanentMode",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "type_name",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

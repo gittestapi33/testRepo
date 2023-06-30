@@ -1,0 +1,91 @@
+{
+    "id": "10a1ef5ffefe4e19b7a60e15210032bd",
+    "name": "JDBCtEST",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "JDBCtEST",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "ba021256a445430e9235c48f4fd4c5a9",
+        "name": "a10"
+    },
+    "features": [
+        "GROUP_PROVISIONING",
+        "DISCOVER_SCHEMA",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "ENABLE",
+        "UNLOCK",
+        "DIRECT_PERMISSIONS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "afcf5b56290240cf9729dabf243faef3",
+            "name": "account",
+            "created": "2023-05-10T11:05:09.600Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [],
+            "id": "8f7c1fdf1afc4fa8be83b12ce5bcb9e1",
+            "name": "group",
+            "created": "2023-05-10T11:05:09.600Z",
+            "modified": "2023-05-10T11:05:09.666Z"
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "group.mergeRows": false,
+        "useStoredProcedureTestConn": false,
+        "isAdvance": "false",
+        "mergeRows": "false",
+        "useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "useStoredProcedureDirectPermission": false,
+        "driverClass": "com.mysql.cj.jdbc.Driver",
+        "jdbcExceptionBucketing": true,
+        "useExecuteQuery": false,
+        "deltaTable": "USER_DELTA",
+        "isPermissionEnabled": false,
+        "deleteThresholdPercentage": 10,
+        "url": "jdbc:mysql://<hostname>/<dbname>",
+        "cloudCacheUpdate": 1683716823141,
+        "templateApplication": "JDBC Template",
+        "encrypted": "password,group.password",
+        "group.isPermissionEnabled": false,
+        "healthy": false,
+        "cloudDisplayName": "JDBCtEST",
+        "connectorName": "JDBC",
+        "useStoredProcedureSqlStmt": false,
+        "user": "Test",
+        "since": "2023-05-10T11:05:09.600Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

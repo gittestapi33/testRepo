@@ -1,0 +1,595 @@
+{
+    "id": "2c91808473fd44d8017405d614871a7c",
+    "name": "Akshaya-Test",
+    "type": "SuccessFactors",
+    "connectorClass": "sailpoint.connector.SuccessFactorsConnector",
+    "connectorScriptName": "successfactors-angularsc",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808473bae8d60173e149e8084151",
+        "name": "Akshaya_Iyer"
+    },
+    "features": [
+        "SEARCH",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "MANAGER_LOOKUP"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "PersonID",
+            "displayAttribute": "FormalName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "PersonID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PersonID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Person ID External",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Person ID external",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Username",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Userid",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Userid",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FormalName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FormalName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Salutation",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": " Salutation",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FirstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FirstName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "MiddleName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "MiddleName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "LastName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PreferredName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Preferred Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Date Of Birth",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date Of Birth\u00a0for Employee ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Gender",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Gender",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Department Name ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Division",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent Division name in the organization data ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The company under which employee belongs.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "BusinessUnit",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Business Unit Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Work Location Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the country",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Nationality",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Nationality ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PositionNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent Position Number associated with Employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "JobTitle",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent Job Title Associated with Employee ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EmployeeType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent EmployeeType",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EmployeeStatus",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent Employee Status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PrimaryEmailAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary Email Address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Job Classification",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Job Classification",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CostCenterID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Cost centre ID associated with employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IsContingentWorker",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent whether Employee is Contingent Worker or Not ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FLSA",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FLSA Status associated with employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "AssignmentType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Assignment Type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ManagerID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Manager ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CostCenter",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent Cost center associated with employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "EmployeeClass",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent EmployeeClass",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IsFullTime",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Represent whether Employee is Full Time or Part Time",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ServiceDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Service start Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "JobInfoLastModified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date when Job Information was Last Modified ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Position Entry Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Position Start date for employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastDateWorked",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Date Worked",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Address",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address of Employee",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "BusinessPhone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Business Phone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "BusinessPhoneCountryCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Business Phone Country Code",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "BusinessExtension",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Business extension",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CellCountryCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary Cell Code",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Cell",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary Cell",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Fax",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Fax Number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FutureActions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Information about Future Actions in JSON format",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Termination Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "It populates Termination Date for Employees and WorkOrder End Date for Contingent Workers",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c91808473fd44d8017405d614871a7e",
+                        "name": "group"
+                    },
+                    "description": "Groups associated to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Roles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Roles associated to the user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808473fd44d8017405d614871a7d",
+            "name": "account",
+            "created": "2020-08-19T08:29:10.151Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "GroupID",
+            "displayAttribute": "GroupName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "GroupName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GroupID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Internal ID of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GroupType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "CreatedBy",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User ID of the creator",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "LastModifiedDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date on which last modification on group is done",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "IsStaticGroup",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group is of type static or dynamic",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Roles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Roles associated to the access group",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808473fd44d8017405d614871a7e",
+            "name": "group",
+            "created": "2020-08-19T08:29:10.151Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "aggPageSize": "200",
+        "apiTimeout": "5",
+        "inactiveOffset": "30",
+        "futureOffset": "30",
+        "deleteThresholdPercentage": 10,
+        "useForAccounts": "true",
+        "connectionType": "direct",
+        "templateApplication": "SuccessFactors Template",
+        "encrypted": "private_key, password",
+        "healthy": false,
+        "cloudDisplayName": "Akshaya-Test",
+        "connectorName": "SuccessFactors",
+        "formPathRules": "SuccessFactorsRulesForm.xhtml",
+        "md5": "a51666ed7bed1e33ac169e45a35d8fff",
+        "since": "2020-08-19T08:29:10.151Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "identificationNumber",
+                "operation": "EQ",
+                "value": "PersonID",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "PrimaryEmailAddress",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "SuccessFactors Template Account Correlation Config",
+        "id": "2c9180846b6c6937016b740d587c3542"
+    },
+    "provisioningPolicies": []
+}

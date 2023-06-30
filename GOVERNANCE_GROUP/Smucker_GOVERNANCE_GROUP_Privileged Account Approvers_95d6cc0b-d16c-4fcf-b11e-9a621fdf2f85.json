@@ -1,0 +1,18 @@
+{
+    "members": null,
+    "connections": null,
+    "description": "Approvers for requested privileged accounts",
+    "owner": {
+        "displayName": null,
+        "emailAddress": null,
+        "type": "IDENTITY",
+        "id": "2c9180896c971d14016c974c41fc4c97",
+        "name": "emmanuel_martinez"
+    },
+    "memberCount": 0,
+    "connectionCount": 0,
+    "id": "95d6cc0b-d16c-4fcf-b11e-9a621fdf2f85",
+    "name": "Privileged Account Approvers",
+    "created": null,
+    "modified": null
+}

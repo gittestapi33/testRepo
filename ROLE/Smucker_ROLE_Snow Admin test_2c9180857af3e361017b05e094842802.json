@@ -1,0 +1,87 @@
+{
+    "id": "2c9180857af3e361017b05e094842802",
+    "name": "Snow Admin test",
+    "created": "2021-08-02T08:00:09.348Z",
+    "modified": "2022-11-10T20:09:02.935Z",
+    "description": "for testing SIM integration",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180837ae54ded017ae71ac79064dc",
+        "name": "priyanka_vangala"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "2c9180887af3e35a017b05df00a22952",
+            "type": "ACCESS_PROFILE",
+            "name": "Snow Admin"
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec444e6505",
+                "name": "Aaron.Nichols",
+                "aliasName": "106"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c637806016c71c41b5306df",
+                "name": "Amy.Cox",
+                "aliasName": "176"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec3f7564cf",
+                "name": "Alice.Ford",
+                "aliasName": "75"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180907088f04a01708d327cf65c37",
+                "name": "Albert.Woods",
+                "aliasName": "78"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180876c63780e016c6dec3e0564af",
+                "name": "Barbara.Wilson",
+                "aliasName": "9"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180867a111c17017a1ad53042497c",
+                "name": "Alan Bradley",
+                "aliasName": "Alan.Bradley"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180886c6377f4016c6ca17ebb1f34",
+                "name": "Ganesh Pagar",
+                "aliasName": "Ganesh_Pagar"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "2c9180837ae54ded017ae71ac79064dc",
+                "name": "priyanka_vangala",
+                "aliasName": "priyanka_vangala"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

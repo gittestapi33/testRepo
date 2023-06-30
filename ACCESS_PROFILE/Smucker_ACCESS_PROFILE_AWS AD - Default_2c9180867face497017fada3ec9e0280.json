@@ -1,0 +1,37 @@
+{
+    "id": "2c9180867face497017fada3ec9e0280",
+    "name": "AWS AD - Default",
+    "description": "Default Access",
+    "created": "2022-03-21T18:01:15.678Z",
+    "modified": "2022-11-10T20:08:03.126Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c9180877f65f353017f9ec01bf94b63",
+        "type": "SOURCE",
+        "name": "AA - AWS AD"
+    },
+    "entitlements": [
+        {
+            "id": "fe6063eaa182420c9f610e6ce8c81c83",
+            "type": "ENTITLEMENT",
+            "name": "Test Group 1"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

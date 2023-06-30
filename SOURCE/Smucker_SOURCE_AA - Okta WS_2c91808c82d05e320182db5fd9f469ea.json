@@ -1,0 +1,281 @@
+{
+    "id": "2c91808c82d05e320182db5fd9f469ea",
+    "name": "AA - Okta WS",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Web Service",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK",
+        "AUTHENTICATE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "login",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "status",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "status",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "firstName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "lastName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "displayName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "login",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "login",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "group",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c91808c82d05e320182db5fd9f469ec",
+                        "name": "group"
+                    },
+                    "description": "group",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c91808c82d05e320182db5fd9f469eb",
+            "name": "account",
+            "created": "2022-08-26T18:17:48.276Z",
+            "modified": "2023-03-10T20:17:06.651Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "id",
+            "displayAttribute": "id",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c91808c82d05e320182db5fd9f469ec",
+            "name": "group",
+            "created": "2022-08-26T18:17:48.276Z",
+            "modified": "2023-03-10T19:56:54.984Z"
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "enableHasMore": false,
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "60",
+        "genericWebServiceBaseUrl": "https://dev-214367.oktapreview.com/api/v1",
+        "connectionParameters": [
+            {
+                "contextUrl": "/users?limit=1",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test",
+                "curlEnabled": false,
+                "header": {
+                    "Authorization": "SSWS $application.accesstoken$"
+                },
+                "operationType": "Test Connection",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                }
+            },
+            {
+                "resMappingObj": {
+                    "firstName": "profile.firstName",
+                    "lastName": "profile.lastName",
+                    "displayName": "profile.displayName",
+                    "id": "id",
+                    "login": "profile.login",
+                    "email": "profile.email",
+                    "status": "status"
+                },
+                "contextUrl": "/users",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Agg",
+                "curlEnabled": false,
+                "header": {
+                    "Authorization": "SSWS $application.accesstoken$"
+                },
+                "operationType": "Account Aggregation",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "paginationSteps": "TERMINATE_IF $responseHeaders.link.next$ == NULL\n\n$endpoint.fullUrl$ = $responseHeaders.link.next$"
+            },
+            {
+                "resMappingObj": {
+                    "group": "[*].id"
+                },
+                "contextUrl": "/users/$response.id$/groups",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "3",
+                "uniqueNameForEndPoint": "User Agg (NEEDS AFTEROP RULE)",
+                "curlEnabled": false,
+                "header": {
+                    "Authorization": "SSWS $application.accesstoken$"
+                },
+                "operationType": "Account Aggregation",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "parentEndpointName": "Agg"
+            },
+            {
+                "contextUrl": "/users?activate=false",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "4",
+                "uniqueNameForEndPoint": "Create",
+                "curlEnabled": false,
+                "header": {
+                    "Authorization": "SSWS $application.accesstoken$"
+                },
+                "operationType": "Create Account",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "{\n  \"profile\": {\n    \"firstName\": \"$plan.firstName\",\n    \"lastName\": \"$plan.lastName\",\n    \"email\": \"$plan.email$\",\n    \"login\": \"$plan.login$\"\n  },\n  \"credentials\": {\n    \"password\" : { \"value\": \"$plan.password$\" }\n  }\n}",
+                    "bodyFormat": "raw"
+                }
+            }
+        ],
+        "partitionAggregationEnabled": false,
+        "hasFullAggregationCompleted": true,
+        "possibleHttpErrors": {},
+        "sourceConnected": true,
+        "throwProvAfterRuleException": true,
+        "lastAggregationDate_account": "2023-03-10T20:44:13Z",
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1681901196086,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "authenticationMethod": "No Auth",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "AA - Okta WS",
+        "connectorName": "Web Services",
+        "since": "2023-04-19T10:46:36.059980Z",
+        "status": "SOURCE_STATE_ERROR_SOURCE"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "AA - Okta WS [source] Account Correlation",
+        "id": "35c95c9d248e4344a08e1d12b182cd0a"
+    },
+    "provisioningPolicies": []
+}

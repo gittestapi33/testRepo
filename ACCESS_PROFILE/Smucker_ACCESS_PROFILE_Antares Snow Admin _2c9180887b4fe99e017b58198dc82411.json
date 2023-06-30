@@ -1,0 +1,37 @@
+{
+    "id": "2c9180887b4fe99e017b58198dc82411",
+    "name": "Antares Snow Admin ",
+    "description": "Test Access profile for Antares test integration",
+    "created": "2021-08-18T07:11:14.888Z",
+    "modified": "2022-11-10T20:08:02.291Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180886c6377f4016c6ca17ebb1f34",
+        "name": "Ganesh_Pagar"
+    },
+    "source": {
+        "id": "2c9180857b36bc14017b531369fe3230",
+        "type": "SOURCE",
+        "name": "Antares SNOW"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180867b5491c0017b5813e1c92b6a",
+            "type": "ENTITLEMENT",
+            "name": "Snow Admin"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

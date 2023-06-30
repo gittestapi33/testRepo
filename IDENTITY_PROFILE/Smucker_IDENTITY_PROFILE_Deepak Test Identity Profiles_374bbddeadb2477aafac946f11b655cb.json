@@ -1,0 +1,89 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 350,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "7b6039562c0c47828e5c4c2a17d3000e",
+        "name": "deepak test application"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 8,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "id",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "e-mail",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "givenName",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "name",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "country",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "location",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "name",
+                        "sourceName": "deepak test application",
+                        "sourceId": "7b6039562c0c47828e5c4c2a17d3000e"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "374bbddeadb2477aafac946f11b655cb",
+    "name": "Deepak Test Identity Profiles",
+    "created": "2023-04-26T20:12:23.683Z",
+    "modified": "2023-04-26T20:39:59.770Z"
+}

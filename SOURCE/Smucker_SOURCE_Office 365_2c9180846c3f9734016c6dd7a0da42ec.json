@@ -1,0 +1,863 @@
+{
+    "id": "2c9180846c3f9734016c6dd7a0da42ec",
+    "name": "Office 365",
+    "type": "Azure Active Directory",
+    "connectorClass": "sailpoint.connector.AzureADConnector",
+    "connectorScriptName": "azure-active-directory-angularsc",
+    "description": "Office 365 tenant",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "AUTHENTICATE",
+        "PASSWORD",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "SEARCH"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "objectId",
+            "displayAttribute": "userPrincipalName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "accountEnabled",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "True if the account is enabled; otherwise, false",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "assignedLicenses",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The licenses that are assigned to the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "assignedPlans",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The plans that are assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "city",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The city in which the user is located",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The country/region in which the user is located",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name for the department in which the user works",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "dirSyncEnabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates whether this object was synced from the on-premises directory",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "disabledPlans",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The plans that are not assigned to user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name displayed in the address book for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "facsimileTelephoneNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The telephone number of the user's business fax machine",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First name of user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180846c3f9734016c6dd7a0db42ee",
+                        "name": "group"
+                    },
+                    "description": "Groups assigned to a user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "immutableId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "This property is used to associate an on-premises Active\n\t\t\t\t\tDirectory user account to their Azure AD user object",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "jobTitle",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user\u2019s job title",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastDirSyncTime",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates the last time at which the object was synced with the on-premises directory",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The SMTP address for the user, for example, \"john@contoso.onmicrosoft.com\"",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mailNickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The mail alias for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mobile",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The primary cellular telephone number for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The unique identifier for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "onPremisesSecurityIdentifier",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "otherMails",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of additional email addresses for the user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "passwordPolicies",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies password policies for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "physicalDeliveryOfficeName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The office location in the user's place of business",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "postalCode",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The ZIP OR postal code for the user's postal address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "preferredLanguage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Preferred written or spoken language for a person",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "proxyAddresses",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Proxy addresses, for example: [\"SMTP: bob@contoso.com\", \"smtp: bob@sales.contoso.com\"]",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "roles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Administrator Role assigned to user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "sipProxyAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies the voice over IP (VOIP) session initiation protocol (SIP) address for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "state",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The state or province in the user's address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "streetAddress",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The street address of the user's place of business",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "surname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "telephoneNumber",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The primary telephone number of the user's place of business",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "usageLocation",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A two letter country code indicating usage location",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "userPrincipalName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user principal name (UPN) of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "userType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180846c3f9734016c6dd7a0db42ed",
+            "name": "account",
+            "created": "2019-08-07T20:49:03.707Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "objectId",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description for the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "dirSyncEnabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates whether this object was synced from the on-premises directory.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The display name for the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastDirSyncTime",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates the last time at which the object was synced with the\n\t\t\t\t\ton-premises directory",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The SMTP address for the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mailEnabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies whether the group is mail-enabled",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "mailNickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The mail alias for the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "onPremisesSecurityIdentifier",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "proxyAddresses",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Proxy addresses of the group",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "securityEnabled",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Specifies whether the group is a security group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180846c3f9734016c6dd7a0db42ee",
+            "name": "group",
+            "created": "2019-08-07T20:49:03.707Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "supportsDeltaAgg": "true",
+        "clientID": "eacadfff-aa5f-4d15-921c-d13cb03e37ce",
+        "deltaAggregationEnabled": "false",
+        "groupDeltaLink": "prIG4R8DTCtnV_hwc-NxDzYYhhF12B7l8DYKGReCH4yP8U-EZMySTJfjzQiQdfiKLB_Lq9QK-D12efHJtmuU41Glhl7IO7bOAwHsGwBZQMuMSS5eMMHHgNFAhl8Fb9ifTH8gnZNkl1Prlpb0cCn0OK_uCJK1bHi9taIq_H-7SdYVaFWDC0CNLAVfn-Nl79MAijh48rXbqI4sQTqkVVWurlnMkOBKKWcUmEA8M9I_Wr6t6Ghsi4a3sXDJLERBTdC1RTkUJaTmiupG9dxhvUbqsI5MfySXSt8djWWQ7X98Asya17XUaoM18Yact7-OrD_cXqA2rTouc-aX4a2lOFYRaqd01bmgkeOkS0Gg9R6lTSdAgKfJL7JBvGNhpVG1JO6xZnOOACjSK7IejGnckWid2kXsyRpqPKAuVkjyzgmtjIgP00UpJJ5uocGaWuwqYBBIXYqb4-M6M0NW0AqV23SinRrG2T0DCFEAo1dcpN7lIWKn05Q8gE9sUL5GM3Lc3M83DJnkHzeG-2vpC1H0YJXCEoMHDgceKKynrTVzQOuFK25EUjsVepnItvqqZgusgjzywcYUq1HBQ3avh17h90zo8olgB3ls7_FlOxNWtXiuhHOji1ciigpl-sTChUuzu2c5S1LumhRBzfDyK2Wq0nI-w9oicUwh1Qu4qLICsgiSrIi6gFJkMiX8CGoFWeds3dRIn7kAszVQm9yB6n2A2q7V43r9eYrNqNT6sTJkgPJ3lL9C42Z0wU-lv3IvLc6sijTmk37Rc40-xM3QLQRBkZnuZnDTDuVnQJngT-3fZkkKKmtKjH-jr7Iwjy6gDzTvYcDmhJrHgGFzlWHOsBFMdgQ7AQgjmBlirUZnX6c_kNZFM76qWA-0GoFOKk5N2cV5QzZrz0EG6IFt0i988cGEeEKZbQKjPLBuy6rEheI0AIySHg0dKUbmjZ4ALzmKOFMsEeLjEUaFlLzAq0uEQT8gxcaW4ik1gYg7cs8oIz6wRE7fJTLZw4nitPnBFkkc-zF2BJuGz16vQEXmJVVg0ms0unyIKQzNWZCzwWhLB1C0BnHWc-ujpbQ5RacIS1ccL4Mlw-XWqxW5HPGaBkKo6NgOg8WQcpuKaqGNu_wKdLWy2Icoit3RvPU3EX40MlWmImiRSK64bp7Rt2Qc7WX6Nu27mAwzVRxsgg4e_Xh_r0o_bFKnW5RR2VjAAnQ8h9mbTmYH6RFYhazenwSRWDbVKb86DPh4yEgZb9XN94X0KCcT3aRkLCnFwdu3RJbYlsVi0kIGEAHJS487jOEW03BMpxR6gX6EmH3YDnx5zFmBVv7GZyTlINIFNsteasW0KcVmNmVLBTFM7M3apbJlr41z8BRGpP_-JpSirYmGSuMV59Bf7AXvbUMz8yjEtBYD-b9gMzoBIqKRVwB6Vkw5_eqHWVxsP3CQtuMr-EkZiMDfw98Bhwe0LzJAJ7OIOE2O1wNI6p1pErr81WtLTp8ZP5kcjI3fh9qBwm9YNUvo-uwvaJ-RShRSHnz6nZWLR9ssmxDJJE7RaFcd1mx5ubyUdVMQNVWVcvTTy35j8-Ae7rwve9lUDQ0wtdBCJl4lXUqhIKnDWDeOeYfzAt-bfp4xMKuWPae97cdR75ide0g0jjzOcQFTbPGhk48nBdrCh5lMh8a08fy_ftRvzLj5Vv0C11D1-LGeNEaH2yWQ_bGXoKqNJPkMWyn89l9vEKXZyc7VU71aCNE3NIOuxWiQVR45g7l55k7ihf0_-pkIFcn0vh-TF8UnvLby4WJuIeiYqnjJYT-W8L1091pnAkAxmW5EG3Tr6Ry_pl8CqfUyyJbukqPJ1Jv31tZ6yglsSBLeEMC6mvRnTosLdDrrnwciAGvRw0XiU4EH77PkJJg-EfoPN_SQ6Pt24SO8Ku9WclZjah4J8Z08lqJYDZpd_rc7SankBU9k_P2kllGD5Mavl80Ux9ZpDOVv26lqNvJxKLeY8OBOgCVcM-8gzaszqd7t9ndwM5vS0bvusff01Wz7F5nWVLfGpfDtSdY42FOUhQeoTq-JWdbhOG9OpymdeVKuxb8aRBmL9R6uhQn-I2WTCxzG6qQczAcj8dTomUgN2zL6L9ySflsFNwGfHtHdVJmyEmKgM8_-Dntp_Z_f7huSCsDpHyycvpjnVbtlNZNo-_MtIJkDgjqpBHxDwfptoZM4GvxphLvhUVFChFDInghd-0ZSoeZGNeWpjoE6u932neqV-eUCFwcu3HdNq9LR7EeekaQdGYcKNl-BEjwfO2ntYzgwLARy7BfpE8rnW56ISLtM1BJgFd6Wzi1P5Lbq6F8r3Pr9BMLa1lkspXvTqg.EZaew7oloIki73GZkJVK2aGrp22wWxdQ5fV8t-F7aKo",
+        "IQServicePort": "5050",
+        "pageSize": "500",
+        "connectionType": "direct",
+        "useTLSForIQService": false,
+        "cloudAuthEnabled": true,
+        "hasFullAggregationCompleted": true,
+        "manageO365Groups": false,
+        "accountDeltaLink": "I5xYOhU4G6YWidiLIgECnG53jKb8zbWUWeLj4-XnH6F8f23UpMKdkiKoSEQtQrpKpCvTu_i00fwB1-lrXt2HTO-8g5Pk8vIEGkhrFRj9qkLB7xb_QmLh_kK-JBzLPj8ZB2TIerCJpmHsYB3vFGylJW3KCHEmqSW_f-IAkfK3Mgj9gFeYBzS2pFK_UtvfkDgTvBIQkwiPVqfUN07GWg4hHGzHIceHL9t3EtIW-F2EhEUM9JuY3ruVYxi9SbsB6xPW8Su56pEqjhRxrnlcgTJ5Zec-77llfAkEcH2Wpjwnml3m9andMTap3Z-oglFTpQeuKWR_bEc4zZBC70rDtDa-I22nZbd_u4P844IyGYHSubajUUwKE-XczxOml_rPzC5wmQYipqaW9b6JGu44cGlKmxjHaYHwkROrLM-sZbRIbc21LKeyl_lm894VySU3yG8d8B80oT9c5X6zMci_sSGQ1dIxBKepQ7PBBLleob9PoS-gXlnaKCjwVLkxPCusifhr64gqauSQkfTc-bFPGXKiU1E-uStiC8OEna3QU10m-46avsF6yhWnwBXtGftz6hmeoCkKE2JXU5fkiZWbebddnaqocgUycS6aDu8cjPaxOUdUMWiD6mLCIJUOPsEzlZgNVt44UTt6gSmn_5c7fdbT-9ZCf8viZLyFvb3HFuwpr8P4HjcpFU_Dj31C5MPZG4UrRn6OgbAMI5xj6r0yBlmC0Srm1_2oqKJFQuVjRn_Uy0FWI4aHr3JVnZ1LMb2UzlhWP4fg94G0aw-KMlYsTsN5ABJFAmD1uiBKxPPLY2q6fHVdap2ZO5Ad7wUWehxjHOGgk7p6aQpU224eTDCHSfvrPO5NwAXF0MMTw1laSHhNElPybIO-JFlHvvSSZBhlpwx4GWIsP1Dm1rJN5BDaE9KrKn6e409pJ0m9erdGsVtUVejTRGrufzgd4Y1YQA_8xKe_mkIUGfDmG49dEMVBB8be3S0SWoJtlp78185iCi296PC4mykNnlyjR_cClRUywJRie4hQRQqzFhtu5tWO4rs9y5uUZVWf0V-b3_FY-QWdlakwTrS9kkbaNmwW8x1Os_Xr-1EEPjFP7wYdJoLQGwKa8b-iVySmura3bAizPk3bYhD8Y2iOHrVtM-7wcY0ZyyV9igoL-pEYw1NVheGDjEL-A5665Vtf0LqoH7T09zhwPoefcQSNOULxeVNq49DVM3cfQB_EqCw4YtDnx1PWmzRg2zG050Ao9k2S7OSPL9NF79R8IH2YEa_yQZ9o_2Bw3hslFi5Hu_qJCyhBLevYH0ng3lxob2H4Q9_er8-eHbMISBLL_eBQGJjB1t6lkk9pqFFDzj01qTg9bS9GXcjY09YnV0QVSqKrH6HgRbKyD2pGze_ND_efLdoXQ_V6sjlfyR_vf3ND7UoUHfB-lttdts8dnX12k2iR8Uek498npgfxNJm5WIIH179INPRqgvA_RtxwYcfKx6ltW9hsmK2S2hugMq36Ywv3j76qE9kiBV09q0o3YZA3PxRIquVkWoEB0mtsG9UKk0F3ouZvs1LJPOw8s7mfXRdWwFHQaRY4hRY5oZ0qkH0ywAQM21i4A3bTGouPPjICz-rIvpw9jBWnw6Txe3HI__nEaahDCD2MFxiXxYpapVK-iLkMrJM2RPa17HXiR8cMsf0LP_n4EOD3PE5aYmo3E5njqeTOYLxc6lDFAVS_j8ORUfiY4kN4t2hbiBzfYdeUHkZnLJ1RyHfPEka9PFu747_EEL19_VjlhoTJdVKgjl5VApaFYSVNcm74iWw37OwCpKAy3-s0yHHK0MQJ0e9lvjDYJJcMp2tTY-5yk9g6EHo_o7Sw1jin46GZktB61NstTIGhNoNz7pCEeEBU_72BQJOkihQwLdei5UrVQ-eye0MtQHYBqyvacXbRDz5tgoh-ITjEjJ9q4SN-HTwwoszgkiJYy7faduehypATiWffm6Rqeqz4IGjumktOGXVBniLvggf0mVv46Bsym6eCM8Sx_gCwYRiMORjUiYY86nfZiw7f2Ot_2iamVOProYbX.TDlxZxtALYa_604ObWgY6fKvZRWQV8QkuWC0UFtnQhQ",
+        "deleteThresholdPercentage": 10,
+        "useForAccounts": "true",
+        "cloudCacheUpdate": 1654026000320,
+        "templateApplication": "Azure Active Directory",
+        "encrypted": "clientSecret,IQServicePassword,oauth_token_info,password,clientCertificate,privateKeyPassword,private_key,refresh_token,exchangeUserPassword",
+        "healthy": false,
+        "isB2CTenant": true,
+        "domainName": "columndemo.onmicrosoft.com",
+        "cloudDisplayName": "Office 365",
+        "connectorName": "Azure Active Directory",
+        "grantType": "CLIENT_CREDENTIALS",
+        "md5": "f49c6a5e8df95e4a094f32810783be5a",
+        "since": "2019-08-07T20:49:03.706Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "userPrincipalName",
+                "operation": "EQ",
+                "value": "userPrincipalName",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Office 365 [source-107385] Account Correlation",
+        "id": "2c9180886d1717d6016d1781feb10b1a"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "userPrincipalName",
+                    "transform": {
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "template": "$(firstname).$(lastname)$(uniqueCounter)@columndemo.onmicrosoft.com",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "attributes": {
+                            "name": "Create Password"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "displayName",
+                    "transform": {
+                        "attributes": {
+                            "name": "displayName"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mailNickname",
+                    "transform": {
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        },
+                        "type": "rule"
+                    },
+                    "attributes": {
+                        "template": "$(firstname).$(lastname)$(uniqueCounter)",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "accountEnabled",
+                    "transform": {
+                        "attributes": {
+                            "value": "true"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "department",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "jobTitle",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "isFederatedDomain",
+                    "transform": {
+                        "attributes": {
+                            "value": "false"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "immutableId",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "passwordPolicies",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "otherMails",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": {
+                        "attributes": {
+                            "name": "firstname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "surname",
+                    "transform": {
+                        "attributes": {
+                            "name": "lastname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "usageLocation",
+                    "transform": {
+                        "attributes": {
+                            "value": "United States;US"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "forceChangePasswordNextLogin",
+                    "transform": {
+                        "attributes": {
+                            "value": "true"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "boolean",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "country",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "state",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "city",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "streetAddress",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "postalCode",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "physicalDeliveryOfficeName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "preferredLanguage",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "telephoneNumber",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mobile",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "facsimileTelephoneNumber",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "userType",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "Guest"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Create group",
+            "description": null,
+            "usageType": "CREATE_GROUP",
+            "fields": [
+                {
+                    "name": "displayName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mailNickname",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "description",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "Update Group",
+            "description": null,
+            "usageType": "UPDATE_GROUP",
+            "fields": [
+                {
+                    "name": "displayName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "mailNickname",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "description",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

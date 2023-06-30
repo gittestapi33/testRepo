@@ -1,0 +1,45 @@
+{
+    "id": "2c9180857fdbc20b017fe0ec634912d5",
+    "name": "EM - Test Role",
+    "created": "2022-03-31T17:01:02.665Z",
+    "modified": "2022-11-10T20:09:02.724Z",
+    "description": "EM Test Role",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877cb8091d017cc2a1f57f52ad",
+        "name": "Eric Mendes"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "2c9180867fdbc0a2017fe0ee81980ecf",
+            "type": "ACCESS_PROFILE",
+            "name": "EM - Test Access Profile"
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c9180877cb8091d017cc2a1f57f52ad",
+                "name": "Eric Mendes",
+                "aliasName": "Eric.Mendes_admin"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

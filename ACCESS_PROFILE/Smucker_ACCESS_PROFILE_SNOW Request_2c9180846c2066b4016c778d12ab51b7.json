@@ -1,0 +1,37 @@
+{
+    "id": "2c9180846c2066b4016c778d12ab51b7",
+    "name": "SNOW Request",
+    "description": "Request delimited file db access",
+    "created": "2019-08-09T18:03:49.803Z",
+    "modified": "2022-11-10T20:08:01.746Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c9180846c3f9734016c7720dc991801",
+        "type": "SOURCE",
+        "name": "SNOW Request"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180836c735102016c77225ccb4214",
+            "type": "ENTITLEMENT",
+            "name": "SailPoint Access Request"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

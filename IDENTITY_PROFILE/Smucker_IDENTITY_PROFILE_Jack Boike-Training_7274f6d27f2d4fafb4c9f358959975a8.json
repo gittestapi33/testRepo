@@ -1,0 +1,473 @@
+{
+    "description": "Jack Boike-Training",
+    "owner": null,
+    "priority": 260,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c9180878066ffde018094694e8c2d49",
+        "name": "Jack Boike-ACME Human Resources"
+    },
+    "identityRefreshRequired": true,
+    "identityCount": 0,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMAIL",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "LASTNAME",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "FIRSTNAME",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalEmail",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALEMAIL",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "city",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "CITY",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "country",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "COUNTRY",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "department",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "DEPARTMENT",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "departmentNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "DEPARTMENTNUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEENUMBER",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_DisplayName_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "identificationNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "employeeStatus",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EMPLOYEESTATUS",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "employeeType",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEETYPE",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_EmployeeType"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "endDate",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "LASTDAYOFWORK",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_DateFormat"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstInitial",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "FIRSTNAME",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_Initial_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "jobCode",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "JOBCODE",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "cloudLifecycleState",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "EMPLOYEENUMBER",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_LCS_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "managerEmployeeNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "MANAGEREMPLOYEENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "manager",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "MANAGEREMPLOYEENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "middleInitial",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "MIDDLENAME",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_Initial_Calculation"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "middleName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "MIDDLENAME",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalMobile",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALMOBILEPHONENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "personalPhone",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PERSONALPHONENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "postalCode",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "ZIP",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredFirstName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDFIRSTNAME",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredLanguage",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDLANGUUAGE",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "preferredLastName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "PREFERREDLASTNAME",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "startDate",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "STARTDATE",
+                                "sourceName": "Jack Boike-ACME Human Resources",
+                                "sourceId": "2c9180878066ffde018094694e8c2d49"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "MKT_Jack Boike_DateFormat"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "state",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "STATE",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "streetAddress",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "ADDRESS",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "title",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "JOBTITLE",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "trainee",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "TRAINEE",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "userType",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "login",
+                                "sourceName": "AA  - Okta dev214367",
+                                "sourceId": "2c9180846c3f972e016c729271cb3148"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Authoritative Source - Canada"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "visibleSegments",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "login",
+                                "sourceName": "AA  - Okta dev214367",
+                                "sourceId": "2c9180846c3f972e016c729271cb3148"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Authoritative Source - US"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workMobile",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "WORKMOBILEPHONENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workPhone",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "WORKPHONENUMBER",
+                        "sourceName": "Jack Boike-ACME Human Resources",
+                        "sourceId": "2c9180878066ffde018094694e8c2d49"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "7274f6d27f2d4fafb4c9f358959975a8",
+    "name": "Jack Boike-Training",
+    "created": "2022-05-05T17:27:28.737Z",
+    "modified": "2022-11-23T17:06:07.110Z"
+}

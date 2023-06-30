@@ -1,0 +1,184 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 20,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c9180846c3f9731016c6de189c649a9",
+        "name": "OrangeHRM - SCFS"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 0,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_number",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_work_email",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_lastname",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_firstname",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "department",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "job_title_code",
+                                "sourceName": "OrangeHRM - SCFS",
+                                "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Get Department From Code"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "emp_number",
+                                "sourceName": "OrangeHRM - SCFS",
+                                "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Orange Firstname.Lastname"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "identificationNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "employee_id",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "cloudLifecycleState",
+                "transformDefinition": {
+                    "type": "reference",
+                    "attributes": {
+                        "input": {
+                            "attributes": {
+                                "attributeName": "emp_status",
+                                "sourceName": "OrangeHRM - SCFS",
+                                "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                            },
+                            "type": "accountAttribute"
+                        },
+                        "id": "Orange HRM Status"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "managerDn",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "erep_sup_emp_number",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "manager",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "erep_sup_emp_number",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "newattribute2",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_middle_name",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "title",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "job_title_code",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "userPrincipalName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "emp_work_email",
+                        "sourceName": "OrangeHRM - SCFS",
+                        "sourceId": "2c9180846c3f9731016c6de189c649a9"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "2c9180866c205820016c6e21d0d92bc8",
+    "name": "HR Employees",
+    "created": "2019-08-07T22:10:05.657Z",
+    "modified": "2023-02-22T20:40:28.565Z"
+}

@@ -1,0 +1,24 @@
+{
+    "description": null,
+    "type": "ConnectorAfterCreate",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "1.1",
+        "script": "$logDate = Get-Date -UFormat \"%Y%m%d\"\r\n$logFile = \"c:\\SailPoint\\Scripts\\Logs\\ConnectorAfterCreate_$logDate.log\"\r\n$command = \"c:\\SailPoint\\Scripts\\script-template.ps1\"\r\n$enableDebug = $true\r\n\r\n#====================-------Helper functions-------====================\r\nfunction LogToFile([String] $info) {\r\n    $info | Out-File $logFile -Append\r\n}\r\n\r\n#====================-------Get the request object-------====================\r\nTry{\r\n    if($enableDebug) {\r\n        LogToFile(\"Entering SailPoint After Create rule\")\r\n    }\r\n\t\r\n    Add-Type -Path \"c:\\SailPoint\\IQService-IDN\\Utils.dll\";\r\n    \r\n    $sReader = New-Object System.IO.StringReader([System.String]$env:Request);\r\n    $xmlReader = [System.xml.XmlTextReader]([sailpoint.utils.xml.XmlUtil]::getReader($sReader));\r\n    $requestObject = New-Object Sailpoint.Utils.objects.AccountRequest($xmlReader);\r\n    $requestAsString = $env:Request\r\n\r\n    if($enableDebug) {\r\n        LogToFile(\"Request as XML object is: $requestAsString\")\r\n    }\r\n\r\n    #Call the client script\r\n    $command = -join ($command, \" -requestString '$requestAsString'\")\r\n    Invoke-Expression $command\r\n}Catch{\r\n\t$ErrorMessage = $_.Exception.Message \r\n  \t$ErrorItem = $_.Exception.ItemName\r\n  \tLogToFile(\"Error: Item = $ErrorItem -> Message = $ErrorMessage\")\r\n}\r\n\r\nif($enableDebug) {\r\n    LogToFile(\"Exiting SailPoint After Create rule\")\r\n}"
+    },
+    "attributes": {
+        "ObjectOrientedScript": "true",
+        "extension": ".ps1",
+        "sourceVersion": "1.1",
+        "disabled": "false",
+        "program": "powershell.exe",
+        "timeout": "300"
+    },
+    "id": "dde3950c5a524fe49f6fe7d4e55eba6e",
+    "name": "EM-AfterCreate-Test-Two",
+    "created": "2022-04-01T17:14:04.897Z",
+    "modified": "2022-04-01T17:44:19.927Z"
+}

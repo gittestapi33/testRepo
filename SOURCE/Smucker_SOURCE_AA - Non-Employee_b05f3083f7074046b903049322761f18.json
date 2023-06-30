@@ -1,0 +1,165 @@
+{
+    "id": "b05f3083f7074046b903049322761f18",
+    "name": "AA - Non-Employee",
+    "type": "Non-Employee",
+    "connectorClass": "com.sailpoint.connector.NesrConnector",
+    "connectorScriptName": "non-employee",
+    "description": "Test",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "NO_RANDOM_ACCESS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "accountName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "accountName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Account Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "phone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Phone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Manager's name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "startDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Start Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "endDate",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "End Date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "294045f5c67646249d354376048e92a3",
+            "name": "account",
+            "created": "2023-06-26T21:38:43.725Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "081f603d37f64cf4a0c6c0fe4fc0a05e",
+            "name": "group",
+            "created": "2023-06-26T21:38:43.725Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "templateApplication": "Non-Employee Source Template",
+        "healthy": true,
+        "deleteThresholdPercentage": 10,
+        "cloudDisplayName": "AA - Non-Employee",
+        "connectorName": "Non-Employee",
+        "connectionType": "file",
+        "since": "2023-06-26T21:38:43.725Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "accountName",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Non-Employee Source Template Account Correlation Config",
+        "id": "2c91808472a518ca0172a542a1201762"
+    },
+    "provisioningPolicies": []
+}

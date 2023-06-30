@@ -1,0 +1,19 @@
+{
+    "description": "This Rule  is used to calculate the body of the request",
+    "type": "WebServiceBeforeOperationRule",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "1.0",
+        "script": "import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.concurrent.TimeUnit;\r\nimport org.json.JSONObject;\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.Application;\r\nimport sailpoint.tools.Util;\r\nimport java.util.HashMap;\r\nimport java.io.IOException;\r\nimport sailpoint.tools.GeneralException;\r\n\r\nlog.error(\"Entering BeforeOperation Rule:: \" + e);\r\nif(null != provisioningPlan) {\r\n    log.error(\"Provisioning plan is not null. Printing plan:\");\r\n    log.error(provisioningPlan.toString());\r\n}\r\nelse {\r\n    log.error(\"ProvisioningPlan is null\");\r\n}\r\nlog.error(\"Exiting BeforeOperation Rule:: \" + e);"
+    },
+    "attributes": {
+        "sourceVersion": "1.0"
+    },
+    "id": "6bbf2a8b7a8e4e01bca97f08f323afeb",
+    "name": "VBs_BeforeOperationRule",
+    "created": "2023-03-08T18:50:52.409Z",
+    "modified": null
+}

@@ -1,0 +1,96 @@
+{
+    "id": "2c91808879666beb017966d9ef2c07b2",
+    "name": "JG Domo",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "JG Domo",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180846fede9ad0170118ff24e066f",
+        "name": "joshua_goldwasser"
+    },
+    "features": [
+        "PROVISIONING",
+        "UNLOCK",
+        "ENABLE",
+        "AUTHENTICATE",
+        "PASSWORD"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808879666beb017966d9ef2c07b3",
+            "name": "account",
+            "created": "2021-05-13T17:50:29.164Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c91808879666beb017966d9ef2c07b4",
+            "name": "group",
+            "created": "2021-05-13T17:50:29.164Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "version": "v2",
+        "client_id": "55ed24b9-e46c-4033-93e6-30e3be3caca7",
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "30",
+        "genericWebServiceBaseUrl": "https://api.domo.com/v1",
+        "cloudCacheUpdate": 1646682225372,
+        "templateApplication": "Web Services Template",
+        "connectionParameters": [
+            {
+                "contextUrl": "/users?limit=1",
+                "httpMethodType": "GET",
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "operationType": "Test Connection",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                }
+            }
+        ],
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "cloudAuthEnabled": true,
+        "grant_type": "CLIENT_CREDENTIALS",
+        "authenticationMethod": "OAuth2Login",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "JG Domo",
+        "connectorName": "Web Services",
+        "token_url": "https://api.domo.com/oauth/token",
+        "since": "2021-05-13T17:50:29.164Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

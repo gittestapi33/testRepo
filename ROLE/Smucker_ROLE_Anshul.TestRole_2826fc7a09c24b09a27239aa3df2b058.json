@@ -1,0 +1,28 @@
+{
+    "id": "2826fc7a09c24b09a27239aa3df2b058",
+    "name": "Anshul.TestRole",
+    "created": "2022-11-18T13:25:56.346Z",
+    "modified": "2022-11-18T13:26:01.524Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877b16d7bd017b1832e6cd4b0c",
+        "name": "Anshul Chaudhary"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [],
+    "membership": null,
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

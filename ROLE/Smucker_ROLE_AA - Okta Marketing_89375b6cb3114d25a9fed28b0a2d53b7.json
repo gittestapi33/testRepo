@@ -1,0 +1,54 @@
+{
+    "id": "89375b6cb3114d25a9fed28b0a2d53b7",
+    "name": "AA - Okta Marketing",
+    "created": "2022-08-12T19:14:26.528Z",
+    "modified": "2023-05-05T18:06:02.34Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex Alvarez"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "b2b1dc80db7d4bb69d9d5c86cbacd83f",
+            "type": "ACCESS_PROFILE",
+            "name": "Okta - Marketing"
+        }
+    ],
+    "membership": {
+        "type": "STANDARD",
+        "criteria": {
+            "operation": "AND",
+            "key": null,
+            "stringValue": null,
+            "children": [
+                {
+                    "operation": "EQUALS",
+                    "key": {
+                        "type": "IDENTITY",
+                        "property": "uid",
+                        "sourceId": null
+                    },
+                    "stringValue": "T002",
+                    "children": null
+                }
+            ]
+        },
+        "identities": null
+    },
+    "legacyMembershipInfo": null,
+    "enabled": false,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

@@ -1,0 +1,22 @@
+{
+    "id": "893b74624926b0197181406fae747190",
+    "name": "Aaron Nichols's team",
+    "description": "Manager Campaign Filter for Aaron's Team",
+    "owner": "Alex Alvarez",
+    "mode": "INCLUSION",
+    "criteriaList": [
+        {
+            "type": "IDENTITY_ATTRIBUTE",
+            "property": "manager",
+            "value": "106",
+            "operation": "EQUALS",
+            "negateResult": false,
+            "shortCircuit": false,
+            "recordChildMatches": false,
+            "id": null,
+            "suppressMatchedItems": false,
+            "children": null
+        }
+    ],
+    "isSystemFilter": false
+}

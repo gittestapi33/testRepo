@@ -1,0 +1,228 @@
+{
+    "id": "2c9180847c337eed017c38576baa446c",
+    "name": "Fresh Service",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "test for Ryan Blocker",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867c045e25017c09d31bd91fb7",
+        "name": "ryan.blocker"
+    },
+    "features": [
+        "ENABLE",
+        "AUTHENTICATE",
+        "PASSWORD",
+        "PROVISIONING",
+        "UNLOCK"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "id",
+            "displayAttribute": "first_name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "first_name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "first_name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "group_ids",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180847c337eed017c38576bab446e",
+                        "name": "group"
+                    },
+                    "description": "group_ids",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180847c337eed017c38576bab446d",
+            "name": "account",
+            "created": "2021-09-30T20:13:45.771Z",
+            "modified": "2021-09-30T22:35:32.498Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "id",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {
+                "cloudGoverned": false
+            },
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "id",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "description",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180847c337eed017c38576bab446e",
+            "name": "group",
+            "created": "2021-09-30T20:13:45.771Z",
+            "modified": "2021-09-30T20:20:39.540Z"
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "throwProvAfterRuleException": true,
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "version": "v2",
+        "isGetObjectRequiredForPTA": true,
+        "genericWebServiceBaseUrl": "https://majorkeytechnologies-servicedesk.freshservice.com/api/v2",
+        "cloudAuthoritativeSourcePrecedence": 220,
+        "cloudCacheUpdate": 1646682217929,
+        "templateApplication": "Web Services Template",
+        "connectionParameters": [
+            {
+                "contextUrl": "/agents",
+                "httpMethodType": "GET",
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "curlEnabled": false,
+                "operationType": "Test Connection",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            },
+            {
+                "resMappingObj": {
+                    "name": "name",
+                    "description": "description",
+                    "id": "id"
+                },
+                "contextUrl": "/groups",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Role Aggregation",
+                "curlEnabled": false,
+                "operationType": "Group Aggregation",
+                "rootPath": "$.groups",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            },
+            {
+                "resMappingObj": {
+                    "group_ids": "group_ids",
+                    "id": "id",
+                    "first_name": "first_name",
+                    "email": "email"
+                },
+                "contextUrl": "/agents",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "3",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "curlEnabled": false,
+                "operationType": "Account Aggregation",
+                "rootPath": "$.agents",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            }
+        ],
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "cloudAuthEnabled": true,
+        "authenticationMethod": "BasicLogin",
+        "httpCookieSpecsStandard": "true",
+        "healthy": false,
+        "cloudDisplayName": "Fresh Service",
+        "connectorName": "Web Services",
+        "cloudIdentityProfileName": "RB Fresh Service",
+        "since": "2021-09-30T20:13:45.770Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+        "username": "61Xe4DxUbw4ABv1C86bF"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "email",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Fresh Service [source] Account Correlation",
+        "id": "2c9180847c337eed017c38d3e5364df9"
+    },
+    "provisioningPolicies": []
+}

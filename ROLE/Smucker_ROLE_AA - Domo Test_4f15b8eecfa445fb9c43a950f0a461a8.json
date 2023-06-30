@@ -1,0 +1,57 @@
+{
+    "id": "4f15b8eecfa445fb9c43a950f0a461a8",
+    "name": "AA - Domo Test",
+    "created": "2023-05-04T14:54:05.768Z",
+    "modified": "2023-05-10T15:25:59.067Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex Alvarez"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "9bcfe65991ff4764940164e078711f5a",
+            "type": "ACCESS_PROFILE",
+            "name": "AA - Domo Test"
+        }
+    ],
+    "membership": {
+        "type": "IDENTITY_LIST",
+        "criteria": null,
+        "identities": [
+            {
+                "type": "IDENTITY",
+                "id": "2c91808871ccc4650171e6456d234cfa",
+                "name": "Bob Smith",
+                "aliasName": "T001"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "df3e8060777d447e94e0cdcde59dc2bd",
+                "name": "Ethan Smith",
+                "aliasName": "T002"
+            },
+            {
+                "type": "IDENTITY",
+                "id": "55fa057a9b5d41eb87ff58e6a62e92fd",
+                "name": "Jane Doe",
+                "aliasName": "T003"
+            }
+        ]
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

@@ -1,0 +1,122 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 320,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c91808a827ef2a6018289031cf03c5c",
+        "name": "AA - External Vendors"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 1,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "accountName",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "email",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "lastName",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "firstName",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "accountName",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "endDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "endDate",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "manager",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "manager",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "startDate",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "startDate",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "workPhone",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "phone",
+                        "sourceName": "AA - External Vendors",
+                        "sourceId": "2c91808a827ef2a6018289031cf03c5c"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "2147bd3966144313b74d4d7906162e49",
+    "name": "AA - Vendors",
+    "created": "2022-08-10T18:28:52.317Z",
+    "modified": "2022-11-23T17:06:07.197Z"
+}

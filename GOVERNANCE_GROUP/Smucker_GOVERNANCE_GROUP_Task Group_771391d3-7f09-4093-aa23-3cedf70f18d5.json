@@ -1,0 +1,24 @@
+{
+    "members": [
+        {
+            "type": "IDENTITY",
+            "id": "2c9180866b96030c016bb3440f680f1c",
+            "name": "Alex_Alvarez"
+        }
+    ],
+    "connections": null,
+    "description": "task group",
+    "owner": {
+        "displayName": null,
+        "emailAddress": null,
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "memberCount": 0,
+    "connectionCount": 0,
+    "id": "771391d3-7f09-4093-aa23-3cedf70f18d5",
+    "name": "Task Group",
+    "created": null,
+    "modified": null
+}

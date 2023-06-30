@@ -1,0 +1,37 @@
+{
+    "id": "2c9180857b7e63d9017b8285bd760d76",
+    "name": "SNOW SIM Integration ",
+    "description": "Service Desk integration Test",
+    "created": "2021-08-26T12:53:28.054Z",
+    "modified": "2022-11-10T20:08:01.751Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180886c6377f4016c6ca17ebb1f34",
+        "name": "Ganesh_Pagar"
+    },
+    "source": {
+        "id": "2c9180837b73552b017b7883d5cb59f9",
+        "type": "SOURCE",
+        "name": "SNOW-GaneshPagar-Test"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180877b7e0ce4017b828386204eec",
+            "type": "ENTITLEMENT",
+            "name": "Test SIM"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

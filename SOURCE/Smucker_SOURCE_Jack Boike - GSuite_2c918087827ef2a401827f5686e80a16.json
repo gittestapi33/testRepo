@@ -1,0 +1,1260 @@
+{
+    "id": "2c918087827ef2a401827f5686e80a16",
+    "name": "Jack Boike - GSuite",
+    "type": "G Suite",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "g-suite-angularsc",
+    "description": "Jack Boike - GSuite",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "SEARCH",
+        "GROUP_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "objectID",
+            "displayAttribute": "primaryEmail",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique ID of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primaryEmail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Primary E-mail ID of user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Full name of the user in JSON format.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isAdmin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is user an administrator.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isDelegatedAdmin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is user a delegated administrator.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastLoginTime",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last login time of user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "suspended",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is user suspended.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "suspensionReason",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Reason for suspension.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "changePasswordAtNextLogin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates if the user is forced to change password at next login.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ipWhitelisted",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicate if user's IP address is white listed.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "ims",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's Instant Messenger (IM) accounts.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "emails",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of the user's E-mail addresses.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "externalIds",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of external IDs for the user, such as an employee or network ID.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "relations",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of the user's relationships to other users.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "addresses",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of the user's addresses.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "organizations",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of organizations the user belongs to",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "phones",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A list of the user's phone numbers.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "aliases",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of the user's alias E-mail addresses.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "nonEditableAliases",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of the user's non-editable alias E-mail addresses.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "customerId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The customer ID to retrieve all account users.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "orgUnitPath",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The full path of the parent organization associated with the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isMailboxSetup",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates if the user's Google mailbox is created.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "includeInGlobalAddressList",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates if the user's profile is visible in Global Address List when the contact sharing feature is enabled for the domain.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "thumbnailPhotoUrl",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Photo Url of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "contacts",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Contacts",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First Name of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "familyName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last Name of the user.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918087827ef2a401827f5686e90a18",
+                        "name": "group"
+                    },
+                    "description": "Groups connected to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Roles",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918087827ef2a401827f5686e90a19",
+                        "name": "Role"
+                    },
+                    "description": "Roles assigned to the user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "objectType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Object type of the account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "domainName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The domain name of the customer.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "domainAliases",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of domain alias.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isPrimary",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates if the domain is a primary domain.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "verified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Indicates the verification state of a domain.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The ID of the project that owns the service account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "uniqueId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The unique, stable numeric ID for the service account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name for the service account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description for the service account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "serviceAccountId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Account Id of service account.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "resourcePermissions",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918087827ef2a401827f5686e90a1a",
+                        "name": "iamResourcePermission"
+                    },
+                    "description": "IAM resource permissions assigned to the user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a17",
+            "name": "account",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "objectID",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "nonEditableAliases",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "List of the group's non-editable alias E-mail addresses that are outside of the account's primary domain or sub domains. These are functioning E-mail addresses used by the group. This is a read-only property.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ID of group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "adminCreated",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Whether it is created by administrator.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "aliases",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group aliases.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group E-mail address.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "directMembersCount",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Number of group members.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "whoCanJoin",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permissions to join the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "whoCanViewMembership",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permissions to view membership.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "whoCanViewGroup",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permissions to view group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "whoCanInvite",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permissions to invite members.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "allowExternalMembers",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if Google Apps users external to your account can view or become members of this group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "whoCanPostMessage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permissions to post messages to the group.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "allowWebPosting",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if any member allowed to post to the group web forum.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "primaryLanguage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Language tag for a group's primary language.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "maxMessageBytes",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The maximum size of a message.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isArchived",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if the contents of the group to be archived.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "archiveOnly",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if the group to be only archived.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "messageModerationLevel",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Moderation level for messages.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "spamModerationLevel",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Moderation levels for messages detected as spam.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "replyTo",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The default reply to a message is sent here.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "customReplyTo",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "An E-mail address used when replying to a message.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "sendMessageDenyNotification",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if the members are notified if his message is denied by owner.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "defaultMessageDenyNotificationText",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Text sent to the message's author as part of rejection notification.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "showInGroupDirectory",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if group is listed in the Groups directory.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "allowGoogleCommunication",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean allowing Google to contact group administrators.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "membersCanPostAsTheGroup",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if members can post using the group E-mail address.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "messageDisplayFont",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Default message's display font.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "includeInGlobalAddressList",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A Boolean indicating if group is included in the Global Address List",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "resourcePermissions",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918087827ef2a401827f5686e90a1a",
+                        "name": "iamResourcePermission"
+                    },
+                    "description": "IAM resource permissions assigned to the user.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a18",
+            "name": "group",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": "2022-08-08T21:22:33.399Z"
+        },
+        {
+            "nativeObjectType": "Role",
+            "identityAttribute": "objectID",
+            "displayAttribute": "roleName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Id of role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "roleName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "roleDescription",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "rolePrivileges",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Privileges of the role.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isSystemRole",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is System Role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "isSuperAdminRole",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Is Super Admin Role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a19",
+            "name": "Role",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "iamResourcePermission",
+            "identityAttribute": "objectID",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Id of resource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display name of resource permission is combination of role dispaly name and resource display name.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Description of role associated with reource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "includedPermissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Permission over the resource include in role.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "stage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Stage of the role associated with resource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "resourceName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Resource name associated with the resource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "roleName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role name associated with the resource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "resourceType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of the resource associated with the resource permission.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a1a",
+            "name": "iamResourcePermission",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "iamRole",
+            "identityAttribute": "name",
+            "displayAttribute": "title",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the IAM role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A human-readable description for the IAM role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A human-readable title for the role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "includedPermissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The names of the permissions this IAM role grants when bound in an IAM policy.",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "stage",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The current launch stage of the IAM role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "deleted",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "The current deleted state of the IAM role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a1b",
+            "name": "iamRole",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "folder",
+            "identityAttribute": "objectID",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Id of the folder in the format folders/{numeric folder id}.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The full resource name of folder.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "assetType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Asset Type of the GCP resource.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display name of the folder.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Location of the folder.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "state",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "State of the folder.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a1c",
+            "name": "folder",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "project",
+            "identityAttribute": "objectID",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "objectID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Id of the project in the format projects/{alpha numeric project id}.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The full resource name of project.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "assetType",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Asset Type of the GCP resource.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Display name of the project.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Location of the project.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "state",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "State of the project.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087827ef2a401827f5686e90a1d",
+            "name": "project",
+            "created": "2022-08-08T21:22:33.321Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "groupDetails": "Y",
+        "enableGcpSupport": false,
+        "deleteThresholdPercentage": 10,
+        "isSkipAlias": "true",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.GoogleAppsDirect",
+        "cloudCacheUpdate": 1660240012017,
+        "templateApplication": "G Suite",
+        "encrypted": "refreshToken,clientSecret,accessToken,private_key,private_key_password",
+        "healthy": false,
+        "cloudDisplayName": "Jack Boike - GSuite",
+        "connectorName": "G Suite",
+        "grantType": "CLIENT_CREDENTIALS",
+        "since": "2022-08-08T21:22:33.320Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "primaryEmail",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "G Suite Account Correlation Config",
+        "id": "2c9180866ecd33e9016ecf90815f6b13"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "objectType",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": "user"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "familyName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Password"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "primaryEmail",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "domainName",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": ""
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "projectId",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": ""
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "serviceAccountId",
+                    "transform": {
+                        "type": "static",
+                        "attributes": {
+                            "value": ""
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "displayName",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "displayName"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        },
+        {
+            "name": "group",
+            "description": null,
+            "usageType": "CREATE_GROUP",
+            "fields": [
+                {
+                    "name": "Email",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": true,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

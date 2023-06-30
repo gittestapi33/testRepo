@@ -1,0 +1,80 @@
+{
+    "id": "2c9180846c3f9734016c71ae1a0e1a19",
+    "name": "MySQL",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "User Repository",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "GROUP_PROVISIONING",
+        "PROVISIONING",
+        "UNLOCK",
+        "DISCOVER_SCHEMA",
+        "SYNC_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "2c9180846c3f9734016c71ae1a0e1a1a",
+            "name": "account",
+            "created": "2019-08-08T14:42:11.086Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": "false",
+        "useStoredProcedureTestConn": false,
+        "isAdvance": "false",
+        "mergeRows": false,
+        "useStoredProcedureGetObject": false,
+        "connectionType": "direct",
+        "usePrepareCall": false,
+        "driverClass": "com.mysql.jdbc.Driver",
+        "connector_files": "mysql-connector-java-8.0.16.jar",
+        "jdbcProvisionRule": "jdbcProvisionRule",
+        "testConnSQL": "select * from users",
+        "group": "[SQL:, getObjectSQL:]",
+        "deltaTable": "USER_DELTA",
+        "isPermissionEnabled": false,
+        "deleteThresholdPercentage": 10,
+        "useForAccounts": "true",
+        "group.useStoredProcedureSqlStmt": false,
+        "url": "jdbc:mysql://10.1.100.35/destinationdb",
+        "SQL": "select *, CASE WHEN Status = 'active' THEN 'false' ELSE 'true' END AS 'IIQDisabled' from users order By idusers asc",
+        "group.useStoredProcedureGetObject": false,
+        "cloudCacheUpdate": 1646682214899,
+        "templateApplication": "JDBC Template",
+        "group.isPermissionEnabled": false,
+        "healthy": false,
+        "cloudDisplayName": "MySQL",
+        "connectorName": "JDBC",
+        "useStoredProcedureSqlStmt": false,
+        "user": "root",
+        "groupHierarchyAttribute": "Child Roles",
+        "md5": "ecc3eb8b681f469daffa0c929fd67162",
+        "since": "2019-08-08T14:42:11.086Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

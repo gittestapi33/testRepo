@@ -1,0 +1,170 @@
+{
+    "id": "c753f3cd4a91452c9c6c9048fae88485",
+    "name": "AA - SOAP WS",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "SOAP WS",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "PROVISIONING",
+        "PASSWORD",
+        "ENABLE",
+        "AUTHENTICATE",
+        "UNLOCK"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "USER_ID",
+            "displayAttribute": "USER_ID",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "USER_ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USER_ID",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FIRST_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "FIRST_NAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "USER_NAME",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "USER_NAME",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "DEPARTMENT",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "DEPARTMENT",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "059cc52365c5452c96ce33f6a12d8eaa",
+            "name": "account",
+            "created": "2023-03-14T17:58:25.731Z",
+            "modified": "2023-03-14T18:01:17.644Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "e9e4d540d2cc42868c72e011be2bf20c",
+            "name": "group",
+            "created": "2023-03-14T17:58:25.731Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "enableHasMore": false,
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "60",
+        "genericWebServiceBaseUrl": "https://01300ee3-52fd-4807-8f4c-2bff08712067.mock.pstmn.io",
+        "connectionParameters": [
+            {
+                "contextUrl": "/users",
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "curlEnabled": false,
+                "operationType": "Test Connection",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ]
+            },
+            {
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "rootPath": "//ns:records/ns:record",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "2**"
+                ],
+                "resMappingObj": {
+                    "USER_ID": "ns:field[6]"
+                },
+                "contextUrl": "/users",
+                "pagingSize": 50,
+                "curlEnabled": false,
+                "operationType": "Account Aggregation",
+                "xpathNamespaces": {
+                    "ns": "http://schemas.xmlsoap.org/soap/envelope/",
+                    "wsu": "httsd",
+                    "soap": "httplope"
+                }
+            }
+        ],
+        "partitionAggregationEnabled": false,
+        "hasFullAggregationCompleted": true,
+        "possibleHttpErrors": {},
+        "throwProvAfterRuleException": true,
+        "lastAggregationDate_account": "2023-03-14T18:59:18Z",
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1678820358231,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info",
+        "authenticationMethod": "No Auth",
+        "httpCookieSpecsStandard": "true",
+        "healthy": true,
+        "cloudDisplayName": "AA - SOAP WS",
+        "connectorName": "Web Services",
+        "since": "2023-03-14T18:00:09.495052Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

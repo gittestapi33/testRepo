@@ -1,0 +1,37 @@
+{
+    "id": "2c9180866c2066b8016c728578584d09",
+    "name": "Office 365 - Base License",
+    "description": "End User Group",
+    "created": "2019-08-08T18:37:25.464Z",
+    "modified": "2022-11-10T20:08:01.519Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c9180846c3f9734016c6dd7a0da42ec",
+        "type": "SOURCE",
+        "name": "Office 365"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180876c63780e016c6dde84496493",
+            "type": "ENTITLEMENT",
+            "name": "End User"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

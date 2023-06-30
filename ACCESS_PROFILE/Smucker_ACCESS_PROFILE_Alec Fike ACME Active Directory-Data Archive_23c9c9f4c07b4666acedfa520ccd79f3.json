@@ -1,0 +1,42 @@
+{
+    "id": "23c9c9f4c07b4666acedfa520ccd79f3",
+    "name": "Alec Fike ACME Active Directory-Data Archive",
+    "description": "Alec Fike ACME Active Directory-Data Archive",
+    "created": "2022-07-25T13:56:27.907Z",
+    "modified": "2022-11-10T20:08:01.77Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "source": {
+        "id": "2c9180858215e1970182227d841c3e4f",
+        "type": "SOURCE",
+        "name": "Alec Fike - ACME Active Directory"
+    },
+    "entitlements": [
+        {
+            "id": "18a59189553f4492b49d25b689ea1dc0",
+            "type": "ENTITLEMENT",
+            "name": "DataArchive"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "MANAGER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

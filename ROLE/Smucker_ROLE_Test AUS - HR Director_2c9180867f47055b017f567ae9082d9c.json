@@ -1,0 +1,48 @@
+{
+    "id": "2c9180867f47055b017f567ae9082d9c",
+    "name": "Test AUS - HR Director",
+    "created": "2022-03-04T19:49:29.992Z",
+    "modified": "2022-11-10T20:08:01.995Z",
+    "description": "test",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex Alvarez"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [],
+    "membership": {
+        "type": "STANDARD",
+        "criteria": {
+            "operation": "OR",
+            "key": null,
+            "stringValue": "",
+            "children": [
+                {
+                    "operation": "EQUALS",
+                    "key": {
+                        "type": "IDENTITY",
+                        "property": "attribute.title",
+                        "sourceId": ""
+                    },
+                    "stringValue": "HR: Director - HR",
+                    "children": []
+                }
+            ]
+        },
+        "identities": null
+    },
+    "legacyMembershipInfo": null,
+    "enabled": false,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

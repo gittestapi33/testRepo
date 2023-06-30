@@ -1,0 +1,28 @@
+{
+    "id": "4a6e1be7a21f41ccb5ae23220d111a59",
+    "name": "Billing Admin",
+    "created": "2022-08-11T17:25:15.642Z",
+    "modified": "2022-11-10T20:08:02.701Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex Alvarez"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [],
+    "membership": null,
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

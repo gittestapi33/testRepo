@@ -1,0 +1,139 @@
+{
+    "id": "f52b701c5701406e91618b4bb4289542",
+    "name": "AA - SCIM",
+    "type": "SCIM 2.0",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "scim20-angularsc",
+    "description": "test SCIM connector",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "features": [
+        "ENABLE",
+        "PASSWORD",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "DISCOVER_SCHEMA"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "0848451dce7e4923992d57ee47797250",
+            "name": "account",
+            "created": "2023-05-25T15:43:33.668Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Entitlement",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "1c617b2768fb49c69a766d806dedc1e9",
+            "name": "entitlements",
+            "created": "2023-05-25T15:43:33.668Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Role",
+            "identityAttribute": null,
+            "displayAttribute": null,
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "e1885d4471f94926899d6bdbe62e99a5",
+            "name": "roles",
+            "created": "2023-05-25T15:43:33.668Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique identifier for the group ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Displayable Name of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "members",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Members of the group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "b7234e4e8109440bbd648aa9035c775e",
+            "name": "group",
+            "created": "2023-05-25T15:43:33.668Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "load-by-sysclassloader": [
+            "json.jar"
+        ],
+        "supportsDeltaAgg": "true",
+        "deltaAggregationEnabled": false,
+        "customTimeout": "1",
+        "usePatch": false,
+        "skipGrpUpdate": false,
+        "deleteThresholdPercentage": 10,
+        "pageSize": "50",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.scim2.SCIM2Connector",
+        "cloudCacheUpdate": 1685029414240,
+        "templateApplication": "SCIM 2.0",
+        "encrypted": "refresh_token,oauthTokenInfo,client_secret,oauthBearerToken,additional_payload,private_key, private_key_password,oauth2password",
+        "grant_type": "PASSWORD",
+        "healthy": false,
+        "relaxConfiguration": false,
+        "cloudDisplayName": "AA - SCIM",
+        "connectorName": "SCIM 2.0",
+        "authType": "Basic",
+        "since": "2023-05-25T15:43:33.668Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

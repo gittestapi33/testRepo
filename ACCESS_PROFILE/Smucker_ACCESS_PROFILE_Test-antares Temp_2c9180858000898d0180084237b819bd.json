@@ -1,0 +1,37 @@
+{
+    "id": "2c9180858000898d0180084237b819bd",
+    "name": "Test-antares Temp",
+    "description": "Test-antares Temp",
+    "created": "2022-04-08T08:19:59.033Z",
+    "modified": "2022-11-10T20:08:02.982Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877c3c73d7017c4a1a4494640c",
+        "name": "Priyanka Vangala (TRANSFORM)"
+    },
+    "source": {
+        "id": "2c918085800485c501800828b959615d",
+        "type": "SOURCE",
+        "name": "test-antares"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180867fff7c780180083f9cfe20cc",
+            "type": "ENTITLEMENT",
+            "name": "Temp"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

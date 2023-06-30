@@ -1,0 +1,13 @@
+{
+    "triggerId": "idn:saved-search-complete",
+    "responseDeadline": "PT1H",
+    "workflowConfig": {
+        "workflowId": "07543a59-fe39-43fb-b399-ecfa540d4cfb"
+    },
+    "triggerName": "Scheduled Search",
+    "description": "Managed by Workflows",
+    "id": "07543a59-fe39-43fb-b399-ecfa540d4cfb",
+    "enabled": false,
+    "type": "WORKFLOW",
+    "name": "Jack Boike - Disable Active Accounts for Inactive Identities"
+}

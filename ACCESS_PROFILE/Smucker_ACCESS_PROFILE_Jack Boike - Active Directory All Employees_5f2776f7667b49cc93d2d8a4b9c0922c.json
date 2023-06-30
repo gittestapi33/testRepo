@@ -1,0 +1,42 @@
+{
+    "id": "5f2776f7667b49cc93d2d8a4b9c0922c",
+    "name": "Jack Boike - Active Directory All Employees",
+    "description": "Detailed description.",
+    "created": "2023-05-31T01:09:28.522Z",
+    "modified": "2023-05-31T14:23:49.715Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808480948d3e0180955e2a00345b",
+        "name": "Bill Gates"
+    },
+    "source": {
+        "id": "2c9180888067003e01809566d9ad48f9",
+        "type": "SOURCE",
+        "name": "Jack Boike-ACME Active Directory"
+    },
+    "entitlements": [
+        {
+            "id": "1029cddf48f1486b8810ed95168699d3",
+            "type": "ENTITLEMENT",
+            "name": "all-employees"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": true,
+        "denialCommentsRequired": true,
+        "approvalSchemes": [
+            {
+                "approverType": "GOVERNANCE_GROUP",
+                "approverId": "26f81224-a622-4b84-81f1-9e0fbb5bb309"
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

@@ -1,0 +1,28 @@
+{
+    "id": "e018c43e52b04040b30cbf5282b31a68",
+    "name": "wsss",
+    "created": "2022-11-07T21:30:24.048Z",
+    "modified": "2022-11-10T20:08:02.215Z",
+    "description": null,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808882d0abf50182fe915b247595",
+        "name": "AAF989"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [],
+    "membership": null,
+    "legacyMembershipInfo": null,
+    "enabled": false,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

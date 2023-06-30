@@ -1,0 +1,31 @@
+{
+    "id": "3e1bd0d7f5904ff98bc6e92a67e257e2",
+    "name": "AA - External Vendors",
+    "description": null,
+    "created": "2022-08-10T18:41:18.794Z",
+    "modified": "2022-11-10T20:08:02.765Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180866b96030c016bb3440f680f1c",
+        "name": "Alex_Alvarez"
+    },
+    "source": {
+        "id": "2c91808a827ef2a6018289031cf03c5c",
+        "type": "SOURCE",
+        "name": "AA - External Vendors"
+    },
+    "entitlements": [],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

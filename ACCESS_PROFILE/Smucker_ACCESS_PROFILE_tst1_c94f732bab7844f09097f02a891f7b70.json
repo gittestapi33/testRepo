@@ -1,0 +1,42 @@
+{
+    "id": "c94f732bab7844f09097f02a891f7b70",
+    "name": "tst1",
+    "description": null,
+    "created": "2023-05-10T10:29:58.547Z",
+    "modified": "2023-05-10T10:36:12.856Z",
+    "enabled": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "0db1e25dc0bd499ebf29d9b92b0b55f2",
+        "name": "a1"
+    },
+    "source": {
+        "id": "2c9180877f65f353017f9ec01bf94b63",
+        "type": "SOURCE",
+        "name": "AA - AWS AD"
+    },
+    "entitlements": [
+        {
+            "id": "fe6063eaa182420c9f610e6ce8c81c83",
+            "type": "ENTITLEMENT",
+            "name": "Test Group 1"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "APP_OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

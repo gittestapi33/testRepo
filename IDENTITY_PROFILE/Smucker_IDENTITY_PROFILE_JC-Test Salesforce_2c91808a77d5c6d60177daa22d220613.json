@@ -1,0 +1,133 @@
+{
+    "description": null,
+    "owner": null,
+    "priority": 120,
+    "authoritativeSource": {
+        "type": "SOURCE",
+        "id": "2c91808477a6a9f00177d4d3dd620036",
+        "name": "JC - SalesForce Test"
+    },
+    "identityRefreshRequired": false,
+    "identityCount": 7,
+    "identityAttributeConfig": {
+        "enabled": true,
+        "attributeTransforms": [
+            {
+                "identityAttributeName": "uid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Id",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "email",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Email",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "lastname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "LastName",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "firstname",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "FirstName",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "alias",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Alias",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "country",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Country",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "displayName",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "Username",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "identificationNumber",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "EmployeeNumber",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "userType",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "UserType",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            },
+            {
+                "identityAttributeName": "profileid",
+                "transformDefinition": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                        "attributeName": "ProfileId",
+                        "sourceName": "JC - SalesForce Test",
+                        "sourceId": "2c91808477a6a9f00177d4d3dd620036"
+                    }
+                }
+            }
+        ]
+    },
+    "identityExceptionReportReference": null,
+    "hasTimeBasedAttr": false,
+    "id": "2c91808a77d5c6d60177daa22d220613",
+    "name": "JC-Test Salesforce",
+    "created": "2021-02-25T19:19:57.474Z",
+    "modified": "2022-11-23T17:06:06.922Z"
+}

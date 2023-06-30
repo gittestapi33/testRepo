@@ -1,0 +1,1386 @@
+{
+    "id": "347246744b8e4aa394acc28ddaacf2e2",
+    "name": "sap1",
+    "type": "SAP - Direct",
+    "connectorClass": "sailpoint.connector.SAPConnector",
+    "connectorScriptName": "sap-angularsc",
+    "description": "sap1",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "0db1e25dc0bd499ebf29d9b92b0b55f2",
+        "name": "a1"
+    },
+    "features": [
+        "ENABLE",
+        "NO_GROUP_PERMISSIONS_PROVISIONING",
+        "PASSWORD",
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "UNLOCK",
+        "SEARCH",
+        "AUTHENTICATE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "User Name",
+            "displayAttribute": "User Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Academic Title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Academic title of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Academic Title 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd Academic title of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Addr Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Alias",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Alias name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Birth Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Birth name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Building",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the building",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Building 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd Name of the building",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Building Long",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Long name of the building",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Care of",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Care of name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Check Status",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Check status for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "City",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "City Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Number of the city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Code",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Signature initials",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Communication Language",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Communication language of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Communication type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Communication method for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company Address",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address of the company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company Address2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address 2 of the company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company Address3",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address 3 of the company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Company Address4",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Address 4 of the company",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the country",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Country ISO",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ISO name of the country",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Delivery District",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Delivery district name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Department",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Department name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "District",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "District name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "District Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "District number for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "E-Mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "E-mail address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "E-Mail List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "E-mail address list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Employee Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Employee number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Fax",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Fax number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Fax Extension",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Fax extension number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Fax List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Fax number list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "First name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "First name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Floor",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Floor number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Floor 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Floor 2 number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Format",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Format name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FullName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Full name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "FullName2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Full name 2 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Function",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Function of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "House  Number 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "House number 2 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "House Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "House number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "HouseNumber 3",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "House number 3 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Inhouse ML",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Inhouse mail of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Initials",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Initials of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Language CR P",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "CR P language of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Language ISO",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "ISO language of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Language UCP ISO",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "CP ISO language of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Language UP ISO",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "P ISO language of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Last name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Last name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Location name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Logon Language",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Logon language for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Middle Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Middle name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Name Country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the country",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Nickname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Nickname of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Notes",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Notes for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Other City",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the other city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Other City Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Number of the other city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Pager SMS List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Pager or SMS number list in the format pager_type#pager_number",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Parameters",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Parameter list in the format prameter_ID=parameter_value",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PCODE 1 Ext",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Postal code 1 extension",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PCODE 2 Ext",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Postal code 2 extension",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PCODE 3 Ext",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Postal code 3 extension",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box City",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box number of the city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box City ISO",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box number of the ISO city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box Country",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box number of the country",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box Region",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box number of the region",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PO Box Without Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "PO box without number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Pboxcity Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Pbox number of the city",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Postal Code",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Postal code of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Postal Code2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd postal code of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Postal Code3",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "3rd postal code of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Prefix 1",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "1st prefix",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Prefix 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd prefix",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Printer List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Print destination list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Region",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Name of the region",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Region Group",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Group name of the region",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Remote Communication List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Communication notes list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Remote Function Call List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Remote function call destination list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Remote Mail List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Remote mail list of the user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Room Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Room number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Room Number 2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd room number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Searc Term2 P",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd search term P for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Search Term P",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Search term P for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Search Term1",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "1st search term for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Search Term2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "2nd search term for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Second Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Second name of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Abbreviation",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street abbreviation for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Address",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street address of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Address2",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street address 2 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Address3",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street address 3 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Address4",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street address 4 of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Street Number",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Street number of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Tax Jurisdiction  Code",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Tax jurisdiction  code of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Telephone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telephone number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Telephone Extension",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telephone extension number",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Telephone List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telephone number list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Teletex List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Teletex number list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Telex List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Telex number list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TimeZone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "System time zone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TZone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Personal time zone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Title of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Title SPPL",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Title SPPL of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Transportation Zone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Transportation zone of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "URL Homepage List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "URL (Homepage) address list in the format URI_type#URI_name",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Last Logon Time",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User last log in time",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Last Logon Date",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User last log in date",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Logon Data Time Zone",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User last log time zone",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Productive Password",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "User password set in permanent mode",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Password Deactivated",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Password Deactivated Flag",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "GUI Flag",
+                    "type": "BOOLEAN",
+                    "schema": null,
+                    "description": "Unsecured communication permitted",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "SNC Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "SNC name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Reference User",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Reference user name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Title of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Type of the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Valid From",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Valid from date for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Valid To",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Valid to date for the user",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Role Details",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Details of the User",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Systems",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Systems list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "X.400 List",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Organization name list",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Roles",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "ede4f59cba494cbfaee17aa697b4b408",
+                        "name": "group"
+                    },
+                    "description": "Roles for user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Profiles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Profiles for user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User Group Assignments of the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "Contractual User Type ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Contractual user types associated with user",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "261e4e4be3c343fbbc4931fc4f19095a",
+            "name": "account",
+            "created": "2023-05-16T15:13:33.067Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Role",
+            "identityAttribute": "Name",
+            "displayAttribute": "Name",
+            "hierarchyAttribute": "Child Roles",
+            "includePermissions": false,
+            "features": [
+                "NO_PERMISSIONS_PROVISIONING"
+            ],
+            "configuration": {
+                "childHierarchy": "true"
+            },
+            "attributes": [
+                {
+                    "name": "Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Description",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Subsystem",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "System Name for CUA System Aggregation",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Child Roles",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Sub Role List",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Long Description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Role Long Description",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Generated Profile",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "System Generated Profile associated to Role which in turn has Authorizations.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "TCodes",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Transaction Code List",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "Authorization Objects",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Authorization objects associated with role.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "ede4f59cba494cbfaee17aa697b4b408",
+            "name": "group",
+            "created": "2023-05-16T15:13:33.067Z",
+            "modified": "2023-05-16T15:13:33.441Z"
+        }
+    ],
+    "connectorAttributes": {
+        "jco.client.snc_qop": "8",
+        "load-by-sysclassloader": [
+            "sapjco3.jar"
+        ],
+        "supportsDeltaAgg": "true",
+        "skipInactiveRoles": "true",
+        "deleteThresholdPercentage": 10,
+        "useClientLanguageForLicense": "true",
+        "connectionType": "direct",
+        "retryableErrors": [
+            "Server is not operational",
+            "Connect to SAP gateway failed"
+        ],
+        "unlockOnChangePassword": true,
+        "cloudCacheUpdate": 1684250014269,
+        "templateApplication": "SAP Template",
+        "encrypted": "password",
+        "healthy": false,
+        "cloudDisplayName": "sap1",
+        "connectorName": "SAP",
+        "spFMName": "/SAILPOIN/SAIL_READ_TABLE",
+        "since": "2023-05-16T15:13:33.067Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "E-Mail",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "User Name",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "displayName",
+                "operation": "EQ",
+                "value": "FullName",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "SAP Template Account Correlation Config",
+        "id": "2c9180846b6c6937016b740d20933525"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Create User",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "User Name",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        }
+                    },
+                    "attributes": {
+                        "template": "$(firstname)$(uniqueCounter)",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudMaxSize": "12",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Password"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Last name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

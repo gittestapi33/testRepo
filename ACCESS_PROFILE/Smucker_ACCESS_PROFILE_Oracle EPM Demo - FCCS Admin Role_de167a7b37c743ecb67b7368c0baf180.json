@@ -1,0 +1,46 @@
+{
+    "id": "de167a7b37c743ecb67b7368c0baf180",
+    "name": "Oracle EPM Demo - FCCS Admin Role",
+    "description": "Oracle EPM Demo - FCCS Admin Role. Detailed description of access can go here.",
+    "created": "2023-06-08T02:05:18.337Z",
+    "modified": "2023-06-08T02:18:32.741Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "07b13ffcca484de2ad3122e867eabab4",
+            "type": "ENTITLEMENT",
+            "name": "Admin-FCCS"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": true,
+        "denialCommentsRequired": true,
+        "approvalSchemes": [
+            {
+                "approverType": "MANAGER",
+                "approverId": null
+            },
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

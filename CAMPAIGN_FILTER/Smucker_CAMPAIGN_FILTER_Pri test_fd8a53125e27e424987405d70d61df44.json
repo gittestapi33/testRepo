@@ -1,0 +1,47 @@
+{
+    "id": "fd8a53125e27e424987405d70d61df44",
+    "name": "Pri test",
+    "description": "For testing purposes",
+    "owner": "Vangala Priyanka",
+    "mode": "INCLUSION",
+    "criteriaList": [
+        {
+            "type": "COMPOSITE",
+            "property": "displayableName",
+            "value": "Admin",
+            "operation": "AND",
+            "negateResult": false,
+            "shortCircuit": false,
+            "recordChildMatches": false,
+            "id": null,
+            "suppressMatchedItems": false,
+            "children": [
+                {
+                    "type": "ENTITLEMENT",
+                    "property": "displayableName",
+                    "value": "Admin",
+                    "operation": "EQUALS",
+                    "negateResult": false,
+                    "shortCircuit": false,
+                    "recordChildMatches": false,
+                    "id": null,
+                    "suppressMatchedItems": false,
+                    "children": null
+                },
+                {
+                    "type": "ENTITLEMENT",
+                    "property": "application",
+                    "value": "Antares test",
+                    "operation": "EQUALS",
+                    "negateResult": false,
+                    "shortCircuit": false,
+                    "recordChildMatches": false,
+                    "id": null,
+                    "suppressMatchedItems": false,
+                    "children": null
+                }
+            ]
+        }
+    ],
+    "isSystemFilter": false
+}

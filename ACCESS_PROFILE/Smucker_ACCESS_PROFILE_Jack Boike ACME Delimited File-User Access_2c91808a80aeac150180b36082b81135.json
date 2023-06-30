@@ -1,0 +1,47 @@
+{
+    "id": "2c91808a80aeac150180b36082b81135",
+    "name": "Jack Boike ACME Delimited File-User Access",
+    "description": "Jack Boike ACME Delimited File-User Access",
+    "created": "2022-05-11T13:48:08.248Z",
+    "modified": "2022-11-10T20:08:02.926Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "source": {
+        "id": "2c91808780ad30fe0180b35bc2a31ab7",
+        "type": "SOURCE",
+        "name": "Jack Boike-ACME Delimited File"
+    },
+    "entitlements": [
+        {
+            "id": "2c91808780ae715a0180b35f31f41e81",
+            "type": "ENTITLEMENT",
+            "name": "User"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": true,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "MANAGER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": [
+            {
+                "approverType": "SOURCE_OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

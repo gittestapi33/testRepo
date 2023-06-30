@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "WebServiceBeforeOperationRule",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "1.0",
+        "script": "import sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.Identity;\r\nimport sailpoint.connector.webservices.WebServicesClient;\r\nimport connector.common.JsonUtil;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.HashMap;\r\nimport java.util.Base64;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\t\r\n// Helper method to iterate through the manager entitlements that need to be revoked prior to disabling the account.\r\npublic void removeAdditionalEntitlements(List entitlementsToRemove) {\r\n\tif(null != entitlementsToRemove) {\r\n\t\t// Create new client\r\n\t\tWebServicesClient client = new WebServicesClient();\t\r\n\r\n\t\t// Create URL \r\n\t\tString url = \"TODO\";\r\n\t\tMap args = new HashMap();\r\n\t\targs.put(WebServicesClient.ARG_URL, url);\r\n\t\tclient.configure(args);\r\n\r\n\t\t// Create Headers\r\n\t\tMap header = new HashMap();\r\n\t\theader.put(\"Content-Type\", \"application/json\");\r\n\r\n\t\t// Create Allowed Statuses\r\n\t\tList allowedStatuses = new ArrayList();\r\n\t\tallowedStatuses.add(\"2**\");\r\n\t\t\r\n\t\tfor(String attrReq :entitlementsToRemove)\r\n\t\t{\r\n\t\t\tString finalBody = JsonUtil.render(\"BODY\");\r\n\t\t\t\r\n\t\t\t// Execute Post\r\n\t\t\tString response = client.executePost(url, finalBody, header, allowedStatuses);\r\n\t\t\t\r\n\t\t\t// Error handling\r\n\t\t\t// TODO\r\n\t\t}\r\n\t}\r\n}\r\n\r\n// Helper methods to make a request to an IPAAS solution which will receive this request and send an email to the intended recipients.\r\npublic void sendEmailHTTPRequest()\r\n{   \r\n\t// Create new client\r\n\tWebServicesClient client = new WebServicesClient();\t\r\n\r\n\t// Create URL \r\n\tString url = \"TODO\";\r\n\tMap args = new HashMap();\r\n\targs.put(WebServicesClient.ARG_URL, url);\r\n\tclient.configure(args);\r\n\r\n\t// Create Headers\r\n\tMap header = new HashMap();\r\n\theader.put(\"Content-Type\", \"application/json\");\r\n\r\n\t// Create Allowed Statuses\r\n\tList allowedStatuses = new ArrayList();\r\n\tallowedStatuses.add(\"2**\");\r\n\r\n\t// Create Payload\r\n\t// Here you will need to capture the XSRF token from the previous response\r\n\t// Here you will also need to pass in any other variables such as username and password\r\n\tMap payload = new HashMap();\r\n\tString finalBody = JsonUtil.render(\"BODY\");\r\n\r\n\r\n\t// Execute Post\r\n\tString response = client.executePost(url, finalBody, header, allowedStatuses);\r\n\t\r\n\t// Error handling\r\n\t// TODO\r\n}\r\n\r\n\r\n// Set up vairables to be used\r\nboolean adminProcessing = false;\r\nboolean managerProcessing = false;\r\nboolean standardProcessing = false;\r\nString attrName = \"ARG - <INSERT ENTITLEMENT ATTRIBUTE NAME HERE>\";\r\n\r\nString password = application.getStringAttributeValue(\"password\");\r\nString testUsername = application.getStringAttributeValue(\"testUsername\");\r\n\r\nlog.error(\"testUsername: \" + testUsername);\r\nlog.error(\"Password: \" + password);"
+    },
+    "attributes": {
+        "sourceVersion": "1.0"
+    },
+    "id": "a189307803384d24aa22c47f0cc57224",
+    "name": "Jack_Boike_Test_Before_Provision_Rule",
+    "created": "2022-06-23T00:19:10.551Z",
+    "modified": "2022-06-23T00:43:09.368Z"
+}

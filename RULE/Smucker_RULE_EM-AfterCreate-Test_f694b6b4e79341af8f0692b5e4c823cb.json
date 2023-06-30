@@ -1,0 +1,24 @@
+{
+    "description": "This rule is for testing. EM.",
+    "type": "ConnectorAfterCreate",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "1.0",
+        "script": "$logDate = Get-Date -UFormat \"%Y%m%d\"\r\n$logFile = \"c:\\SailPoint\\Scripts\\Logs\\ConnectorAfterCreate_$logDate.log\"\r\n$command = \"c:\\SailPoint\\Scripts\\SampleSource-AfterCreate.ps1\"\r\n$enableDebug = $true\r\n\r\n#====================-------Helper functions-------====================\r\nfunction LogToFile([String] $info) {\r\n    $info | Out-File $logFile -Append\r\n}\r\n\r\n#====================-------Get the request object-------====================\r\nTry{\r\n    if($enableDebug) {\r\n        LogToFile(\"Entering SailPoint rule\")\r\n    }\r\n\t\r\n    Add-type -path utils.dll;\r\n\t$sReader = New-Object System.IO.StringReader([System.String]$env:Request);\r\n\t$xmlReader = [System.xml.XmlTextReader]([sailpoint.utils.xml.XmlUtil]::getReader($sReader));\r\n\t$requestObject = New-Object Sailpoint.Utils.objects.AccountRequest($xmlReader);\r\n    $requestAsString = $env:Request\r\n\r\n    if($enableDebug) {\r\n        LogToFile(\"Request as XML object is: $requestAsString\")\r\n    }\r\n\r\n    #Call the client script\r\n    $command = -join ($command, \" -requestString '$requestAsString'\")\r\n    Invoke-Expression $command\r\n\r\n}Catch{\r\n\t$ErrorMessage = $_.Exception.Message \r\n  \t$ErrorItem = $_.Exception.ItemName\r\n  \tLogToFile(\"Error: Item = $ErrorItem -> Message = $ErrorMessage\")\r\n}\r\n\r\nif($enableDebug) {\r\n    LogToFile(\"Exiting SailPoint rule\")\r\n}"
+    },
+    "attributes": {
+        "ObjectOrientedScript": "true",
+        "extension": ".ps1",
+        "sourceVersion": "1.0",
+        "disabled": "false",
+        "program": "powershell.exe",
+        "timeout": "300"
+    },
+    "id": "f694b6b4e79341af8f0692b5e4c823cb",
+    "name": "EM-AfterCreate-Test",
+    "created": "2022-04-01T16:55:22.103Z",
+    "modified": null
+}

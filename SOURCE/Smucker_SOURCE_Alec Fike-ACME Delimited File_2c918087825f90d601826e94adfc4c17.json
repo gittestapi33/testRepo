@@ -1,0 +1,331 @@
+{
+    "id": "2c918087825f90d601826e94adfc4c17",
+    "name": "Alec Fike-ACME Delimited File",
+    "type": "DelimitedFile",
+    "connectorClass": "sailpoint.connector.DelimitedFileConnector",
+    "connectorScriptName": "delimited-file-angularsc",
+    "description": "Alec Fike-ACME Delimited File",
+    "deleteThreshold": 10,
+    "provisionAsCsv": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180867b16d72c017b1d32858261ce",
+        "name": "Alec_Fike"
+    },
+    "features": [
+        "NO_RANDOM_ACCESS",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "User Name",
+            "displayAttribute": "User Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "User Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "User Name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "givenName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "familyName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "familyName",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c918087825f90d601826e94adfd4c19",
+                        "name": "group"
+                    },
+                    "description": "Groups",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Title",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Title",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Employee Type",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Employee Type",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087825f90d601826e94adfd4c18",
+            "name": "account",
+            "created": "2022-08-05T15:16:53.885Z",
+            "modified": "2022-08-05T15:27:50.979Z"
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique ID for Group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typically groupname etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The preferred display name for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was created (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Multi-purpose field used to capture a description or comments",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "modified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was modified (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "entitlements",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The access rights, entitlements etc. that the account has access to.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The groups, roles etc. that reference to account group objects",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "permissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The permissions associated with the account",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c918087825f90d601826e94adfd4c19",
+            "name": "group",
+            "created": "2022-08-05T15:16:53.885Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "mergeColumns": [
+            "Groups"
+        ],
+        "group.mergeRows": true,
+        "group.delimiter": ",",
+        "mergeRows": true,
+        "group.filetransport": "local",
+        "partitionMode": "disabled",
+        "connectionType": "file",
+        "group.host": "local",
+        "group.indexColumn": "id",
+        "file": "/var/lib/identityiq_workspace/962b01f0-a56d-4b25-af25-76db4bba41af-accounts.csv",
+        "delimiter": ",",
+        "host": "local",
+        "indexColumns": [
+            "User Name"
+        ],
+        "commentCharacter": "#",
+        "group.mergeColumns": [
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "hasHeader": true,
+        "filterEmptyRecords": true,
+        "filetransport": "local",
+        "deleteThresholdPercentage": 10,
+        "group.filterEmptyRecords": true,
+        "group.hasHeader": true,
+        "group.partitionMode": "disabled",
+        "group.columnNames": [
+            "id",
+            "name",
+            "displayName",
+            "created",
+            "description",
+            "modified",
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "templateApplication": "DelimitedFile Template",
+        "group.file": "/var/lib/identityiq_workspace/e00e484c-0b6f-4820-a6b2-d113f76ff5ea-groups.csv",
+        "indexColumn": "User Name",
+        "healthy": true,
+        "cloudDisplayName": "Alec Fike-ACME Delimited File",
+        "connectorName": "Delimited File",
+        "cloudOriginalApplicationType": "Delimited File",
+        "since": "2022-08-05T15:16:53.884Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "identificationNumber",
+                "operation": "EQ",
+                "value": "User Name",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Alec Fike-ACME Delimited File [source] Account Correlation",
+        "id": "2c918086825f90cc01826e9fa4a913bb"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Create Policy",
+            "description": "Create Policy",
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "id",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "name",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "givenName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "familyName",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "e-mail",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "location",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                },
+                {
+                    "name": "groups",
+                    "transform": null,
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": null,
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

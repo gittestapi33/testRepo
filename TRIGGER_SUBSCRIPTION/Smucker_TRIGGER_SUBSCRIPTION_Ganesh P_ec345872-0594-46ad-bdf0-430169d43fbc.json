@@ -1,0 +1,20 @@
+{
+    "triggerId": "idn:identity-attributes-changed",
+    "responseDeadline": "PT1H",
+    "httpConfig": {
+        "httpDispatchMode": "SYNC",
+        "httpAuthenticationType": "BASIC_AUTH",
+        "url": "https://dev82427.service-now.com/api/anclp/sailpoint_event_trigger_processor/remove_role_event",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": {
+            "userName": "admin",
+            "password": null
+        }
+    },
+    "triggerName": "Identity Attributes Changed",
+    "description": "Terminated user remove role access",
+    "id": "ec345872-0594-46ad-bdf0-430169d43fbc",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "Ganesh P"
+}

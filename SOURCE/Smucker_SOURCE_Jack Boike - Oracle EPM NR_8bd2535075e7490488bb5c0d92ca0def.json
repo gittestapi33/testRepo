@@ -1,0 +1,314 @@
+{
+    "id": "8bd2535075e7490488bb5c0d92ca0def",
+    "name": "Jack Boike - Oracle EPM NR",
+    "type": "Oracle EPM Cloud - NR",
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "oracle-epm-cloud-nr-angularsc",
+    "description": "Jack Boike - Oracle EPM NR",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "PROVISIONING",
+        "SYNC_PROVISIONING",
+        "PASSWORD",
+        "ENABLE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "ID",
+            "displayAttribute": "User Login",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the user resource in Oracle EPM Cloud",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "User Login",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "A unique identifier for the user to authenticate with the service provider directly\n                ",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "First Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's first name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Last Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's last name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The user's primary email address",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "PredefinedRoles",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "abb455a83616491f8446225893f8f1a6",
+                        "name": "PredefinedRole"
+                    },
+                    "description": "The list of predefined roles assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "Groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "270391f080dd4d309a6ba06718cc0f59",
+                        "name": "group"
+                    },
+                    "description": "The list of groups assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                },
+                {
+                    "name": "ApplicationRoles",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "c21232ad5a8e4394acc15d113aab60a6",
+                        "name": "ApplicationRole"
+                    },
+                    "description": "The list of application role assigned to the user",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "622f0028bffe4930ba7a9e3a1e643363",
+            "name": "account",
+            "created": "2023-05-04T22:02:45.166Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "Group Name",
+            "displayAttribute": "Group Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Group Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The group's display name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "270391f080dd4d309a6ba06718cc0f59",
+            "name": "group",
+            "created": "2023-05-04T22:02:45.166Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "PredefinedRole",
+            "identityAttribute": "ID",
+            "displayAttribute": "Role Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "ID",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The ID of predefined role",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "Role Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The role's display name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "abb455a83616491f8446225893f8f1a6",
+            "name": "PredefinedRole",
+            "created": "2023-05-04T22:02:45.166Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "ApplicationRole",
+            "identityAttribute": "Role Name",
+            "displayAttribute": "Role Name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "Role Name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The Application role's display name",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "c21232ad5a8e4394acc15d113aab60a6",
+            "name": "ApplicationRole",
+            "created": "2023-05-04T22:02:45.166Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "provisioningTimeout": "180",
+        "deleteThresholdPercentage": 10,
+        "pageSize": "100",
+        "connectionType": "direct",
+        "connectorClass": "openconnector.connector.oracleepmcloud.OracleEPMCloudConnector",
+        "connTimeout": "1",
+        "cloudCacheUpdate": 1683237766396,
+        "templateApplication": "Oracle EPM Cloud - NR",
+        "encrypted": "client_secret, public_certificate, private_key",
+        "healthy": false,
+        "cloudDisplayName": "Jack Boike - Oracle EPM NR",
+        "connectorName": "Oracle EPM Cloud - NR",
+        "since": "2023-05-04T22:02:45.166Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "Email",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            },
+            {
+                "complex": false,
+                "property": "name",
+                "operation": "EQ",
+                "value": "User Login",
+                "ignoreCase": false,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Oracle EPM Cloud - NR Account Correlation Config",
+        "id": "a329e0ca766f412a90fc97d5dd26b959"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Create Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "User Login",
+                    "transform": {
+                        "type": "rule",
+                        "attributes": {
+                            "name": "Create Unique Account ID"
+                        }
+                    },
+                    "attributes": {
+                        "template": "$(email)",
+                        "cloudMaxUniqueChecks": "50",
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Email",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "First Name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "Last Name",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "id": "2179f822472f5c342e71544e168d968b",
+    "name": "Test Filter",
+    "description": "Test filter",
+    "owner": "Emmanuel Martinez",
+    "mode": "INCLUSION",
+    "criteriaList": [
+        {
+            "type": "SOURCE",
+            "property": "application",
+            "value": "AD - Employees",
+            "operation": "EQUALS",
+            "negateResult": false,
+            "shortCircuit": false,
+            "recordChildMatches": false,
+            "id": null,
+            "suppressMatchedItems": false,
+            "children": null
+        }
+    ],
+    "isSystemFilter": false
+}

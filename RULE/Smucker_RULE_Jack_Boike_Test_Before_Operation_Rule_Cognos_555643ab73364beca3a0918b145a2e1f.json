@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "WebServiceBeforeOperationRule",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "1.0",
+        "script": "import java.util.ArrayList;\r\nimport java.util.HashMap;\r\nimport java.util.Base64;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\nimport sailpoint.connector.webservices.WebServicesClient;\r\nimport sailpoint.object.Application;\r\nimport connector.common.JsonUtil;\r\n\r\nString xsrfToken;\r\n\r\ntry {\r\n\tMap body = requestEndPoint.getBody();\r\n\tMap header = requestEndPoint.getHeader();\r\n\tlog.error(\"TESTBODY:\" + body.toString() + \":TESTBODY\");\r\n\tlog.error(\"TESTHEADER for operation:\" + requestEndPoint.getOperationType() + \":::\" + header.toString() + \":TESTHEADER\");\r\n\tlog.error(\"TESTHEADER:\" + application.getStringAttributeValue(\"accesstoken\") + \":TESTHEADER\");\r\n\r\n}\t\r\ncatch (Exception e) {\r\n\tlog.error(\"Exception In AfterOperation Rule:: \" + e);\r\n\tlog.error(\": \" + e.getStackTrace());\r\n}"
+    },
+    "attributes": {
+        "sourceVersion": "1.0"
+    },
+    "id": "555643ab73364beca3a0918b145a2e1f",
+    "name": "Jack_Boike_Test_Before_Operation_Rule_Cognos",
+    "created": "2022-07-07T17:15:51.120Z",
+    "modified": "2022-07-07T17:43:03.476Z"
+}

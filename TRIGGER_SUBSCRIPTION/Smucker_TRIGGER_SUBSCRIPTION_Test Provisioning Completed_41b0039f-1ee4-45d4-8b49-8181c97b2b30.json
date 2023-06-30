@@ -1,0 +1,20 @@
+{
+    "triggerId": "idn:post-provisioning",
+    "responseDeadline": "PT1H",
+    "httpConfig": {
+        "httpDispatchMode": "SYNC",
+        "httpAuthenticationType": "BASIC_AUTH",
+        "url": "https://webhook.site/395c1d8f-a346-4ea9-9d44-009ab7c49735",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": {
+            "userName": "asdfasdfasdfa",
+            "password": null
+        }
+    },
+    "triggerName": "Provisioning Completed",
+    "description": "",
+    "id": "41b0039f-1ee4-45d4-8b49-8181c97b2b30",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "Test Provisioning Completed"
+}

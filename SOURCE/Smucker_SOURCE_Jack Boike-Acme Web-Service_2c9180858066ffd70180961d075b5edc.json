@@ -1,0 +1,429 @@
+{
+    "id": "2c9180858066ffd70180961d075b5edc",
+    "name": "Jack Boike-Acme Web-Service",
+    "type": "Web Services",
+    "connectorClass": "sailpoint.connector.webservices.WebServicesConnector",
+    "connectorScriptName": "web-services-angularsc",
+    "description": "Jack Boike-Acme Web-Service",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "features": [
+        "PROVISIONING",
+        "PASSWORD",
+        "UNLOCK",
+        "ENABLE",
+        "AUTHENTICATE"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "user",
+            "identityAttribute": "userId",
+            "displayAttribute": "userId",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "userId",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "userId",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "username",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "username",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "firstname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "firstname",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "lastname",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "lastname",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "email",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "email",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "capabilities",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180858066ffd70180961d075b5ede",
+                        "name": "group"
+                    },
+                    "description": "capabilities",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180858066ffd70180961d075b5edd",
+            "name": "account",
+            "created": "2022-05-05T21:25:26.491Z",
+            "modified": "2022-05-05T21:31:45.301Z"
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "capability",
+            "displayAttribute": "capability",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "capability",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "capability",
+                    "isMulti": false,
+                    "isEntitlement": true,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180858066ffd70180961d075b5ede",
+            "name": "group",
+            "created": "2022-05-05T21:25:26.491Z",
+            "modified": "2022-06-24T22:17:24.588Z"
+        }
+    ],
+    "connectorAttributes": {
+        "healthCheckTimeout": 30,
+        "supportsDeltaAgg": "true",
+        "lastAggregationDate_group": "2023-05-30T21:51:07Z",
+        "deltaAggregationEnabled": false,
+        "throwProvBeforeRuleException": true,
+        "connectionType": "direct",
+        "enableHasMore": false,
+        "isGetObjectRequiredForPTA": true,
+        "timeoutInSeconds": "60",
+        "genericWebServiceBaseUrl": "http://192.168.164.133:9080",
+        "connectionParameters": [
+            {
+                "contextUrl": "/trakkws/rest/test",
+                "httpMethodType": "GET",
+                "sequenceNumberForEndpoint": "1",
+                "uniqueNameForEndPoint": "Test Connection",
+                "curlEnabled": false,
+                "operationType": "Test Connection",
+                "rootPath": "$",
+                "body": {
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ]
+            },
+            {
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "2",
+                "uniqueNameForEndPoint": "Account Aggregation",
+                "rootPath": "$.trakkwsAccounts",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ],
+                "resMappingObj": {
+                    "firstname": "firstname",
+                    "capabilities": "capabilities",
+                    "userId": "userId",
+                    "email": "email",
+                    "lastname": "lastname",
+                    "username": "username"
+                },
+                "contextUrl": "/trakkws/rest/aggregate",
+                "pagingSize": 50,
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Account Aggregation",
+                "beforeRule": "Jack_Boike_Test_Before_Provision_Rule"
+            },
+            {
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "3",
+                "uniqueNameForEndPoint": "Single Account Aggregation",
+                "rootPath": "$",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ],
+                "resMappingObj": {
+                    "firstname": "firstname",
+                    "capabilities": "capabilities",
+                    "userId": "userId",
+                    "email": "email",
+                    "lastname": "lastname",
+                    "username": "username"
+                },
+                "contextUrl": "/trakkws/rest/aggregate/$plan.nativeIdentity$",
+                "pagingSize": 50,
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type\t": "application/json"
+                },
+                "operationType": "Get Object"
+            },
+            {
+                "httpMethodType": "GET",
+                "pagingInitialOffset": 0,
+                "sequenceNumberForEndpoint": "4",
+                "uniqueNameForEndPoint": "Entitlement Aggregation",
+                "rootPath": "$.trakkwsGroups",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                },
+                "responseCode": [
+                    "200"
+                ],
+                "resMappingObj": {
+                    "capability": "capability"
+                },
+                "contextUrl": "/trakkws/rest/aggregateGroups",
+                "pagingSize": 50,
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Group Aggregation"
+            },
+            {
+                "resMappingObj": {
+                    "firstname": "firstname",
+                    "capabilities": "capabilities",
+                    "userId": "userId",
+                    "email": "email",
+                    "lastname": "lastname",
+                    "username": "username"
+                },
+                "contextUrl": "/trakkws/rest/createService",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "5",
+                "uniqueNameForEndPoint": "Create Account",
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Create Account",
+                "rootPath": "$",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "{\n\"userId\":\"$plan.nativeIdentity$\",\n\"username\":\"$plan.username$\",\n\"firstname\":\"$plan.firstname$\",\n\"lastname\":\"$plan.lastname$\",\n\"email\":\"$plan.email$\",\n\"capabilities:\":$plan.capabilities$\n}",
+                    "bodyFormat": "raw"
+                }
+            },
+            {
+                "contextUrl": "/trakkws/rest/addEntitlementService",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "6",
+                "uniqueNameForEndPoint": "Add Entitlement",
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Add Entitlement",
+                "rootPath": "$",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "{\n\"userId\":\"$plan.nativeIdentity$\",\n\"capabilities\":\"$plan.capabilities$\"\n}",
+                    "bodyFormat": "raw"
+                }
+            },
+            {
+                "contextUrl": "/trakkws/rest/removeEntitlementService",
+                "httpMethodType": "POST",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "7",
+                "uniqueNameForEndPoint": "Remove Entitlement",
+                "curlEnabled": false,
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "operationType": "Remove Entitlement",
+                "rootPath": "$",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": "{\n\"userId\":\"$plan.nativeIdentity$\",\n\"capabilities\":\"$plan.capabilities$\"\n}",
+                    "bodyFormat": "raw"
+                }
+            },
+            {
+                "contextUrl": "/trakkws/rest/remove/$plan.nativeIdentity$",
+                "httpMethodType": "DELETE",
+                "pagingInitialOffset": 0,
+                "pagingSize": 50,
+                "sequenceNumberForEndpoint": "8",
+                "uniqueNameForEndPoint": "Delete Account",
+                "curlEnabled": false,
+                "operationType": "Disable Account",
+                "rootPath": "$",
+                "body": {
+                    "bodyFormData": null,
+                    "jsonBody": null,
+                    "bodyFormat": "raw"
+                }
+            }
+        ],
+        "cloudAuthEnabled": true,
+        "partitionAggregationEnabled": false,
+        "hasFullAggregationCompleted": true,
+        "possibleHttpErrors": {},
+        "sourceConnected": true,
+        "throwProvAfterRuleException": true,
+        "lastAggregationDate_account": "2023-05-30T21:50:52Z",
+        "deleteThresholdPercentage": 10,
+        "fixedPlanMultivaluedAttribute": "true",
+        "version": "v2",
+        "cloudCacheUpdate": 1685483467859,
+        "templateApplication": "Web Services Template",
+        "encrypted": "accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info,testUsername",
+        "authenticationMethod": "BasicLogin",
+        "httpCookieSpecsStandard": "true",
+        "healthy": true,
+        "cloudDisplayName": "Jack Boike-Acme Web-Service",
+        "connectorName": "Web Services",
+        "enableStatus": "Status=Active",
+        "since": "2023-05-30T21:50:41.153038Z",
+        "status": "SOURCE_STATE_HEALTHY",
+        "username": "TRAKKWSAdmin"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "displayName",
+                "operation": "EQ",
+                "value": "username",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "Jack Boike-Acme Web-Service [source] Account Correlation",
+        "id": "2c9180858066ffd7018096270b1c6051"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": null,
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "userId",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "identificationNumber"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "username",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "identificationNumber"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "firstname",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "firstname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "lastname",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "lastname"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "email",
+                    "transform": {
+                        "type": "identityAttribute",
+                        "attributes": {
+                            "name": "email"
+                        }
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

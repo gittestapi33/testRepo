@@ -1,0 +1,37 @@
+{
+    "id": "2af116bd08d744d49eb5f7d023eddbbb",
+    "name": "Jack Boike ACME Web Service-Reject",
+    "description": "Jack Boike ACME Web Service-Reject",
+    "created": "2022-06-24T22:33:23.746Z",
+    "modified": "2022-11-10T20:08:01.761Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180868051da76018051f669d20861",
+        "name": "jack.boike"
+    },
+    "source": {
+        "id": "2c9180858066ffd70180961d075b5edc",
+        "type": "SOURCE",
+        "name": "Jack Boike-Acme Web-Service"
+    },
+    "entitlements": [
+        {
+            "id": "2c91808680948d2f018096277e945734",
+            "type": "ENTITLEMENT",
+            "name": "reject"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

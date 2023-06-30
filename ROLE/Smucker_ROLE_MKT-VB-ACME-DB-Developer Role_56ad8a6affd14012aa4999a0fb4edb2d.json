@@ -1,0 +1,54 @@
+{
+    "id": "56ad8a6affd14012aa4999a0fb4edb2d",
+    "name": "MKT-VB-ACME-DB-Developer Role",
+    "created": "2022-08-12T16:11:51.908Z",
+    "modified": "2022-11-10T20:08:02.819Z",
+    "description": "MKT-VB-ACME-DB-Developer Role",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "Viswanathan Balakumar"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "a881102ca72a4169a94e837213f95f95",
+            "type": "ACCESS_PROFILE",
+            "name": "MKT-VB-ACME_DB-DeveloperProfile"
+        }
+    ],
+    "membership": {
+        "type": "STANDARD",
+        "criteria": {
+            "operation": "AND",
+            "key": null,
+            "stringValue": null,
+            "children": [
+                {
+                    "operation": "EQUALS",
+                    "key": {
+                        "type": "ACCOUNT",
+                        "property": "attribute.ROLE",
+                        "sourceId": "2c918086827ef2f90182845698a866e1"
+                    },
+                    "stringValue": "Developer",
+                    "children": null
+                }
+            ]
+        },
+        "identities": null
+    },
+    "legacyMembershipInfo": null,
+    "enabled": false,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

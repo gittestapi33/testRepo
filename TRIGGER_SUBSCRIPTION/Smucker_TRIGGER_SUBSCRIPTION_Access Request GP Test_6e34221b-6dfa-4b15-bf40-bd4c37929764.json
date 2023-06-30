@@ -1,0 +1,20 @@
+{
+    "triggerId": "idn:access-request-pre-approval",
+    "responseDeadline": "PT1H",
+    "httpConfig": {
+        "httpDispatchMode": "SYNC",
+        "httpAuthenticationType": "BASIC_AUTH",
+        "url": "https://frostdev.service-now.com/api/frnb/sailpoint_event_trigger_processor/AccessRequestSubmit",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": {
+            "userName": "Vendor08",
+            "password": null
+        }
+    },
+    "triggerName": "Access Request Submitted",
+    "description": "Access Request GP Test",
+    "id": "6e34221b-6dfa-4b15-bf40-bd4c37929764",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "Access Request GP Test"
+}

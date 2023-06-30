@@ -1,0 +1,71 @@
+{
+    "id": "4f4e476f14ca470d84b5ec875c5ed882",
+    "name": "VB -ACME AllEmployee BirthRight Role",
+    "created": "2022-07-26T23:00:40.046Z",
+    "modified": "2022-11-10T20:09:02.968Z",
+    "description": "VB -ACME AllEmployee BirthRight Role",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918083818c0b320181915459fa6435",
+        "name": "Viswanathan Balakumar"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [
+        {
+            "id": "4c1bd534d03944398055d29c3e153b15",
+            "type": "ACCESS_PROFILE",
+            "name": "VB-ACME Active Directory-All Employees"
+        }
+    ],
+    "membership": {
+        "type": "STANDARD",
+        "criteria": {
+            "operation": "OR",
+            "key": null,
+            "stringValue": null,
+            "children": [
+                {
+                    "operation": "AND",
+                    "key": null,
+                    "stringValue": null,
+                    "children": [
+                        {
+                            "operation": "EQUALS",
+                            "key": {
+                                "type": "IDENTITY",
+                                "property": "trainee",
+                                "sourceId": null
+                            },
+                            "stringValue": "viswanathan.balakumar",
+                            "children": null
+                        },
+                        {
+                            "operation": "EQUALS",
+                            "key": {
+                                "type": "IDENTITY",
+                                "property": "employeeType",
+                                "sourceId": null
+                            },
+                            "stringValue": "Employee",
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        "identities": null
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": false,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

@@ -1,0 +1,365 @@
+{
+    "id": "2c9180837b73552b017b7883d5cb59f9",
+    "name": "SNOW-GaneshPagar-Test",
+    "type": "DelimitedFile",
+    "connectorClass": "sailpoint.connector.DelimitedFileConnector",
+    "connectorScriptName": "delimited-file-angularsc",
+    "description": "SIM integration ",
+    "deleteThreshold": 10,
+    "provisionAsCsv": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180886c6377f4016c6ca17ebb1f34",
+        "name": "Ganesh_Pagar"
+    },
+    "features": [
+        "NO_RANDOM_ACCESS",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "User",
+            "identityAttribute": "id",
+            "displayAttribute": "name",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The unique ID for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typical username etc",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "givenName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The first or given name of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "familyName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The last, family name, or surname of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "e-mail",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The primary e-mail address of the user associated with the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The location associated with this account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "manager",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Reference to the manager of this particular account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": {
+                        "type": "CONNECTOR_SCHEMA",
+                        "id": "2c9180837b73552b017b7883d5cc59fb",
+                        "name": "group"
+                    },
+                    "description": "The groups, roles etc. that reference account group objects",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": true
+                }
+            ],
+            "id": "2c9180837b73552b017b7883d5cc59fa",
+            "name": "account",
+            "created": "2021-08-24T14:15:11.052Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "Group",
+            "identityAttribute": "id",
+            "displayAttribute": "displayName",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Unique ID for Group",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "name",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The name of the account - typically groupname etc.",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The preferred display name for the account",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "created",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was created (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "description",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Multi-purpose field used to capture a description or comments",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "modified",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "Date/Time when the group was modified (utime)",
+                    "isMulti": false,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "entitlements",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The access rights, entitlements etc. that the account has access to.",
+                    "isMulti": true,
+                    "isEntitlement": true,
+                    "isGroup": false
+                },
+                {
+                    "name": "groups",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The groups, roles etc. that reference to account group objects",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                },
+                {
+                    "name": "permissions",
+                    "type": "STRING",
+                    "schema": null,
+                    "description": "The permissions associated with the account",
+                    "isMulti": true,
+                    "isEntitlement": false,
+                    "isGroup": false
+                }
+            ],
+            "id": "2c9180837b73552b017b7883d5cc59fb",
+            "name": "group",
+            "created": "2021-08-24T14:15:11.052Z",
+            "modified": null
+        }
+    ],
+    "connectorAttributes": {
+        "mergeColumns": [
+            "groups"
+        ],
+        "group.mergeRows": true,
+        "group.delimiter": ",",
+        "mergeRows": true,
+        "group.filetransport": "local",
+        "partitionMode": "disabled",
+        "connectionType": "file",
+        "group.host": "local",
+        "group.indexColumn": "id",
+        "file": "/tmp/source-account-2c9180837b73552b017b7883d5cb59f92295624532609000178.csv",
+        "delimiter": ",",
+        "host": "local",
+        "commentCharacter": "#",
+        "cloudIdentityProfileName": "SNOW IDN SIM INT",
+        "group.mergeColumns": [
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "hasHeader": true,
+        "filterEmptyRecords": true,
+        "filetransport": "local",
+        "deleteThresholdPercentage": 10,
+        "group.filterEmptyRecords": true,
+        "group.hasHeader": true,
+        "group.partitionMode": "disabled",
+        "cloudAuthoritativeSourcePrecedence": 200,
+        "group.columnNames": [
+            "id",
+            "name",
+            "displayName",
+            "created",
+            "description",
+            "modified",
+            "entitlements",
+            "groups",
+            "permissions"
+        ],
+        "templateApplication": "DelimitedFile Template",
+        "group.file": "/sweep-server/tmp/806aa9890c5f44c4b7f956da4fdeae9d.csv",
+        "indexColumn": "id",
+        "healthy": true,
+        "cloudDisplayName": "SNOW-GaneshPagar-Test",
+        "connectorName": "Delimited File",
+        "cloudOriginalApplicationType": "Delimited File",
+        "md5": "c3dac51a673d34fd869f6df68c8fb3f5",
+        "since": "2022-02-03T12:55:18.367678Z",
+        "status": "SOURCE_STATE_HEALTHY"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": [
+            {
+                "complex": false,
+                "property": "email",
+                "operation": "EQ",
+                "value": "e-mail",
+                "ignoreCase": true,
+                "matchMode": null,
+                "filterString": null
+            }
+        ],
+        "name": "SNOW-GaneshPagar-Test [source] Account Correlation",
+        "id": "2c9180867b7e11ac017b824ce89445ea"
+    },
+    "provisioningPolicies": [
+        {
+            "name": "Account",
+            "description": "New users",
+            "usageType": "CREATE",
+            "fields": [
+                {
+                    "name": "givenName",
+                    "transform": {
+                        "attributes": {
+                            "name": "firstname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "familyName",
+                    "transform": {
+                        "attributes": {
+                            "name": "lastname"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "e-mail",
+                    "transform": {
+                        "attributes": {
+                            "name": "email"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "location",
+                    "transform": {
+                        "attributes": {
+                            "name": "city"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "manager",
+                    "transform": {
+                        "attributes": {
+                            "name": "manager"
+                        },
+                        "type": "identityAttribute"
+                    },
+                    "attributes": {},
+                    "isRequired": false,
+                    "type": "string",
+                    "isMultiValued": false
+                },
+                {
+                    "name": "password",
+                    "transform": {
+                        "attributes": {
+                            "value": "LongP@ssword123456!"
+                        },
+                        "type": "static"
+                    },
+                    "attributes": {
+                        "cloudRequired": "true"
+                    },
+                    "isRequired": false,
+                    "type": "secret",
+                    "isMultiValued": false
+                }
+            ]
+        }
+    ]
+}

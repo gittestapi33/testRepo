@@ -1,0 +1,53 @@
+{
+    "id": "2c91808878db1abc0179042c703369aa",
+    "name": "SG UNO Administrator Role",
+    "created": "2021-04-24T13:58:11.763Z",
+    "modified": "2022-11-10T20:08:02.249Z",
+    "description": "Uno Administrator Role",
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808978db26320178eb0ce76002d9",
+        "name": "Suresh Govindarajulu"
+    },
+    "directEntitlements": null,
+    "accessProfiles": [],
+    "membership": {
+        "type": "STANDARD",
+        "criteria": {
+            "operation": "OR",
+            "key": null,
+            "stringValue": "",
+            "children": [
+                {
+                    "operation": "EQUALS",
+                    "key": {
+                        "type": "ENTITLEMENT",
+                        "property": "attribute.groups",
+                        "sourceId": "2c91808879006ee20179040b269e33cd"
+                    },
+                    "stringValue": "uno1",
+                    "children": []
+                }
+            ]
+        },
+        "identities": null
+    },
+    "legacyMembershipInfo": null,
+    "enabled": true,
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "segmentRefs": []
+}

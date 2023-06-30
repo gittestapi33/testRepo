@@ -1,0 +1,50 @@
+{
+    "description": "SOD Check 1",
+    "ownerRef": {
+        "type": "GOVERNANCE_GROUP",
+        "id": "96a11b80-f7df-4b69-94f8-1846fa15e159",
+        "name": "Sample Gov Group"
+    },
+    "externalPolicyReference": "",
+    "policyQuery": "@access(id:2c9180877900450b0179041e869372a6) AND @access(id:2c918089790047000179041b0cd45f9c)",
+    "compensatingControls": "",
+    "correctionAdvice": "",
+    "tags": [
+        "SOD"
+    ],
+    "state": "ENFORCED",
+    "scheduled": false,
+    "creatorId": "2c91808978db26320178eb0ce76002d9",
+    "modifierId": null,
+    "violationOwnerAssignmentConfig": {
+        "assignmentRule": null,
+        "ownerRef": null
+    },
+    "type": "CONFLICTING_ACCESS_BASED",
+    "conflictingAccessCriteria": {
+        "leftCriteria": {
+            "name": "Accounts Payable",
+            "criteriaList": [
+                {
+                    "type": "ENTITLEMENT",
+                    "id": "2c9180877900450b0179041e869372a6",
+                    "name": "UNO-Application Developers"
+                }
+            ]
+        },
+        "rightCriteria": {
+            "name": "Accounts Receivable",
+            "criteriaList": [
+                {
+                    "type": "ENTITLEMENT",
+                    "id": "2c918089790047000179041b0cd45f9c",
+                    "name": "UNO-Application Admins"
+                }
+            ]
+        }
+    },
+    "id": "05fca4ed-21f9-4866-8cbb-1c1de7b5e7ff",
+    "name": "sg-SODCheck1",
+    "created": "2021-06-27T19:45:13Z",
+    "modified": "2021-06-27T19:45:13Z"
+}

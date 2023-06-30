@@ -1,0 +1,80 @@
+{
+    "id": "4b0ffa15f2914d94a099f4a26267fd7b",
+    "name": "Testing von",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "Testng",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c918087781a6fe501781e48fee8309e",
+        "name": "Chatter Expert"
+    },
+    "features": [
+        "ENABLE",
+        "GROUP_PROVISIONING",
+        "PROVISIONING",
+        "UNLOCK",
+        "DIRECT_PERMISSIONS",
+        "DISCOVER_SCHEMA",
+        "SYNC_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "5a80c1149bb6428cb0dd10d7b86e58ed",
+            "name": "account",
+            "created": "2022-12-28T00:14:10.161Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [],
+            "id": "78bcd5f04b4b46f8b367ec298c1b2386",
+            "name": "group",
+            "created": "2022-12-28T00:14:10.161Z",
+            "modified": "2022-12-28T00:14:10.190Z"
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "group.mergeRows": false,
+        "isPermissionEnabled": false,
+        "isAdvance": "false",
+        "deleteThresholdPercentage": 10,
+        "mergeRows": "false",
+        "connectionType": "direct",
+        "cloudCacheUpdate": 1672186477684,
+        "templateApplication": "JDBC Template",
+        "group.isPermissionEnabled": false,
+        "healthy": false,
+        "jdbcExceptionBucketing": true,
+        "cloudDisplayName": "Testing von",
+        "connectorName": "JDBC",
+        "since": "2022-12-28T00:14:10.161Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

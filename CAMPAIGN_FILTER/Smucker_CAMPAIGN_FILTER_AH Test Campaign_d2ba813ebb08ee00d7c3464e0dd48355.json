@@ -1,0 +1,59 @@
+{
+    "id": "d2ba813ebb08ee00d7c3464e0dd48355",
+    "name": "AH Test Campaign",
+    "description": "AH Test Campaign",
+    "owner": "Amit Hansalia",
+    "mode": "INCLUSION",
+    "criteriaList": [
+        {
+            "type": "SOURCE",
+            "property": "application",
+            "value": "AHAD",
+            "operation": "EQUALS",
+            "negateResult": false,
+            "shortCircuit": false,
+            "recordChildMatches": false,
+            "id": null,
+            "suppressMatchedItems": false,
+            "children": null
+        },
+        {
+            "type": "COMPOSITE",
+            "property": "displayableName",
+            "value": "CN=Administrators,CN=Builtin,DC=ahemm,DC=com",
+            "operation": "AND",
+            "negateResult": false,
+            "shortCircuit": false,
+            "recordChildMatches": false,
+            "id": null,
+            "suppressMatchedItems": false,
+            "children": [
+                {
+                    "type": "ENTITLEMENT",
+                    "property": "displayableName",
+                    "value": "CN=Administrators,CN=Builtin,DC=ahemm,DC=com",
+                    "operation": "EQUALS",
+                    "negateResult": false,
+                    "shortCircuit": false,
+                    "recordChildMatches": false,
+                    "id": null,
+                    "suppressMatchedItems": false,
+                    "children": null
+                },
+                {
+                    "type": "ENTITLEMENT",
+                    "property": "application",
+                    "value": "AHAD",
+                    "operation": "EQUALS",
+                    "negateResult": false,
+                    "shortCircuit": false,
+                    "recordChildMatches": false,
+                    "id": null,
+                    "suppressMatchedItems": false,
+                    "children": null
+                }
+            ]
+        }
+    ],
+    "isSystemFilter": false
+}

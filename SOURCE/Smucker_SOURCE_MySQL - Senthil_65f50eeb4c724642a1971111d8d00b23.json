@@ -1,0 +1,79 @@
+{
+    "id": "65f50eeb4c724642a1971111d8d00b23",
+    "name": "MySQL - Senthil",
+    "type": "JDBC",
+    "connectorClass": "sailpoint.connector.JDBCConnector",
+    "connectorScriptName": "jdbc-angularsc",
+    "description": "MySQL Senthil",
+    "deleteThreshold": 10,
+    "provisionAsCsv": false,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180886c6377f4016c6dd7f2e94344",
+        "name": "Senthil.Kumar"
+    },
+    "features": [
+        "ENABLE",
+        "GROUP_PROVISIONING",
+        "PROVISIONING",
+        "UNLOCK",
+        "DISCOVER_SCHEMA",
+        "DIRECT_PERMISSIONS",
+        "SYNC_PROVISIONING"
+    ],
+    "schemas": [
+        {
+            "nativeObjectType": "account",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [],
+            "configuration": {},
+            "attributes": [],
+            "id": "62e694ea25ae450b8a6256368137c6b5",
+            "name": "account",
+            "created": "2023-06-11T14:48:07.491Z",
+            "modified": null
+        },
+        {
+            "nativeObjectType": "group",
+            "identityAttribute": "",
+            "displayAttribute": "",
+            "hierarchyAttribute": null,
+            "includePermissions": false,
+            "features": [
+                "PROVISIONING"
+            ],
+            "configuration": {},
+            "attributes": [],
+            "id": "0ab8bade4c794733a34bb43e7c618b7f",
+            "name": "group",
+            "created": "2023-06-11T14:48:07.491Z",
+            "modified": "2023-06-11T14:48:07.593Z"
+        }
+    ],
+    "connectorAttributes": {
+        "supportsDeltaAgg": "true",
+        "group.mergeRows": false,
+        "isPermissionEnabled": false,
+        "isAdvance": "false",
+        "deleteThresholdPercentage": 10,
+        "mergeRows": "false",
+        "connectionType": "direct",
+        "templateApplication": "JDBC Template",
+        "group.isPermissionEnabled": false,
+        "healthy": false,
+        "jdbcExceptionBucketing": true,
+        "cloudDisplayName": "MySQL - Senthil",
+        "connectorName": "JDBC",
+        "since": "2023-06-11T14:48:07.491Z",
+        "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS"
+    },
+    "correlationConfigDetails": {
+        "attributeAssignments": null,
+        "name": null,
+        "id": null
+    },
+    "provisioningPolicies": []
+}

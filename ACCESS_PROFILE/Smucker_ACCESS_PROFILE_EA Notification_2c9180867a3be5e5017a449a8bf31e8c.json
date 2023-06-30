@@ -1,0 +1,37 @@
+{
+    "id": "2c9180867a3be5e5017a449a8bf31e8c",
+    "name": "EA Notification",
+    "description": "EA Notification",
+    "created": "2021-06-25T19:16:56.947Z",
+    "modified": "2022-11-10T20:08:02.392Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c9180877864d273017865ad39104a10",
+        "name": "amit_hansalia"
+    },
+    "source": {
+        "id": "2c9180857a3f5ad0017a447bb2014754",
+        "type": "SOURCE",
+        "name": "AHTicket"
+    },
+    "entitlements": [
+        {
+            "id": "2c9180877a428c79017a4496a498627c",
+            "type": "ENTITLEMENT",
+            "name": "EA"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": false,
+        "denialCommentsRequired": false,
+        "approvalSchemes": []
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

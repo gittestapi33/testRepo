@@ -1,0 +1,46 @@
+{
+    "id": "b33a8184d438434db1016b16280efeb9",
+    "name": "Oracle EPM Demo - EPBCS Admin Role",
+    "description": "Oracle EPM Demo - EPBCS Admin Role. Detailed description of access can go here.",
+    "created": "2023-06-08T01:56:03.125Z",
+    "modified": "2023-06-08T16:48:41.751Z",
+    "enabled": true,
+    "owner": {
+        "type": "IDENTITY",
+        "id": "2c91808481fd9fd201821e3bd7b70c7f",
+        "name": "Michael Jordan"
+    },
+    "source": {
+        "id": "2a40389599814043a400c220099fe1a9",
+        "type": "SOURCE",
+        "name": "Jack Boike - EPM Delimited File Demo"
+    },
+    "entitlements": [
+        {
+            "id": "a31d3a1c2cec4abc87a1ec981784bcc8",
+            "type": "ENTITLEMENT",
+            "name": "Admin-EPBCS"
+        }
+    ],
+    "requestable": true,
+    "accessRequestConfig": {
+        "commentsRequired": true,
+        "denialCommentsRequired": false,
+        "approvalSchemes": [
+            {
+                "approverType": "MANAGER",
+                "approverId": null
+            },
+            {
+                "approverType": "OWNER",
+                "approverId": null
+            }
+        ]
+    },
+    "revocationRequestConfig": {
+        "approvalSchemes": []
+    },
+    "segments": [],
+    "provisioningCriteria": null,
+    "segmentRefs": []
+}

@@ -1,0 +1,19 @@
+{
+    "description": "Describe your rule here.",
+    "type": "Correlation",
+    "signature": {
+        "input": [],
+        "output": null
+    },
+    "sourceCode": {
+        "version": "2023-05-18 18:24:22",
+        "script": "\n\n  import sailpoint.object.*;\nimport java.util.*;\nimport org.apache.commons.lang.StringUtils;\n\nList sourceID = new ArrayList(Arrays.asList(new String[] {\n    \"ba9b3ae552e44cbd848f8a96c17de78a\"\n}));\nString searchableAttribute = \"jackSearchTestAttribute\";\n\nMap returnMap = new HashMap();\n\nString employeeNumber = StringUtils.trimToNull(account.getStringAttribute(\"id\"));\n\nif (employeeNumber != null) {\n    String identityName = null;\n\n    List searchValues = new ArrayList(Arrays.asList(new String[] {\n        employeeNumber\n    }));\n\n    identityName = idn.attrSearchGetIdentityName(sourceID, searchableAttribute, \"Equals\", searchValues);\n    if (identityName != null) {\n        returnMap.put(\"identityAttributeName\", \"name\");\n        returnMap.put(\"identityAttributeValue\", identityName);\n    } else {}\n}\n\nreturn returnMap;\n\n  "
+    },
+    "attributes": {
+        "sourceVersion": "2023-05-18 18:24:22"
+    },
+    "id": "635227167f864f9ab675bb745f61c809",
+    "name": "Jack Test Correlation Rule",
+    "created": "2023-05-15T18:31:49.448Z",
+    "modified": "2023-05-18T18:24:23.764Z"
+}

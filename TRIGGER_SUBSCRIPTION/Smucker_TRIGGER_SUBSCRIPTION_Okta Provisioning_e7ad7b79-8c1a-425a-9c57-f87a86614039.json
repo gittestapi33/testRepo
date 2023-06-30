@@ -1,0 +1,17 @@
+{
+    "triggerId": "idn:post-provisioning",
+    "responseDeadline": "PT1H",
+    "httpConfig": {
+        "httpDispatchMode": "SYNC",
+        "httpAuthenticationType": "NO_AUTH",
+        "url": "https://webhook.site/96e43576-9206-4a3c-b8f5-6db15de05c65",
+        "bearerTokenAuthConfig": null,
+        "basicAuthConfig": null
+    },
+    "triggerName": "Provisioning Completed",
+    "description": "",
+    "id": "e7ad7b79-8c1a-425a-9c57-f87a86614039",
+    "enabled": false,
+    "type": "HTTP",
+    "name": "Okta Provisioning"
+}
