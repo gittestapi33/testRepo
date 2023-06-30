@@ -1,0 +1,311 @@
+[
+    {
+        "version": 1,
+        "self": {
+            "id": "2c91808780d899150180f1ae79a65c44",
+            "type": "SERVICE_DESK_INTEGRATION",
+            "name": "Jack Boike-SDIM"
+        },
+        "object": {
+            "id": "2c91808780d899150180f1ae79a65c44",
+            "name": "Jack Boike-SDIM",
+            "description": "Jack Boike-SDIM",
+            "type": "ServiceNow SDIM",
+            "ownerRef": {
+                "type": "IDENTITY",
+                "id": "2c9180868051da76018051f669d20861",
+                "name": "Jack Boike"
+            },
+            "provisioningConfig": {
+                "universalManager": false,
+                "managedResourceRefs": [
+                    {
+                        "type": "SOURCE",
+                        "id": "2c91808780ad30fe0180b35bc2a31ab7",
+                        "name": "Jack Boike-ACME Delimited File"
+                    }
+                ],
+                "planInitializerScript": null,
+                "noProvisioningRequests": false,
+                "provisioningRequestExpiration": 0
+            },
+            "attributes": {
+                "provisioningTimeout": "180",
+                "tokenUrl": "https://demo.service-now.com/oauth_token.do",
+                "serviceRequest": {
+                    "checkStatus": {
+                        "statusMap": {
+                            "closed_complete": "Committed",
+                            "closed_rejected": "Failed",
+                            "requested": "Queued",
+                            "in_process": "Queued",
+                            "closed_cancelled": "Failed",
+                            "closed_incomplete": "Failed",
+                            "closed_skipped": "Failed"
+                        },
+                        "resource": "/api/now/table/sc_request?number=$ticketId&sysparm_fields=request_state",
+                        "responseElement": "$.result[0].request_state"
+                    },
+                    "provision": {
+                        "request": {
+                            "short_description": "SailPoint Access Request $!plan.arguments.identityRequestId",
+                            "opened_by": "$!{plan.arguments.opened_by|'Default_ServiceNow_Account_Sys_ID'}",
+                            "req_description": "Service Request created by Service Desk Integration Module (SIM)",
+                            "description": "#if($request.operation == 'Create') Create Account on application $request.resource #else For $request.id in application $request.resource #end #if ($request.items) $newline  #foreach ($item in $request.items) #if ($item.name == '*disabled*' && $item.value == 'true') Disable Account. $newline #elseif ($item.name == '*disabled*' && $item.value == 'false') Enable Account. $newline #elseif ($item.name == '*locked*' && $item.value == 'false') Unlock Account. $newline #else $!item.Operation $item.name: $item.value $newline #end #end #else $newline $!request.Operation Account #end",
+                            "requested_for": "$!plan.arguments.requested_for"
+                        },
+                        "requestRootElement": "items",
+                        "resource": "/api/x_sap_sdim/sailpoint_cart_js_api/create_ticket",
+                        "responseElement": "$.result.request_number",
+                        "catalogItem": {
+                            "2c91808780ad30fe0180b35bc2a31ab7": "test"
+                        }
+                    }
+                },
+                "ticketType": "serviceRequest",
+                "authenticationType": "Basic",
+                "connectorClass": "openconnector.connector.servicedesk.ServiceDeskConnector",
+                "requesterSource": "2c9180837b73552b017b7883d5cb59f9",
+                "url": "test",
+                "username": "test"
+            },
+            "beforeProvisioningRule": {
+                "type": "RULE",
+                "id": "2c91808a7ae8844f017ae89249970df6",
+                "name": "Sample Before Provisioning Rule for SDIM"
+            }
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "2c9180877b78a743017b86e97f924475",
+            "type": "SERVICE_DESK_INTEGRATION",
+            "name": "ServiceNow SD"
+        },
+        "object": {
+            "id": "2c9180877b78a743017b86e97f924475",
+            "name": "ServiceNow SD",
+            "description": "ServiceNow SD",
+            "type": "ServiceNow SDIM",
+            "ownerRef": {
+                "type": "IDENTITY",
+                "id": "2c9180886c6377f4016c6ca17ebb1f34",
+                "name": "Ganesh Pagar"
+            },
+            "provisioningConfig": {
+                "universalManager": false,
+                "managedResourceRefs": [
+                    {
+                        "type": "SOURCE",
+                        "id": "2c9180837b73552b017b7883d5cb59f9",
+                        "name": "SNOW-GaneshPagar-Test"
+                    }
+                ],
+                "planInitializerScript": {
+                    "source": "\n                \n                    import sailpoint.object.Identity;\n                    import sailpoint.object.Link;\n                    import sailpoint.object.IntegrationConfig;\n                    import sailpoint.object.Application;\n                    import sailpoint.api.IdentityService;\n\n                    /**\n                     * Fields\n                     */\n                    String applicationType = \"ServiceNow\";\n                    // Identity attribute on SailPoint/ UserID on ServiceNow\n                    String userId = \"sys_id\";\n\n                    /**\n                     * Get ServiceNow Account name for identity using application type - ServiceNow\n                     */\n                    private String getLinkByAppType(Identity identity) {\n                        if (identity == null) {\n                            return null;\n                        }\n\n                        List links = identity.getLinks();\n                        String linkName = null;\n                        if (links != null ) {\n                            for (Link link : links) {\n                                String appType = link.getApplication().getType();\n                                if (appType != null && appType.equals(applicationType)) {\n                                    if(link.getAttribute(userId) != null) {\n                                        String userName = link.getAttribute(userId);\n                                        if(userName != null) {\n                                            linkName = userName;\n                                            break;\n                                        }\n                                    }\n                                }\n                            }\n                        }\n\n                        return linkName;\n                    }\n\n                    /**\n                     * Get ServiceNow Account name for Identity using application name\n                     */\n                    private String getLinkByAppName(Identity identity, String requesterSource) {\n                        if (identity == null) {\n                            return null;\n                        }\n\n                        String linkName = null;\n                        if (requesterSource != null) {\n                            Application app = context.getObjectByName(Application.class, requesterSource);\n                            IdentityService identService = new IdentityService(context);\n                            List links = identService.getLinks(identity, app);\n                            Link link = null;\n                            if (links != null && links.size() > 0) {\n                                link = links.get(0);\n                            }\n\n                            if (link != null) {\n                                String userName = (String) link.getAttribute(userId);\n                                if (userName != null) {\n                                    linkName = userName;\n                                }\n                            }\n                        }\n\n                        return linkName;\n                    }\n\n                    ////////////////////////////////////////////////////////////////\n                    // Main\n                    ////////////////////////////////////////////////////////////////\n                    Map arguments = (Map)plan.getArguments();\n                    List requesterList = plan.getRequesters();\n                    Identity requester = null;\n                    if (requesterList != null) {\n                        requester = requesterList.get(0);\n                        if (requester != null && requester.getName() != null) {\n                            requester = context.getObjectByName(Identity.class, requester.getName());\n                        }\n                    }\n\n                    String appName = integration.getName();\n                    if (appName != null) {\n                        Application appObject = context.getObjectByName(Application.class, appName);\n                        requesterSource = appObject.getAttributeValue(\"requesterSource\");\n                    }\n\n                    // Get ServiceNow Account name\n                    if (requesterSource != null) {\n                        openedBy = getLinkByAppName(requester, requesterSource);\n                        requestedFor = getLinkByAppName(identity, requesterSource);\n                    } else {\n                        openedBy = getLinkByAppType(requester);\n                        requestedFor = getLinkByAppType(identity);\n                    }\n\n                    if (requestedFor != null) {\n                        arguments.put(\"requested_for\", requestedFor);\n                    }\n\n                    if (openedBy != null) {\n                        arguments.put(\"opened_by\", openedBy);\n                    }\n                \n            "
+                },
+                "noProvisioningRequests": false,
+                "provisioningRequestExpiration": 0
+            },
+            "attributes": {
+                "tokenUrl": "https://demo.service-now.com/oauth_token.do",
+                "serviceRequest": {
+                    "checkStatus": {
+                        "statusMap": {
+                            "closed_complete": "Committed",
+                            "closed_rejected": "Failed",
+                            "requested": "Queued",
+                            "in_process": "Queued",
+                            "closed_cancelled": "Failed",
+                            "closed_incomplete": "Failed",
+                            "closed_skipped": "Failed"
+                        },
+                        "resource": "/api/now/table/sc_request?number=$ticketId&sysparm_fields=request_state",
+                        "responseElement": "$.result[0].request_state"
+                    },
+                    "provision": {
+                        "request": {
+                            "short_description": "SailPoint Access Request $!plan.arguments.identityRequestId",
+                            "opened_by": "$!plan.arguments.opened_by",
+                            "req_description": "Service Request created by Service Desk Integration Module (SIM)",
+                            "description": "#if($request.operation == 'Create') Create Account on application $request.resource #else For $request.id in application $request.resource #end #if ($request.items) $newline  #foreach ($item in $request.items) #if ($item.name == '*disabled*' && $item.value == 'true') Disable Account. $newline #elseif ($item.name == '*disabled*' && $item.value == 'false') Enable Account. $newline #elseif ($item.name == '*locked*' && $item.value == 'false') Unlock Account. $newline #else $!item.Operation $item.name: $item.value $newline #end #end #else $newline $!request.Operation Account #end",
+                            "requested_for": "$!plan.arguments.requested_for"
+                        },
+                        "requestRootElement": "items",
+                        "resource": "/api/x_sap_sdim/sailpoint_cart_js_api/create_ticket",
+                        "responseElement": "$.result.request_number",
+                        "catalogItem": {
+                            "2c9180837b73552b017b7883d5cb59f9": "5ae12c49db55b600dc513ecf9d961926"
+                        }
+                    }
+                },
+                "ticketType": "serviceRequest",
+                "authenticationType": "Basic",
+                "connectorClass": "openconnector.connector.servicedesk.ServiceDeskConnector",
+                "requesterSource": "2c9180837b73552b017b7883d5cb59f9",
+                "url": "https://dev76781.service-now.com",
+                "username": "admin"
+            },
+            "beforeProvisioningRule": null
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "2c91808882a1b6870182ab849cf62f12",
+            "type": "SERVICE_DESK_INTEGRATION",
+            "name": "VBs Snow Instance"
+        },
+        "object": {
+            "id": "2c91808882a1b6870182ab849cf62f12",
+            "name": "VBs Snow Instance",
+            "description": "VBs Snow Instance",
+            "type": "ServiceNow SDIM",
+            "ownerRef": {
+                "type": "IDENTITY",
+                "id": "2c918083818c0b320181915459fa6435",
+                "name": "Viswanathan Balakumar"
+            },
+            "provisioningConfig": {
+                "universalManager": false,
+                "managedResourceRefs": [
+                    {
+                        "type": "SOURCE",
+                        "id": "2c918086825f90cc0182605aa04d13c0",
+                        "name": "VBsBox"
+                    }
+                ],
+                "planInitializerScript": {
+                    "source": null
+                },
+                "noProvisioningRequests": false,
+                "provisioningRequestExpiration": 0
+            },
+            "attributes": {
+                "provisioningTimeout": "180",
+                "tokenUrl": "https://demo.service-now.com/oauth_token.do",
+                "serviceRequest": {
+                    "checkStatus": {
+                        "statusMap": {
+                            "closed_complete": "Committed",
+                            "closed_rejected": "Failed",
+                            "requested": "Queued",
+                            "in_process": "Queued",
+                            "closed_cancelled": "Failed",
+                            "closed_incomplete": "Failed",
+                            "closed_skipped": "Failed"
+                        },
+                        "resource": "/api/now/table/sc_request?number=$ticketId&sysparm_fields=request_state",
+                        "responseElement": "$.result[0].request_state"
+                    },
+                    "provision": {
+                        "request": {
+                            "short_description": "SailPoint Access Request $!plan.arguments.identityRequestId",
+                            "opened_by": "$!{plan.arguments.opened_by|'Default_ServiceNow_Account_Sys_ID'}",
+                            "req_description": "Service Request created by Service Desk Integration Module (SIM)",
+                            "description": "#if($request.operation == 'Create') Create Account on application $request.resource #else For $request.id in application $request.resource #end #if ($request.items) $newline  #foreach ($item in $request.items) #if ($item.name == '*disabled*' && $item.value == 'true') Disable Account. $newline #elseif ($item.name == '*disabled*' && $item.value == 'false') Enable Account. $newline #elseif ($item.name == '*locked*' && $item.value == 'false') Unlock Account. $newline #else $!item.Operation $item.name: $item.value $newline #end #end #else $newline $!request.Operation Account #end",
+                            "requested_for": "$!plan.arguments.requested_for"
+                        },
+                        "requestRootElement": "items",
+                        "resource": "/api/x_sap_sdim/sailpoint_cart_js_api/create_ticket",
+                        "responseElement": "$.result.request_number",
+                        "catalogItem": {
+                            "2c918086825f90cc0182605aa04d13c0": "test"
+                        }
+                    }
+                },
+                "ticketType": "serviceRequest",
+                "authenticationType": "Basic",
+                "connectorClass": "openconnector.connector.servicedesk.ServiceDeskConnector",
+                "requesterSource": "2c9180898222e59b01823b2daa3e0080",
+                "url": "VBs Snow Instance",
+                "username": "admin"
+            },
+            "beforeProvisioningRule": {
+                "type": "RULE",
+                "id": "2c91808a7ae8844f017ae89249970df6",
+                "name": "Sample Before Provisioning Rule for SDIM"
+            }
+        }
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "096eaddf3edf4328ab1e2ce9f3a66d78",
+            "type": "SERVICE_DESK_INTEGRATION",
+            "name": "VBShowInstance2"
+        },
+        "object": {
+            "id": "096eaddf3edf4328ab1e2ce9f3a66d78",
+            "name": "VBShowInstance2",
+            "description": "VBShowInstance2",
+            "type": "ServiceNow SDIM",
+            "ownerRef": {
+                "type": "IDENTITY",
+                "id": "2c918083818c0b320181915459fa6435",
+                "name": "Viswanathan Balakumar"
+            },
+            "provisioningConfig": {
+                "universalManager": false,
+                "managedResourceRefs": [
+                    {
+                        "type": "SOURCE",
+                        "id": "2c91808a827ef2a6018289031cf03c5c",
+                        "name": "AA - External Vendors"
+                    }
+                ],
+                "planInitializerScript": {
+                    "source": null
+                },
+                "noProvisioningRequests": false,
+                "provisioningRequestExpiration": 0
+            },
+            "attributes": {
+                "provisioningTimeout": "180",
+                "tokenUrl": "https://demo.service-now.com/oauth_token.do",
+                "serviceRequest": {
+                    "checkStatus": {
+                        "statusMap": {
+                            "closed_complete": "Committed",
+                            "closed_rejected": "Failed",
+                            "requested": "Queued",
+                            "in_process": "Queued",
+                            "closed_cancelled": "Failed",
+                            "closed_incomplete": "Failed",
+                            "closed_skipped": "Failed"
+                        },
+                        "resource": "/api/now/table/sc_request?number=$ticketId&sysparm_fields=request_state",
+                        "responseElement": "$.result[0].request_state"
+                    },
+                    "provision": {
+                        "request": {
+                            "short_description": "SailPoint Access Request $!plan.arguments.identityRequestId",
+                            "opened_by": "$!{plan.arguments.opened_by|'Default_ServiceNow_Account_Sys_ID'}",
+                            "req_description": "Service Request created by Service Desk Integration Module (SIM)",
+                            "description": "#if($request.operation == 'Create') Create Account on application $request.resource #else For $request.id in application $request.resource #end #if ($request.items) $newline  #foreach ($item in $request.items) #if ($item.name == '*disabled*' && $item.value == 'true') Disable Account. $newline #elseif ($item.name == '*disabled*' && $item.value == 'false') Enable Account. $newline #elseif ($item.name == '*locked*' && $item.value == 'false') Unlock Account. $newline #else $!item.Operation $item.name: $item.value $newline #end #end #else $newline $!request.Operation Account #end",
+                            "requested_for": "$!plan.arguments.requested_for"
+                        },
+                        "requestRootElement": "items",
+                        "resource": "/api/x_sap_sdim/sailpoint_cart_js_api/create_ticket",
+                        "responseElement": "$.result.request_number",
+                        "catalogItem": {
+                            "2c91808a827ef2a6018289031cf03c5c": null
+                        }
+                    }
+                },
+                "ticketType": "serviceRequest",
+                "authenticationType": "Basic",
+                "connectorClass": "openconnector.connector.servicedesk.ServiceDeskConnector",
+                "requesterSource": "2c91808a827ef2a6018289031cf03c5c",
+                "url": "https://dev80328.service-now.com/",
+                "username": "Admin"
+            },
+            "beforeProvisioningRule": {
+                "type": "RULE",
+                "id": "2c91808a7ae8844f017ae89249970df6",
+                "name": "Sample Before Provisioning Rule for SDIM"
+            }
+        }
+    }
+]
