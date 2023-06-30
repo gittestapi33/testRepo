@@ -1,0 +1,32 @@
+[
+    {
+        "version": 1,
+        "self": {
+            "id": "2c9180886b245300016b740dbe801497",
+            "type": "ACCESS_REQUEST_CONFIG",
+            "name": "AccessRequestConfiguration"
+        },
+        "object": {
+            "approvalsMustBeExternal": false,
+            "autoApprovalEnabled": false,
+            "requestOnBehalfOfConfig": {
+                "allowRequestOnBehalfOfAnyoneByAnyone": true,
+                "allowRequestOnBehalfOfEmployeeByManager": false
+            },
+            "approvalReminderAndEscalationConfig": {
+                "daysUntilEscalation": null,
+                "daysBetweenReminders": null,
+                "maxReminders": null,
+                "fallbackApprover": null
+            },
+            "entitlementRequestConfig": {
+                "allowEntitlementRequest": false,
+                "requestCommentsRequired": true,
+                "deniedCommentsRequired": true,
+                "grantRequestApprovalSchemes": [
+                    "sourceOwner"
+                ]
+            }
+        }
+    }
+]

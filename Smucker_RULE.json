@@ -1,0 +1,429 @@
+[
+    {
+        "version": 1,
+        "self": {
+            "id": "33d647de691e4bd09a38d996f9ae79a9",
+            "type": "RULE",
+            "name": "AA Domo Before Rule"
+        },
+        "object": {
+            "description": "This rule sends a call to webhook to test a string body",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.Application;\r\n\r\nimport sailpoint.tools.Util;\r\nimport okhttp3.MediaType;\r\nimport okhttp3.OkHttpClient;\r\nimport okhttp3.Request;\r\nimport okhttp3.RequestBody;\r\nimport okhttp3.Response;\r\nimport java.util.HashMap;\r\nimport java.io.IOException;\r\nimport sailpoint.tools.GeneralException;\r\n\r\nlog.info(\"Starting Test Before Operation Rule\");\r\nString userId = \"12345\";\r\nString teamId = \"aiowejf123\";\r\nString url = \"https://webhook.site/8d787bda-d0e9-47f2-be17-9d4b4b3977c6\";\r\n\r\ntry {\r\n\t\t// Make API call to authenticate to the web-service\r\n\t\tlog.debug(\"Inside try method\");\r\n\r\n        // Call API to remove entitlement using the body of the request\r\n        log.debug(\"userId: \" + userId);\r\n        log.debug(\"teamId: \" + teamId);\r\n        log.debug(\"Webhook URL: \" + url);\r\n        String body = \"{\\\"query\\\":\\\"mutation{removeTeamManager(input: { userId: \\\\\\\"\" + userId + \"\\\\\\\" teamId: \\\\\\\"\" + teamId + \"\\\\\\\"}) {userId teamId }}\\\"}\";\r\n        log.debug(\"Body of the query when ManagerOf is not instance of list: \" + body + \" end of body\");\r\n        // Make API call to authorize the token \r\n        OkHttpClient authorizationClient = new OkHttpClient().newBuilder().build();\r\n        MediaType authorizationMediaType = MediaType.parse(\"application/json\");\r\n        RequestBody authorizationRequestBody = RequestBody.create(authorizationMediaType, body);\r\n        Request authorizationRequest = new Request.Builder()\r\n            .url(url)\r\n            .method(\"POST\", authorizationRequestBody)\r\n            .build();\r\n        log.debug(\"After creating auth\");\r\n        Response authorizationResponse = authorizationClient.newCall(authorizationRequest).execute();\r\n        log.debug(\"After auth execute\");\r\n\t\t\r\n\t}\r\n\tcatch (Exception e) {\r\n\t\tlog.error(\"Exception In BeforeOperation Rule:: \" + e);\r\n\t\tlog.error(\": \" + e.getStackTrace());\r\n\t}\r\n\r\n\r\nreturn requestEndPoint;"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "33d647de691e4bd09a38d996f9ae79a9",
+            "name": "AA Domo Before Rule",
+            "created": "2023-05-04T16:03:45.071Z",
+            "modified": "2023-05-05T18:05:42.416Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "JF6vlJFWFerXPhhKfbrTieWGpJnPTowWSHLeSQyhKLRvSmucQUup08ATR1JDiXLOauJrREE0YCxTOeSv8ppUew"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "01506a630772450289be9ed574454e58",
+            "type": "RULE",
+            "name": "Active Directory - After Create Rule"
+        },
+        "object": {
+            "description": null,
+            "type": "ConnectorAfterCreate",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "$logDate = Get-Date -UFormat \"%Y%m%d\"\r\n$logFile = \"c:\\SailPoint\\Scripts\\Logs\\AfterCreateRule_$logDate.log\"\r\n$command = \"c:\\SailPoint\\Scripts\\after-create-script.ps1\"\r\n$enableDebug = $true\r\n\r\n#====================-------Helper functions-------====================\r\nfunction LogToFile([String] $info) {\r\n    $info | Out-File $logFile -Append\r\n}\r\n\r\n#====================-------Get the request object-------====================\r\nTry{\r\n    if($enableDebug) {\r\n        LogToFile(\"Entering SailPoint After Create rule\")\r\n    }\r\n\t\r\n    Add-Type -Path \"c:\\SailPoint\\IQService-IDN\\Utils.dll\";\r\n    \r\n    $sReader = New-Object System.IO.StringReader([System.String]$env:Request);\r\n    $xmlReader = [System.xml.XmlTextReader]([sailpoint.utils.xml.XmlUtil]::getReader($sReader));\r\n    $requestObject = New-Object Sailpoint.Utils.objects.AccountRequest($xmlReader);\r\n    $requestAsString = $env:Request\r\n\r\n    if($enableDebug) {\r\n        LogToFile(\"Request as XML object is: $requestAsString\")\r\n    }\r\n\r\n    #Call the client script\r\n    $command = -join ($command, \" -requestString '$requestAsString'\")\r\n    Invoke-Expression $command\r\n}Catch{\r\n\t$ErrorMessage = $_.Exception.Message \r\n  \t$ErrorItem = $_.Exception.ItemName\r\n  \tLogToFile(\"Error: Item = $ErrorItem -> Message = $ErrorMessage\")\r\n}\r\n\r\nif($enableDebug) {\r\n    LogToFile(\"Exiting SailPoint After Create rule\")\r\n}"
+            },
+            "attributes": {
+                "ObjectOrientedScript": "true",
+                "extension": ".ps1",
+                "sourceVersion": "1.0",
+                "disabled": "false",
+                "program": "powershell.exe",
+                "timeout": "300"
+            },
+            "id": "01506a630772450289be9ed574454e58",
+            "name": "Active Directory - After Create Rule",
+            "created": "2022-03-25T01:39:20.367Z",
+            "modified": "2022-07-13T22:45:21.242Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "0PtEkt9AfY3mkqDqYZtHyJxL5BaBqKujo2P8P_0PWdO-JeB9VQZJF8heVR38ltgm4qJWSJmzfBueX00vjj0NvA"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "ecc8174c118b4ed48530d17a0a2ba897",
+            "type": "RULE",
+            "name": "eee"
+        },
+        "object": {
+            "description": "This JDBC rule can process account creation requests, deletion requests, and modification requests that pertain to the role attribute. It logs debug messages if other account request types are submitted.",
+            "type": "JDBCProvision",
+            "signature": {
+                "input": [
+                    {
+                        "name": "log",
+                        "description": "The log object associated with the SailPointContext.",
+                        "type": null
+                    },
+                    {
+                        "name": "context",
+                        "description": "A sailpoint.api.SailPointContext object that can be used to query the database if necessary.\n  ",
+                        "type": null
+                    },
+                    {
+                        "name": "application",
+                        "description": "The application whose data file is being processed.",
+                        "type": null
+                    },
+                    {
+                        "name": "schema",
+                        "description": "The Schema currently in use.",
+                        "type": null
+                    },
+                    {
+                        "name": "connection",
+                        "description": "A connection object to connect to database.",
+                        "type": null
+                    },
+                    {
+                        "name": "plan",
+                        "description": "The ProvisioningPlan created against the JDBC application.",
+                        "type": null
+                    }
+                ],
+                "output": {
+                    "name": "result",
+                    "description": "A Provisioning Result object is desirable to return the status.IT can be a new object or part of  Provisioning Plan",
+                    "type": null
+                }
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.concurrent.TimeUnit;\r\nimport org.json.JSONObject;\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.Application;\r\nimport sailpoint.tools.Util;\r\nimport java.util.HashMap;\r\nimport java.io.IOException;\r\nimport sailpoint.tools.GeneralException;\r\n\r\n//new coment\r\nlog.error(\"Entering BeforeOperation Rule:: \" + e);\r\nif(null != provisioningPlan) {\r\n    log.error(\"Provisioning plan is not null. Printing plan:\");\r\n    log.error(provisioningPlan.toString());\r\n}\r\nelse {\r\n    log.error(\"ProvisioningPlan is null\");\r\n}\r\nlog.error(\"Exiting BeforeOperation Rule:: \" + e);"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "ecc8174c118b4ed48530d17a0a2ba897",
+            "name": "eee",
+            "created": "2023-05-29T11:39:41.566Z",
+            "modified": null
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "CPBNA3-TbL7NozPcjcB581NkaNHsJJYaZDL5ayyimt5a45zQr3W3TEoFtuSR-hHLbXhkEHtg77GFiI7F6_M2VQ"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "f694b6b4e79341af8f0692b5e4c823cb",
+            "type": "RULE",
+            "name": "EM-AfterCreate-Test"
+        },
+        "object": {
+            "description": "This rule is for testing. EM.",
+            "type": "ConnectorAfterCreate",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "$logDate = Get-Date -UFormat \"%Y%m%d\"\r\n$logFile = \"c:\\SailPoint\\Scripts\\Logs\\ConnectorAfterCreate_$logDate.log\"\r\n$command = \"c:\\SailPoint\\Scripts\\SampleSource-AfterCreate.ps1\"\r\n$enableDebug = $true\r\n\r\n#====================-------Helper functions-------====================\r\nfunction LogToFile([String] $info) {\r\n    $info | Out-File $logFile -Append\r\n}\r\n\r\n#====================-------Get the request object-------====================\r\nTry{\r\n    if($enableDebug) {\r\n        LogToFile(\"Entering SailPoint rule\")\r\n    }\r\n\t\r\n    Add-type -path utils.dll;\r\n\t$sReader = New-Object System.IO.StringReader([System.String]$env:Request);\r\n\t$xmlReader = [System.xml.XmlTextReader]([sailpoint.utils.xml.XmlUtil]::getReader($sReader));\r\n\t$requestObject = New-Object Sailpoint.Utils.objects.AccountRequest($xmlReader);\r\n    $requestAsString = $env:Request\r\n\r\n    if($enableDebug) {\r\n        LogToFile(\"Request as XML object is: $requestAsString\")\r\n    }\r\n\r\n    #Call the client script\r\n    $command = -join ($command, \" -requestString '$requestAsString'\")\r\n    Invoke-Expression $command\r\n\r\n}Catch{\r\n\t$ErrorMessage = $_.Exception.Message \r\n  \t$ErrorItem = $_.Exception.ItemName\r\n  \tLogToFile(\"Error: Item = $ErrorItem -> Message = $ErrorMessage\")\r\n}\r\n\r\nif($enableDebug) {\r\n    LogToFile(\"Exiting SailPoint rule\")\r\n}"
+            },
+            "attributes": {
+                "ObjectOrientedScript": "true",
+                "extension": ".ps1",
+                "sourceVersion": "1.0",
+                "disabled": "false",
+                "program": "powershell.exe",
+                "timeout": "300"
+            },
+            "id": "f694b6b4e79341af8f0692b5e4c823cb",
+            "name": "EM-AfterCreate-Test",
+            "created": "2022-04-01T16:55:22.103Z",
+            "modified": null
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "Zo4ugnjvS1rj7TIhMy6-93PZjg5vX7NBBcmlWV1yAGkjkZstpVAkbj6P0nPfSE3YV8PdcSBfTMZxFKDXK31j6g"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "dde3950c5a524fe49f6fe7d4e55eba6e",
+            "type": "RULE",
+            "name": "EM-AfterCreate-Test-Two"
+        },
+        "object": {
+            "description": null,
+            "type": "ConnectorAfterCreate",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.1",
+                "script": "$logDate = Get-Date -UFormat \"%Y%m%d\"\r\n$logFile = \"c:\\SailPoint\\Scripts\\Logs\\ConnectorAfterCreate_$logDate.log\"\r\n$command = \"c:\\SailPoint\\Scripts\\script-template.ps1\"\r\n$enableDebug = $true\r\n\r\n#====================-------Helper functions-------====================\r\nfunction LogToFile([String] $info) {\r\n    $info | Out-File $logFile -Append\r\n}\r\n\r\n#====================-------Get the request object-------====================\r\nTry{\r\n    if($enableDebug) {\r\n        LogToFile(\"Entering SailPoint After Create rule\")\r\n    }\r\n\t\r\n    Add-Type -Path \"c:\\SailPoint\\IQService-IDN\\Utils.dll\";\r\n    \r\n    $sReader = New-Object System.IO.StringReader([System.String]$env:Request);\r\n    $xmlReader = [System.xml.XmlTextReader]([sailpoint.utils.xml.XmlUtil]::getReader($sReader));\r\n    $requestObject = New-Object Sailpoint.Utils.objects.AccountRequest($xmlReader);\r\n    $requestAsString = $env:Request\r\n\r\n    if($enableDebug) {\r\n        LogToFile(\"Request as XML object is: $requestAsString\")\r\n    }\r\n\r\n    #Call the client script\r\n    $command = -join ($command, \" -requestString '$requestAsString'\")\r\n    Invoke-Expression $command\r\n}Catch{\r\n\t$ErrorMessage = $_.Exception.Message \r\n  \t$ErrorItem = $_.Exception.ItemName\r\n  \tLogToFile(\"Error: Item = $ErrorItem -> Message = $ErrorMessage\")\r\n}\r\n\r\nif($enableDebug) {\r\n    LogToFile(\"Exiting SailPoint After Create rule\")\r\n}"
+            },
+            "attributes": {
+                "ObjectOrientedScript": "true",
+                "extension": ".ps1",
+                "sourceVersion": "1.1",
+                "disabled": "false",
+                "program": "powershell.exe",
+                "timeout": "300"
+            },
+            "id": "dde3950c5a524fe49f6fe7d4e55eba6e",
+            "name": "EM-AfterCreate-Test-Two",
+            "created": "2022-04-01T17:14:04.897Z",
+            "modified": "2022-04-01T17:44:19.927Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "AxMDPLYZ2epmvto_UlQsIvsOZlFCxxIlpVnCgZb4VvBuzxI9lAFYdSL7xoalTI--KATuAN3ZMS10uMZ7A-dQEQ"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "5ed5830cb8904ecb9f846433b10f3e7c",
+            "type": "RULE",
+            "name": "IdentityNowLoopBack Before AddRemove"
+        },
+        "object": {
+            "description": "This rule is used by the Web Services connector before performing any operation like testconnection, aggregation etc .",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "2021-08-04 15:11:25",
+                "script": "\nimport sailpoint.tools.GeneralException;\nimport connector.common.JsonUtil;\n\nMap body = requestEndPoint.getBody();\nif(body != null) {\n\tString jsonBody = (String) body.get(\"jsonBody\");\n\tlog.info(\"IdentityNow Admin Roles Before AddRemove:: jsonBody passed in: \" + jsonBody);\n\tMap jsonMap = JsonUtil.toMap(jsonBody);\n\tString adminType = (String) jsonMap.get(\"adminType\");\n\tlog.info(\"IdentityNow Admin Roles Before AddRemove:: adminType being updated: \" + adminType);\n\t\n\tboolean updateJsonBody = false;\n\tif(\"ORG_ADMIN\".equals(adminType)) {\n\t\tlog.info(\"IdentityNow Admin Roles Before AddRemove:: need to change ORG_ADMIN to ADMIN\");\n\t\tadminType = \"ADMIN\";\n\t\tjsonMap.put(\"adminType\", adminType);\n\t\tupdateJsonBody = true;\n\t}\n\t\n\tList availableAdminTypes = Arrays.asList(new String[] {\"ADMIN\",\"CERT_ADMIN\",\"HELPDESK\",\"REPORT_ADMIN\",\"ROLE_ADMIN\",\"ROLE_SUBADMIN\",\"SOURCE_ADMIN\",\"SOURCE_SUBADMIN\"});\n\tif(!availableAdminTypes.contains(adminType)) {\n\t\tlog.error(\"IdentityNow Admin Roles Before AddRemove:: attempting to modify permissions with invalid permission type: \" + adminType);\n\t\tthrow new GeneralException(\"Admin Type not available for connector provisioning: \" + adminType + \". Available options \" + availableAdminTypes);\n\t}\n\t\n\tif(updateJsonBody) {\n\t\tString finalBody = JsonUtil.toJson(jsonMap);\n\t\tbody.put(\"jsonBody\", finalBody);\n\t\trequestEndPoint.setBody(body);\n\t\tlog.info(\"IdentityNow Admin Roles Before AddRemove:: updated jsonBody: \" + jsonMap);\n\t}\n}\nreturn requestEndPoint;\n\n"
+            },
+            "attributes": {
+                "sourceVersion": "2021-08-04 15:11:25"
+            },
+            "id": "5ed5830cb8904ecb9f846433b10f3e7c",
+            "name": "IdentityNowLoopBack Before AddRemove",
+            "created": "2023-01-24T20:36:34.686Z",
+            "modified": null
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "223fiqM8ogHGQOhRAaSs2Zk1vHHP9C6MlKQC5ydlPRtXyI-EWXyXGT3GpVyACGUyxkgqcCuk9NGi6KD4HUINuA"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "635227167f864f9ab675bb745f61c809",
+            "type": "RULE",
+            "name": "Jack Test Correlation Rule"
+        },
+        "object": {
+            "description": "Describe your rule here.",
+            "type": "Correlation",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "2023-05-18 18:24:22",
+                "script": "\n\n  import sailpoint.object.*;\nimport java.util.*;\nimport org.apache.commons.lang.StringUtils;\n\nList sourceID = new ArrayList(Arrays.asList(new String[] {\n    \"ba9b3ae552e44cbd848f8a96c17de78a\"\n}));\nString searchableAttribute = \"jackSearchTestAttribute\";\n\nMap returnMap = new HashMap();\n\nString employeeNumber = StringUtils.trimToNull(account.getStringAttribute(\"id\"));\n\nif (employeeNumber != null) {\n    String identityName = null;\n\n    List searchValues = new ArrayList(Arrays.asList(new String[] {\n        employeeNumber\n    }));\n\n    identityName = idn.attrSearchGetIdentityName(sourceID, searchableAttribute, \"Equals\", searchValues);\n    if (identityName != null) {\n        returnMap.put(\"identityAttributeName\", \"name\");\n        returnMap.put(\"identityAttributeValue\", identityName);\n    } else {}\n}\n\nreturn returnMap;\n\n  "
+            },
+            "attributes": {
+                "sourceVersion": "2023-05-18 18:24:22"
+            },
+            "id": "635227167f864f9ab675bb745f61c809",
+            "name": "Jack Test Correlation Rule",
+            "created": "2023-05-15T18:31:49.448Z",
+            "modified": "2023-05-18T18:24:23.764Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "1eIlRn226CPiIIvPw9asb3pAEjskt3EvbEVHp63QBC_EEwDrUatewD2xN1bdQNREeje-XzzLYbZX5wnsxeYuDA"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "51cf9347ce184255a2b005163f606fc0",
+            "type": "RULE",
+            "name": "Jack_Boike_Test_After_Operation_Rule_Cognos"
+        },
+        "object": {
+            "description": "",
+            "type": "WebServiceAfterOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\n//import org.json.JSONArray;\r\n//import org.json.JSONObject;\r\n\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\n//import connector.common.JsonUtil;\r\n//import sailpoint.connector.webservices.EndPoint;\r\n//import sailpoint.connector.webservices.WebServicesClient;\r\nimport sailpoint.object.Application;\r\n\r\nimport sailpoint.tools.Util;\r\nimport okhttp3.MediaType;\r\nimport okhttp3.OkHttpClient;\r\nimport okhttp3.Request;\r\nimport okhttp3.RequestBody;\r\nimport okhttp3.Response;\r\nimport java.util.HashMap;\r\n//import org.json.JSONException;\r\nimport java.io.IOException;\r\nimport sailpoint.tools.GeneralException;\r\n\r\nString xsrfToken;\r\nMap updatedMapInfo = new HashMap();\r\n\r\nif(processedResponseObject != null) {\r\n\r\n\ttry {\r\n\t\t\r\n\t\tString password = application.getStringAttributeValue(\"password_CA\");\r\n\t\t\r\n\t\t// Here you will need to capture the XSRF token from the previous response\r\n\t\txsrfToken = restClient.getResponseHeaders().get(\"Set-Cookie\");\r\n\t\txsrfToken = xsrfToken.replace(\"XSRF-TOKEN=\",\"\");\r\n\t\txsrfToken = xsrfToken.replace(\"; Path=/api\",\"\");\r\n\t\t\r\n\t\tString url = requestEndPoint.getFullUrl();\r\n\t\t\r\n\t\tOkHttpClient authorizationClient = new OkHttpClient().newBuilder().build();\r\n\t\tMediaType authorizationMediaType = MediaType.parse(\"application/json\");\r\n\t\tRequestBody authorizationRequestBody = RequestBody.create(authorizationMediaType, \"{\\r\\n    \\\"parameters\\\": [\\r\\n        {\\r\\n            \\\"name\\\": \\\"CAMNamespace\\\",\\r\\n            \\\"value\\\": \\\"OKTA\\\"\\r\\n        },\\r\\n        {\\r\\n            \\\"name\\\": \\\"CAMUsername\\\",\\r\\n            \\\"value\\\": \\\"SvcSlptCognosAPI\\\"\\r\\n        },\\r\\n        {\\r\\n            \\\"name\\\": \\\"CAMPassword\\\",\\r\\n            \\\"value\\\": \\\"\"+ password +\"\\\"\\r\\n        }\\r\\n    ]\\r\\n}\");\r\n\t\tRequest authorizationRequest = new Request.Builder()\r\n\t\t  .url(url)\r\n\t\t  .method(\"PUT\", authorizationRequestBody)\r\n\t\t  .addHeader(\"X-XSRF-Token\", xsrfToken)\r\n\t\t  .addHeader(\"Cookie\", \"XSRF-TOKEN=\" + xsrfToken)\r\n\t\t  .addHeader(\"Content-Type\", \"application/json\")\r\n\t\t  .build();\r\n\t\t\r\n\t\tResponse authorizationResponse = authorizationClient.newCall(authorizationRequest).execute();\r\n\r\n\t\tString cookie = \"\";\r\n\t\tint i = 0;\r\n\t\tfor (String cookieString: authorizationResponse.headers(\"set-cookie\")) {\r\n\t\t\tString s = cookieString;\r\n\t\t\t\r\n\t\t\tif(null != s) {\r\n\t\t\t\ts = s.replaceAll(\"; Path=/api/v1; Secure\", \"\");\r\n\t\t\t\ts = s.replaceAll(\"; Path=/api/v1;\", \"\");\r\n\t\t\t\ts = s.replaceAll(\"; Path=/api; Secure\", \"\");\r\n\t\t\t\ts = s.replaceAll(\"; Path=/api;\", \"\");\r\n\t\t\t\ts = s.replaceAll(\"HttpOnly\",\"\");\r\n\t\t\t\ts = s.replaceAll(\";\",\"\");\r\n\r\n\t\t\t\t\r\n\t\t\t\tcookie += s;\r\n\t\t\t\tif(++i != authorizationResponse.headers(\"set-cookie\").size()) {\r\n\t\t\t\t\tcookie += \";\";\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tcookie += \";XSRF-TOKEN=\" + xsrfToken;\r\n\t\t\r\n\t\t\r\n\t\tlog.error(\"Completed authorization API call with cookie:\" + cookie);\r\n\t\t\r\n\t\tMap connectorStateMap = new HashMap();\r\n\t\tconnectorStateMap.put(\"accesstoken\",xsrfToken);\r\n\t\tconnectorStateMap.put(\"testCookie\",cookie);\r\n\t\tupdatedMapInfo.put(\"connectorStateMap\",connectorStateMap);\r\n\t}\r\n\tcatch (Exception e) {\r\n\t\tlog.error(\"Exception In AfterOperation Rule:: \" + e);\r\n\t\tlog.error(\": \" + e.getStackTrace());\r\n\t}\r\n}\r\n\r\nreturn updatedMapInfo;"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "51cf9347ce184255a2b005163f606fc0",
+            "name": "Jack_Boike_Test_After_Operation_Rule_Cognos",
+            "created": "2022-07-07T17:15:24.391Z",
+            "modified": "2022-07-07T17:54:41.635Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "OACF4arQPjcYZuoIsfqGLvR4R9-eKcMk5Xs6Bc42d4Qgt3XdH177jBDqSYrpNE6lKaL9Oq7-dXtVwgs-huusdw"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "555643ab73364beca3a0918b145a2e1f",
+            "type": "RULE",
+            "name": "Jack_Boike_Test_Before_Operation_Rule_Cognos"
+        },
+        "object": {
+            "description": "",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.ArrayList;\r\nimport java.util.HashMap;\r\nimport java.util.Base64;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\nimport sailpoint.connector.webservices.WebServicesClient;\r\nimport sailpoint.object.Application;\r\nimport connector.common.JsonUtil;\r\n\r\nString xsrfToken;\r\n\r\ntry {\r\n\tMap body = requestEndPoint.getBody();\r\n\tMap header = requestEndPoint.getHeader();\r\n\tlog.error(\"TESTBODY:\" + body.toString() + \":TESTBODY\");\r\n\tlog.error(\"TESTHEADER for operation:\" + requestEndPoint.getOperationType() + \":::\" + header.toString() + \":TESTHEADER\");\r\n\tlog.error(\"TESTHEADER:\" + application.getStringAttributeValue(\"accesstoken\") + \":TESTHEADER\");\r\n\r\n}\t\r\ncatch (Exception e) {\r\n\tlog.error(\"Exception In AfterOperation Rule:: \" + e);\r\n\tlog.error(\": \" + e.getStackTrace());\r\n}"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "555643ab73364beca3a0918b145a2e1f",
+            "name": "Jack_Boike_Test_Before_Operation_Rule_Cognos",
+            "created": "2022-07-07T17:15:51.120Z",
+            "modified": "2022-07-07T17:43:03.476Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "6FHfs11S1S4L3TulT2slxMfoyz833BadWwjO_TUGclMD79kR66CRKea4EstA7-QcBIWiioxPp07WDO0DxCxUeQ"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "a189307803384d24aa22c47f0cc57224",
+            "type": "RULE",
+            "name": "Jack_Boike_Test_Before_Provision_Rule"
+        },
+        "object": {
+            "description": "",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.Identity;\r\nimport sailpoint.connector.webservices.WebServicesClient;\r\nimport connector.common.JsonUtil;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.HashMap;\r\nimport java.util.Base64;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\t\r\n// Helper method to iterate through the manager entitlements that need to be revoked prior to disabling the account.\r\npublic void removeAdditionalEntitlements(List entitlementsToRemove) {\r\n\tif(null != entitlementsToRemove) {\r\n\t\t// Create new client\r\n\t\tWebServicesClient client = new WebServicesClient();\t\r\n\r\n\t\t// Create URL \r\n\t\tString url = \"TODO\";\r\n\t\tMap args = new HashMap();\r\n\t\targs.put(WebServicesClient.ARG_URL, url);\r\n\t\tclient.configure(args);\r\n\r\n\t\t// Create Headers\r\n\t\tMap header = new HashMap();\r\n\t\theader.put(\"Content-Type\", \"application/json\");\r\n\r\n\t\t// Create Allowed Statuses\r\n\t\tList allowedStatuses = new ArrayList();\r\n\t\tallowedStatuses.add(\"2**\");\r\n\t\t\r\n\t\tfor(String attrReq :entitlementsToRemove)\r\n\t\t{\r\n\t\t\tString finalBody = JsonUtil.render(\"BODY\");\r\n\t\t\t\r\n\t\t\t// Execute Post\r\n\t\t\tString response = client.executePost(url, finalBody, header, allowedStatuses);\r\n\t\t\t\r\n\t\t\t// Error handling\r\n\t\t\t// TODO\r\n\t\t}\r\n\t}\r\n}\r\n\r\n// Helper methods to make a request to an IPAAS solution which will receive this request and send an email to the intended recipients.\r\npublic void sendEmailHTTPRequest()\r\n{   \r\n\t// Create new client\r\n\tWebServicesClient client = new WebServicesClient();\t\r\n\r\n\t// Create URL \r\n\tString url = \"TODO\";\r\n\tMap args = new HashMap();\r\n\targs.put(WebServicesClient.ARG_URL, url);\r\n\tclient.configure(args);\r\n\r\n\t// Create Headers\r\n\tMap header = new HashMap();\r\n\theader.put(\"Content-Type\", \"application/json\");\r\n\r\n\t// Create Allowed Statuses\r\n\tList allowedStatuses = new ArrayList();\r\n\tallowedStatuses.add(\"2**\");\r\n\r\n\t// Create Payload\r\n\t// Here you will need to capture the XSRF token from the previous response\r\n\t// Here you will also need to pass in any other variables such as username and password\r\n\tMap payload = new HashMap();\r\n\tString finalBody = JsonUtil.render(\"BODY\");\r\n\r\n\r\n\t// Execute Post\r\n\tString response = client.executePost(url, finalBody, header, allowedStatuses);\r\n\t\r\n\t// Error handling\r\n\t// TODO\r\n}\r\n\r\n\r\n// Set up vairables to be used\r\nboolean adminProcessing = false;\r\nboolean managerProcessing = false;\r\nboolean standardProcessing = false;\r\nString attrName = \"ARG - <INSERT ENTITLEMENT ATTRIBUTE NAME HERE>\";\r\n\r\nString password = application.getStringAttributeValue(\"password\");\r\nString testUsername = application.getStringAttributeValue(\"testUsername\");\r\n\r\nlog.error(\"testUsername: \" + testUsername);\r\nlog.error(\"Password: \" + password);"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "a189307803384d24aa22c47f0cc57224",
+            "name": "Jack_Boike_Test_Before_Provision_Rule",
+            "created": "2022-06-23T00:19:10.551Z",
+            "modified": "2022-06-23T00:43:09.368Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "t78_LRj-4JPOoL4x12OUiTj2_uYxNPW_mLFVfhF1f46cFl25C8VwROiImXykQCOa2SXOFPRN4SIngzM1EuKixQ"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "13a137d7bf414c6babc77101673a67eb",
+            "type": "RULE",
+            "name": "MKT_Jack Boike_ACMEJDBC_JDBCProvision"
+        },
+        "object": {
+            "description": "",
+            "type": "JDBCProvision",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import sailpoint.services.rule.JackBoikeACMEProvisioning;\r\nimport org.apache.commons.logging.Log;\r\nimport org.apache.commons.logging.LogFactory;\r\nLog _log = LogFactory.getLog(\"customJDBCLog\");\r\nreturn JackBoikeACMEProvisioning.provision( application, connection, plan, _log );"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "13a137d7bf414c6babc77101673a67eb",
+            "name": "MKT_Jack Boike_ACMEJDBC_JDBCProvision",
+            "created": "2022-05-17T20:32:53.126Z",
+            "modified": "2022-05-18T20:16:36.069Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "bFfx5GlaqoUYGZCzyqhK5MYR_JufSZx2uam-yKM4YVOYk7B5NbjTMIxHAjv7edmRfV2PpWJfIL6UiTZRabmpvA"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "e3bb221b78d94642ab424e384378134d",
+            "type": "RULE",
+            "name": "Test_WD_Before_Operation_Rule"
+        },
+        "object": {
+            "description": "",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.HashMap;\r\n\timport java.util.Map;\r\n\timport java.util.Properties;\r\n\timport java.io.ByteArrayInputStream;\r\n\timport java.io.ByteArrayOutputStream;\r\n\timport java.io.InputStream;\r\n\timport java.net.URL;\r\n\timport javax.xml.namespace.QName;\r\n\timport javax.xml.soap.MessageFactory;\r\n\timport javax.xml.soap.SOAPConstants;\r\n\timport javax.xml.soap.SOAPMessage;\r\n\timport javax.xml.ws.Service;\r\n\timport javax.xml.ws.Dispatch;\r\n\r\n\timport org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor;\r\n\timport org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor;\r\n\timport org.apache.ws.security.handler.WSHandlerConstants;\r\n\t\r\n\tURL url = new URL(\"https://asc-uat1.finastrapayments.cloud/gppold/services/QueueListService?wsdl\");\r\n\t\tQName serviceName = new QName(\"http://fundtech.com/SCL/QueueListService\", \"QueueListService\");\r\n\t\tService service = Service.create(url, serviceName);\r\n\t\tString soapRequest = \"<soap:Envelope xmlns:soap=\\\"http://www.w3.org/2003/05/soap-envelope\\\" xmlns:que=\\\"http://fundtech.com/SCL/QueueListService\\\" xmlns:stat=\\\"http://fundtech.com/SCL/StaticDataCommonTypes\\\" xmlns:prul=\\\"http://Fundtech.com/prule-metadata-dto.xsd\\\">\\r\\n\"\r\n\t\t\t\t+ \"    <soap:Header>\\r\\n\"\r\n\t\t\t\t+ \"        <q2:FndtHeader xmlns:q2=\\\"http://fundtech.com/SCL/CommonTypes\\\">\\r\\n\"\r\n\t\t\t\t+ \"            <q2:credentials>\\r\\n\" + \"                <q2:UserID>ADMIN15</q2:UserID>\\r\\n\"\r\n\t\t\t\t+ \"                <q2:Role>ALL1</q2:Role>\\r\\n\" + \"            </q2:credentials>\\r\\n\"\r\n\t\t\t\t+ \"        </q2:FndtHeader>\\r\\n\" + \"    </soap:Header>\\r\\n\" + \"    <soap:Body>\\r\\n\"\r\n\t\t\t\t+ \"        <que:QueueListRequest SkipFormatting=\\\"true\\\">\\r\\n\" + \"            <stat:header>\\r\\n\"\r\n\t\t\t\t+ \"                <stat:UserID>POCIDS</stat:UserID>\\r\\n\" + \"            </stat:header>\\r\\n\"\r\n\t\t\t\t+ \"            <que:ColumnsRequired>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>P_TRX_DIRECTION</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>P_MSG_STS</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>P_DBT_ACCT_NB</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_STTLM_DT_1B</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>P_TIME_STAMP</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INSTG_AGT_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INSTG_AGT_NM_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INSTD_AGT_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INSTD_AGT_NM_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_AGT_BIC_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_AGT_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_AGT_NM_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_ACCT_ID</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_BIC</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_ID</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_DBTR_NM</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_CDTR_AGT_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_CDTR_AGT_NM_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_CDTR_ID</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_CDTR_NM</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_OMAD</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_IMAD</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_RMT_INF_USTRD</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_STTLM_AMT</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_PRVS_INSTG_AGT_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_PRVS_INSTG_AGT_BIC</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INTRMY_AGT1_BIC_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INTRMY_AGT1_ID_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>X_INTRMY_AGT1_NM_2AND</que:column>\\r\\n\"\r\n\t\t\t\t+ \"                <que:column>P_INSTR_ID</que:column>\\r\\n\" + \"            </que:ColumnsRequired>\\r\\n\"\r\n\t\t\t\t+ \"            <que:QueueName>MSG_STS</que:QueueName>\\r\\n\"\r\n\t\t\t\t+ \"            <que:PageDirection>F</que:PageDirection>\\r\\n\" + \"            <que:MID/>\\r\\n\"\r\n\t\t\t\t+ \"            <que:PageSize>200</que:PageSize>\\r\\n\"\r\n\t\t\t\t+ \"            <que:PageNumber>1</que:PageNumber>\\r\\n\"\r\n\t\t\t\t+ \"            <que:SortOrder>X_STTLM_DT_1B</que:SortOrder>\\r\\n\"\r\n   \t\t\t+ \"            <que:Mode>SHOW</que:Mode>\\r\\n\"\r\n\t\t\t\t+ \"            <que:FilterOption>NONE</que:FilterOption>\\r\\n\" + \"            <que:FilterConditions>\\r\\n\"\r\n\t\t\t\t+ \"                <prul:cond lineNumber=\\\"0\\\">\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:andOr>AND</prul:andOr>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:leftVal CT=\\\"Field\\\" value=\\\"P_MSG_STS\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:op>=</prul:op>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:rightVal CT=\\\"Value\\\" value=\\\"COMPLETE\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                </prul:cond>\\r\\n\" + \"                <prul:cond lineNumber=\\\"1\\\">\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:andOr>AND</prul:andOr>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:leftVal CT=\\\"Field\\\" value=\\\"X_STTLM_DT_1B\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:op>=</prul:op>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:rightVal CT=\\\"Value\\\" value=\\\"2021-02-12\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                </prul:cond>\\r\\n\" + \"                <prul:cond lineNumber=\\\"2\\\">\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:andOr>AND</prul:andOr>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:leftVal CT=\\\"Field\\\" value=\\\"P_DBT_ACCT_NB\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:op>=</prul:op>\\r\\n\"\r\n\t\t\t\t+ \"                    <prul:rightVal CT=\\\"Value\\\" value=\\\"4383737322\\\"/>\\r\\n\"\r\n\t\t\t\t+ \"                </prul:cond>\\r\\n\" + \"            </que:FilterConditions>\\r\\n\"\r\n\t\t\t\t+ \"        </que:QueueListRequest>\\r\\n\" + \"    </soap:Body>\\r\\n\" + \"</soap:Envelope>\\r\\n\";\r\n\r\n\t\t\r\n\t\tDispatch<SOAPMessage> disp = service.createDispatch(new QName(\"http://fundtech.com/SCL/QueueListService\", \"QueueListServiceHttpPort\"), SOAPMessage.class, Service.Mode.MESSAGE);\r\n\t\tdisp.getRequestContext().put(Dispatch.ENDPOINT_ADDRESS_PROPERTY, \"https://asc-uat1.finastrapayments.cloud/gppold/services/QueueListService\");\r\n\r\n\t\tInputStream is = new ByteArrayInputStream(soapRequest.getBytes());\r\n\t\tMessageFactory mf2 = MessageFactory.newInstance(SOAPConstants.SOAP_1_1_PROTOCOL);\r\n\t\tSOAPMessage request = mf2.createMessage(null, is);\r\n\r\n\t\tPasswordCallback pc = new PasswordCallback();\r\n\t\tpc.setKeystorePassword(\"PWDPWDPWD\");\r\n\t\tpc.setWsUsernameTokenPassword(\"abc123\");\r\n\t//\tpc.setKeystorePassword(keystorePassword);\r\n\t//\tpc.setWsUsernameTokenPassword(usernameTokenPassword);\r\n\r\n\t\tfinal String signaturePropRefId = \"serverInSecurityProperties\";\r\n\t\tfinal Properties securityProperties = new Properties();\r\n\t\tsecurityProperties.put(\"org.apache.ws.security.crypto.merlin.keystore.type\", \"JKS\");\r\n\t\tsecurityProperties.put(\"org.apache.ws.security.crypto.merlin.keystore.password\", \"PWDPWDPWD\");\r\n\t\tsecurityProperties.put(\"org.apache.ws.security.crypto.merlin.keystore.file\", \"resources/1088-2301-UA-IDP.jks\");\r\n\t\tsecurityProperties.put(\"org.apache.ws.security.crypto.merlin.keystore.alias\",\"1088-2301-ua-idp.associatedbank.com\");\r\n\r\n\t\tMap<String, Object> outProps = new HashMap<String, Object>();\r\n\t\toutProps.put(signaturePropRefId, securityProperties);\r\n\t\toutProps.put(\"action\", \"UsernameToken Timestamp Signature Encrypt\");\r\n\t\toutProps.put(\"user\", \"ADMIN15\");\r\n\t\toutProps.put(\"passwordType\", \"PasswordText\");\r\n\t\toutProps.put(\"passwordCallbackRef\", pc);\r\n\t\toutProps.put(\"encryptionUser\", \"asc-uat1-ws.finastrapayments.cloud (entrust certification authority - l1k)\");\r\n\t\toutProps.put(\"encryptionKeyIdentifier\", \"DirectReference\");\r\n\t\toutProps.put(\"encryptionParts\",\r\n\t\t\t\t\"{Content}{http://www.w3.org/2003/05/soap-envelope}Body;{Content}{http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd}UsernameToken\");\r\n\t\toutProps.put(WSHandlerConstants.ENC_PROP_REF_ID, signaturePropRefId);\r\n\t\toutProps.put(\"encryptionSymAlgorithm\", \"http://www.w3.org/2001/04/xmlenc#aes128-cbc\");\r\n\t\toutProps.put(\"encryptionKeyTransportAlgorithm\", \"http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p\");\r\n\t\toutProps.put(\"signatureUser\", \"1088-2301-ua-idp.associatedbank.com\");\r\n\t\toutProps.put(WSHandlerConstants.SIG_PROP_REF_ID, signaturePropRefId);\r\n\t\toutProps.put(\"signatureKeyIdentifier\", \"DirectReference\");\r\n\t\toutProps.put(\"signatureParts\",\r\n\t\t\t\t\"{Element}{http://www.w3.org/2003/05/soap-envelope}Body;{Element}{http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd}Timestamp\");\r\n\t\toutProps.put(\"signatureAlgorithm\", \"http://www.w3.org/2000/09/xmldsig#rsa-sha1\");\r\n\t\toutProps.put(\"signatureDigestAlgorithm\", \"http://www.w3.org/2001/04/xmlenc#sha256\");\r\n\t\toutProps.put(\"signatureC14nAlgorithm\", \"http://www.w3.org/2001/10/xml-exc-c14n#\");\r\n\t\tWSS4JOutInterceptor wsout = new WSS4JOutInterceptor(outProps);\r\n\r\n\t\tMap<String, Object> inProps = new HashMap<String, Object>();\r\n\t\tinProps.put(\"action\", \"Signature Encrypt Timestamp\");\r\n\t\tinProps.put(signaturePropRefId, securityProperties);\r\n\t\tinProps.put(WSHandlerConstants.SIG_PROP_REF_ID, signaturePropRefId);\r\n\t\tinProps.put(WSHandlerConstants.DEC_PROP_REF_ID, signaturePropRefId);\r\n\t\tinProps.put(\"passwordCallbackRef\", pc);\r\n\t\t\r\n\t\tWSS4JInInterceptor wsin = new WSS4JInInterceptor(inProps);\r\n\t\t((org.apache.cxf.jaxws.DispatchImpl) disp).getClient().getOutInterceptors().add(wsout);\r\n\t\t((org.apache.cxf.jaxws.DispatchImpl) disp).getClient().getInInterceptors().add(wsin);\r\n\r\n\t\tSOAPMessage response = disp.invoke(request);\r\n\t\tByteArrayOutputStream baos3 = new ByteArrayOutputStream();\r\n\t\tresponse.writeTo(baos3);\r\n\t\tlog.error(baos3);"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "e3bb221b78d94642ab424e384378134d",
+            "name": "Test_WD_Before_Operation_Rule",
+            "created": "2022-09-13T19:48:04.247Z",
+            "modified": "2022-09-13T19:52:22.066Z"
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "o9aGrVVI2AVDDDJSK9dOgV4Jpz0aUQ6_-1_UEGVT1sWw6w_skVbQ7mlBJw1u8G4snoV_H7c1wSk_hLhvrVonWw"
+    },
+    {
+        "version": 1,
+        "self": {
+            "id": "6bbf2a8b7a8e4e01bca97f08f323afeb",
+            "type": "RULE",
+            "name": "VBs_BeforeOperationRule"
+        },
+        "object": {
+            "description": "This Rule  is used to calculate the body of the request",
+            "type": "WebServiceBeforeOperationRule",
+            "signature": {
+                "input": [],
+                "output": null
+            },
+            "sourceCode": {
+                "version": "1.0",
+                "script": "import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\nimport java.util.concurrent.TimeUnit;\r\nimport org.json.JSONObject;\r\nimport sailpoint.object.ProvisioningPlan;\r\nimport sailpoint.object.ProvisioningPlan.AccountRequest;\r\nimport sailpoint.object.ProvisioningPlan.AttributeRequest;\r\nimport sailpoint.object.Application;\r\nimport sailpoint.tools.Util;\r\nimport java.util.HashMap;\r\nimport java.io.IOException;\r\nimport sailpoint.tools.GeneralException;\r\n\r\nlog.error(\"Entering BeforeOperation Rule:: \" + e);\r\nif(null != provisioningPlan) {\r\n    log.error(\"Provisioning plan is not null. Printing plan:\");\r\n    log.error(provisioningPlan.toString());\r\n}\r\nelse {\r\n    log.error(\"ProvisioningPlan is null\");\r\n}\r\nlog.error(\"Exiting BeforeOperation Rule:: \" + e);"
+            },
+            "attributes": {
+                "sourceVersion": "1.0"
+            },
+            "id": "6bbf2a8b7a8e4e01bca97f08f323afeb",
+            "name": "VBs_BeforeOperationRule",
+            "created": "2023-03-08T18:50:52.409Z",
+            "modified": null
+        },
+        "jwsHeader": "eyJhbGciOiJFUzI1NiJ9",
+        "jwsSignature": "ttpKIdGJUapH0DJSSMpZRO3oxih1lT0iYCl63HJZOG8CFyafQAPpwx-AKph6T7_wGf5jwULdJG-opsEVFRSJ3w"
+    }
+]
